@@ -1,0 +1,47 @@
+@import "../vars.css";
+
+.projects {
+  margin-bottom: 48px;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-projects-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.projects-title {
+  font-size: var(--xl3);
+  font-weight: 700;
+}
+
+.page-projects-title {
+  font-size: var(--xl4);
+  font-weight: 700;
+}
+
+.projects-small {
+  font-size: var(--sm);
+  color: var(--very-light-secondary);
+}
+
+.projects-small i {
+  margin-left: 4px;
+}
+
+.projects-small:hover {
+  text-decoration: underline;
+}
+
+.project-cards,
+.page-project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}

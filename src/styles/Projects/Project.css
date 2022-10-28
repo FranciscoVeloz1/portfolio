@@ -1,0 +1,68 @@
+@import "../vars.css";
+
+.project-title {
+  font-size: var(--xl4);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.project-content img {
+  width: 70%;
+  height: 380px;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.project-small {
+  font-size: var(--sm);
+  color: var(--secondary);
+  font-weight: 400;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.project-button {
+  font-size: var(--md);
+  padding: 6px 24px;
+  border-radius: 10px;
+  width: fit-content;
+  color: var(--white);
+}
+
+.project-button:hover {
+  opacity: 0.9;
+}
+
+.btn-dark-primary {
+  background-color: var(--dark-primary);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+.btn-secondary:hover {
+  color: var(--dark);
+}

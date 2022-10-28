@@ -1,0 +1,183 @@
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: var(--lg);
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  /* Nav */
+  nav .nav-item a {
+    font-size: var(--sm);
+  }
+
+  /* Showcase */
+  .showcase-content {
+    font-size: var(--lg);
+  }
+
+  /* Experience */
+  .experience-title {
+    font-size: var(--xl2);
+  }
+
+  .experience-subtitle p {
+    font-size: var(--lg);
+  }
+
+  .experience-small {
+    font-size: var(--xs);
+  }
+
+  .experience-content {
+    font-size: var(--md);
+  }
+
+  /* Projects */
+  .project-cards,
+  .page-project-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .projects-title {
+    font-size: var(--xl2);
+  }
+
+  .projects-small {
+    font-size: var(--xs);
+  }
+
+  .projects-card-title {
+    font-size: var(--lg);
+  }
+
+  .projects-card-small {
+    font-size: var(--xs);
+  }
+
+  .projects-card-text {
+    font-size: var(--sm);
+  }
+
+  /* Project */
+  .project-content img {
+    width: 100%;
+  }
+
+  /* Certificates */
+  .certificates-title {
+    font-size: var(--xl2);
+  }
+
+  .certificates-small {
+    font-size: var(--xs);
+  }
+
+  .certificate-subtitle p {
+    font-weight: 700;
+    font-size: var(--xl);
+  }
+
+  .certificate-small {
+    font-size: var(--xs);
+  }
+
+  .certificate-content {
+    font-size: var(--md);
+  }
+
+  .certificate-button {
+    font-size: var(--sm);
+  }
+
+  /* Form */
+  .form {
+    width: 70%;
+  }
+
+  /* Footer */
+  .footer-contact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .footer-item a {
+    font-size: var(--sm);
+  }
+
+  .footer-name {
+    font-size: var(--md);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  /* Showcase */
+  .showcase {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Experience */
+  .experience-title {
+    text-align: center;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-subtitle {
+    display: block;
+  }
+
+  /* Projects */
+  .projects-header {
+    justify-content: space-between;
+  }
+
+  .project-cards,
+  .page-project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Project */
+  .project-content img {
+    height: 260px;
+  }
+
+  /* Certificates */
+  .certificate-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .certificate-subtitle {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .certificate-button {
+    width: 100%;
+  }
+
+  /* Form */
+  .form {
+    width: 100%;
+  }
+}

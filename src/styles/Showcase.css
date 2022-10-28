@@ -1,0 +1,25 @@
+@import "./vars.css";
+
+.showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+.showcase-title {
+  font-size: var(--xl4);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.showcase-content {
+  font-size: var(--xl);
+}
+
+.showcase img {
+  height: 320px;
+  border-radius: 8px;
+}

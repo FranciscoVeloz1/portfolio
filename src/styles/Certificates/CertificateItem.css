@@ -1,0 +1,57 @@
+@import "../vars.css";
+
+.certificate-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--very-dark-primary);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.certificate-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.certificate-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.certificate-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.certificate-subtitle p {
+  font-weight: 700;
+  font-size: var(--xl);
+}
+
+.certificate-small {
+  font-size: var(--sm);
+  font-weight: 400;
+  color: var(--very-light-secondary);
+}
+
+.certificate-content {
+  font-size: var(--lg);
+}
+
+.certificate-button {
+  font-size: var(--md);
+  background-color: var(--dark-primary);
+  padding: 6px 24px;
+  border-radius: 10px;
+  width: fit-content;
+  color: var(--white);
+}
+
+.certificate-button:hover {
+  color: var(--white);
+  opacity: 0.8;
+}

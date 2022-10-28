@@ -1,0 +1,36 @@
+@import "../vars.css";
+
+.certificates {
+  margin-bottom: 48px;
+}
+
+.certificates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.certificates-title {
+  font-size: var(--xl3);
+  font-weight: 700;
+}
+
+.certificates-small {
+  font-size: var(--sm);
+  color: var(--very-light-secondary);
+}
+
+.certificates-small i {
+  margin-left: 4px;
+}
+
+.certificates-small:hover {
+  text-decoration: underline;
+}
+
+.certificates-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

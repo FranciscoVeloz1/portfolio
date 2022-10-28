@@ -1,0 +1,44 @@
+@import "../vars.css";
+
+.experience-item {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 0.5px var(--very-light-secondary) solid;
+}
+
+.experience-item:last-child {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.experience-subtitle p {
+  font-weight: 700;
+  font-size: var(--xl);
+}
+
+.experience-small {
+  font-size: var(--sm);
+  font-weight: 400;
+  color: var(--very-light-secondary);
+}
+
+.experience-content {
+  font-size: var(--lg);
+}
+
+.experience img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: white;
+  object-fit: cover;
+}

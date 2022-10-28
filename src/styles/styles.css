@@ -1,0 +1,47 @@
+@import "./vars.css";
+
+.white-theme-variables {
+  --background: rgb(240, 240, 240);
+  --very-dark-primary: #ffffff;
+  --very-light-secondary: #000000;
+  --dark-primary: #24bdff;
+  --secondary: #616161;
+  --dark: #d4d4d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--xl);
+  color: var(--very-light-secondary);
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background);
+  line-height: 28px;
+}
+
+a {
+  color: var(--very-light-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--very-light-secondary);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* text colors */
+.txt-primary {
+  color: var(--primary);
+}
