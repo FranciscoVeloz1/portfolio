@@ -6,13 +6,13 @@ export const experiences = [
   {
     id: 1,
     image: setenal,
-    title: 'Mobile React Native Developer',
+    title: 'Mobile Developer',
     date: 'may. 2022 - oct. 2022',
     company: 'Setenal - Zapopan, Jalisco, México',
     description: `Setenal is a company that seeks to empower their clients through IT solutions. I participate
-    in the maintenance of two mobile applications, one for business management and another for tire management 
-    called SIAN. I also developed a new version of the SIAN app, using React native as the main technology and 
-    TypeScript as the core programming language.`
+    in the maintenance of two mobile applications coded in Xamarin, one for business management and another for tire 
+    management called SIAN. I also developed a new version of the SIAN app, using React native as the main technology 
+    and TypeScript as the core programming language.`
   },
 
   {

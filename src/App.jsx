@@ -5,6 +5,8 @@ import { URL } from './util/constants'
 
 // Importing pages
 import Home from './pages/Home'
+import Projects from './pages/Projects/Projects'
+import Project from './pages/Projects/Project'
 
 // Importing styles
 import './styles/styles.css'
@@ -22,6 +24,8 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path={`${URL}/`} element={<Home />} />
+          <Route path={`${URL}/projects`} element={<Projects />} />
+          <Route path={`${URL}/projects/:id`} element={<Project />} />
         </Routes>
       </Layout>
     </BrowserRouter>

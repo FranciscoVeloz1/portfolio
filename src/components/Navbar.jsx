@@ -29,8 +29,8 @@ const Navbar = () => {
         </li>
 
         <li className='nav-item'>
-          <a href='https://twitter.com/FranciscoGVeloz' target='_blank' rel='noreferrer'>
-            Twitter
+          <a href='https://www.linkedin.com/in/franciscoveloz/' target='_blank' rel='noreferrer'>
+            LinkedIn
           </a>
         </li>
 
