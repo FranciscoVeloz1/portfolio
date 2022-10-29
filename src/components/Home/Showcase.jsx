@@ -1,6 +1,5 @@
-import React from 'react'
-import img1 from '../../assets/img/fotoA.jpg'
-import '../../styles/Home/Showcase.css'
+import img1 from '@assets/img/fotoA.jpg'
+import '@styles/Home/Showcase.css'
 
 const Showcase = () => {
   return (
@@ -10,9 +9,8 @@ const Showcase = () => {
           Hi, I'm Francisco <span className='txt-primary'>Veloz</span>
         </p>
         <p className='showcase-content'>
-          I am a System Computer Engineer and I am a Frontend Developer with 2
-          years of experience. My objective is to participate as a web developer
-          in high impact projects where I can show my skills.
+          I am a System Computer Engineer and I am a Frontend Developer with 2 years of experience. My objective is
+          to participate as a web developer in high impact projects where I can show my skills.
         </p>
       </div>
 

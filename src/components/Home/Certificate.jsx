@@ -1,9 +1,8 @@
-import React from 'react'
 import CertificateItem from './CertificateItem'
 import { Link } from 'react-router-dom'
-import { URL } from '../../util/constants'
-import { certificates } from '../../util/data/certificates.data'
-import '../../styles/Home/Certificate.css'
+import { URL } from '@util/constants'
+import { certificates } from '@util/data/certificates.data'
+import '@styles/Home/Certificate.css'
 
 const Certificate = () => {
   return (

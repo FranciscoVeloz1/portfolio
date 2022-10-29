@@ -1,5 +1,4 @@
-import React from 'react'
-import '../../styles/Home/ExperienceItem.css'
+import '@styles/Home/ExperienceItem.css'
 
 const ExperienceItem = ({ id, image, title, date, company, description }) => {
   return (

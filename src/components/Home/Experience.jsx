@@ -1,7 +1,6 @@
-import React from 'react'
 import ExperienceItem from './ExperienceItem'
-import { experiences } from '../../util/data/experience.data'
-import '../../styles/Home/Experience.css'
+import { experiences } from '@util/data/experience.data'
+import '@styles/Home/Experience.css'
 
 const Experience = () => {
   return (

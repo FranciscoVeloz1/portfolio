@@ -1,5 +1,4 @@
-import React from 'react'
-import '../../styles/Home/CertificateItem.css'
+import '@styles/Home/CertificateItem.css'
 
 const CertificateItem = ({ id, image, link, title, date, description }) => {
   return (

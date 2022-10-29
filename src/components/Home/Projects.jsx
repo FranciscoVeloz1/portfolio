@@ -1,9 +1,8 @@
-import React from 'react'
 import Card from './Card'
 import { Link } from 'react-router-dom'
-import { URL } from '../../util/constants'
-import { projects } from '../../util/data/projects.data'
-import '../../styles/Home/Projects.css'
+import { URL } from '@util/constants'
+import { projects } from '@util/data/projects.data'
+import '@styles/Home/Projects.css'
 
 const Projects = () => {
   return (

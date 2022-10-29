@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/Home/Card.css'
+import '@styles/Home/Card.css'
 
 const Card = ({ link, image, title, date, description }) => {
   return (

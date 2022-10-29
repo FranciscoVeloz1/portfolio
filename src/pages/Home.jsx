@@ -1,8 +1,8 @@
-import React from 'react'
-import Showcase from '../components/Home/Showcase'
-import Experience from '../components/Home/Experience'
-import Projects from '../components/Home/Projects'
-import Certificate from '../components/Home/Certificate'
+import Showcase from '@components/Home/Showcase'
+import Experience from '@components/Home/Experience'
+import Projects from '@components/Home/Projects'
+import Certificate from '@components/Home/Certificate'
+import Form from '@components/Home/Form'
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
       <Experience />
       <Projects />
       <Certificate />
+      <Form />
     </>
   )
 }
