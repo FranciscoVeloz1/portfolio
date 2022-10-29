@@ -1,15 +1,24 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import "./styles/styles.css";
-import "./styles/MediaQueries.css";
+import React from 'react'
+import Layout from './components/Layout'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { URL } from './util/constants'
+
+// Importing pages
+import Home from './pages/Home'
+
+// Importing styles
+import './styles/styles.css'
 
 const App = () => {
   return (
-    <div className="container">
-      <Navbar />
-      <h1>Hello world</h1>
-    </div>
-  );
-};
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path={`${URL}/`} element={<Home />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  )
+}
 
-export default App;
+export default App
