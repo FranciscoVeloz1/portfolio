@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { URL } from '@util/constants'
 import '@styles/Navbar.css'
 
 const Navbar = () => {
@@ -11,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to={`${URL}/`} className='nav-brand'>
+      <Link to='/' className='nav-brand'>
         Francisco <span className='txt-primary'>Veloz</span>
       </Link>
 

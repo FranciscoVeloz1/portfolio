@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Layout from './components/Layout'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { URL } from './util/constants'
 
 // Importing pages
@@ -20,15 +20,15 @@ const App = () => {
   }, [])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
-          <Route path={`${URL}/`} element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path={`${URL}/projects`} element={<Projects />} />
           <Route path={`${URL}/projects/:id`} element={<Project />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

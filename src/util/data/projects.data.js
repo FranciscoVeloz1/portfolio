@@ -1,7 +1,7 @@
-import { URL } from '../constants'
-import smart from '../../assets/img/smart.jpg'
-import metatton from '../../assets/img/metatton.jpg'
-import mintel from '../../assets/img/mintel.jpg'
+import { URL } from '@util/constants'
+import smart from '@assets/img/smart.jpg'
+import metatton from '@assets/img/metatton.jpg'
+import mintel from '@assets/img/mintel.jpg'
 
 export const projects = [
   {
