@@ -6,6 +6,7 @@
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
       "@util/*": ["util/*"],
+      "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"]
     }

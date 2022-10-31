@@ -23,7 +23,6 @@ const Projects = () => {
           <Card
             key={p.id}
             id={p.id}
-            link={p.link}
             image={p.image}
             title={p.title}
             date={p.date}

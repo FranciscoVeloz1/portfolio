@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
 import Layout from './components/Layout'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import { URL } from './util/constants'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 // Importing pages
 import Home from './pages/Home'

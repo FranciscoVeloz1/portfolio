@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import '../vars.css';
 
 .project-title {
   font-size: var(--xl4);
@@ -66,3 +66,4 @@
 .btn-secondary:hover {
   color: var(--dark);
 }
+

@@ -1,32 +1,43 @@
+import Video from '@components/Video'
+import useScroll from '@hooks/useScroll'
 import { useParams } from 'react-router-dom'
 import { projects } from '@util/data/projects.data'
 import '@styles/Projects/Project.css'
 
 const Project = () => {
+  // eslint-disable-next-line no-unused-vars
+  const scroll = useScroll()
   const { id } = useParams()
   const data = projects.find((p) => p.id === parseInt(id))
 
   return (
     <>
       <p className='project-title'>{data.title}</p>
-
       <div className='project-content'>
-        <img src={data.image} alt='image' />
-
         <div className='project-description'>
           <p>{data.description}</p>
           <p className='project-small'>{data.date}</p>
 
           <div className='project-buttons'>
-            <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
-              <i className='fa-solid fa-play' /> Live demo
-            </a>
+            {data.demo
+              ? (
+                <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
+                  <i className='fa-solid fa-play' /> Live demo
+                </a>
+                )
+              : null}
 
-            <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
-              <i className='fa-brands fa-github' /> Repository
-            </a>
+            {data.git
+              ? (
+                <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
+                  <i className='fa-brands fa-github' /> Repository
+                </a>
+                )
+              : null}
           </div>
         </div>
+
+        <Video embedId={data.video} />
       </div>
     </>
   )

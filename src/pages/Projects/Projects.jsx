@@ -1,7 +1,11 @@
+import useScroll from '@hooks/useScroll'
 import Card from '@components/Projects/Card'
 import { projects } from '@util/data/projects.data'
 
 const Projects = () => {
+  // eslint-disable-next-line no-unused-vars
+  const scroll = useScroll()
+
   return (
     <section className='projects'>
       <div className='page-projects-header'>
