@@ -34,3 +34,10 @@
   flex-direction: column;
   gap: 24px;
 }
+
+.certificate-title {
+  font-size: var(--xl4);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}

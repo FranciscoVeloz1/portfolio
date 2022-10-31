@@ -5,8 +5,7 @@ import { projects } from '@util/data/projects.data'
 import '@styles/Projects/Project.css'
 
 const Project = () => {
-  // eslint-disable-next-line no-unused-vars
-  const scroll = useScroll()
+  useScroll()
   const { id } = useParams()
   const data = projects.find((p) => p.id === parseInt(id))
 

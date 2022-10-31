@@ -7,6 +7,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects/Projects'
 import Project from './pages/Projects/Project'
+import Certificates from './pages/Certificates'
 
 // Importing styles
 import './styles/styles.css'
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path={`${URL}/projects`} element={<Projects />} />
           <Route path={`${URL}/projects/:id`} element={<Project />} />
+          <Route path={`${URL}/certificates`} element={<Certificates />} />
         </Routes>
       </Layout>
     </HashRouter>

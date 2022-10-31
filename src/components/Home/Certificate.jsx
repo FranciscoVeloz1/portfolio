@@ -12,14 +12,14 @@ const Certificate = () => {
           Licenses and <span className='txt-primary'>certifications</span>
         </p>
 
-        <Link to={`${URL}/certifications`} className='certificates-small'>
+        <Link to={`${URL}/certificates`} className='certificates-small'>
           View all certifications
           <i className='fa-solid fa-right-long' />
         </Link>
       </div>
 
       <div className='certificates-cards'>
-        {certificates.map((c) => (
+        {certificates.slice(0, 3).map((c) => (
           <CertificateItem
             key={c.id}
             id={c.id}

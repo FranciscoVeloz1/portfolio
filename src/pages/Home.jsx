@@ -6,8 +6,7 @@ import Experience from '@components/Home/Experience'
 import Certificate from '@components/Home/Certificate'
 
 const Home = () => {
-  // eslint-disable-next-line no-unused-vars
-  const scroll = useScroll()
+  useScroll()
 
   return (
     <>
