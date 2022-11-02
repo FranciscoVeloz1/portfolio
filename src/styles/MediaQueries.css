@@ -145,6 +145,10 @@
     display: block;
   }
 
+  .experience-badges {
+    justify-content: center;
+  }
+
   /* Projects */
   .projects-header {
     justify-content: space-between;

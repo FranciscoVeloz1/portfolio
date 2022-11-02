@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import '../vars.css';
 
 .experience-item {
   display: flex;
@@ -33,6 +33,12 @@
 
 .experience-content {
   font-size: var(--lg);
+}
+
+.experience-badges {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .experience img {

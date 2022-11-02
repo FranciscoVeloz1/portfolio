@@ -9,6 +9,7 @@ export const experiences = [
     title: 'Mobile Developer',
     date: 'may. 2022 - oct. 2022',
     company: 'Setenal - Zapopan, Jalisco, México',
+    badges: [1, 4, 6],
     description: `Setenal is a company that seeks to empower their clients through IT solutions. I participate
     in the maintenance of two mobile applications coded in Xamarin, one for business management and another for tire 
     management called SIAN. I also developed a new version of the SIAN app, using React native as the main technology 
@@ -21,6 +22,7 @@ export const experiences = [
     title: 'Full Stack Developer',
     date: 'jul. 2022 - oct. 2022',
     company: 'Del Norte Distribution - Oxnard, California, United States',
+    badges: [1, 2, 4, 5],
     description: `Del Norte Distribution is the ideal choice for cold storage, freezer storage, dry storage and 
     ripening needs. I developed a web application that helps to control the inventory in real time. With this app
     they can manage the receiving and orders of the company, and know how many products have in their inventory.
@@ -34,6 +36,7 @@ export const experiences = [
     title: 'Full Stack Developer',
     date: 'jun. 2021 - abr. 2022',
     company: 'Channel Islands Warehouse - Oxnard, California, United States',
+    badges: [1, 2, 3, 7],
     description: `Channel Islands Warehouse, Inc. is the leading 3PL service provider for the harbor at Port 
     Hueneme California. They serve the import and export communities with a single source solution for their customers
     logistics needs. I developed a system that helps to reduce inventory time, has better control and allows easy access 

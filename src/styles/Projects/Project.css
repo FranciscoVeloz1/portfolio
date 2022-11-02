@@ -36,6 +36,12 @@
   font-weight: 400;
 }
 
+.badge-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
 .project-buttons {
   display: flex;
   gap: 12px;
@@ -66,4 +72,3 @@
 .btn-secondary:hover {
   color: var(--dark);
 }
-

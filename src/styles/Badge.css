@@ -1,0 +1,54 @@
+@import './vars.css';
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  width: fit-content;
+}
+
+.badge-react {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.badge-node {
+  color: #fff;
+  background-color: #03b81b;
+}
+
+.badge-js {
+  color: #fff;
+  background-color: #ffd500;
+}
+
+.badge-ts {
+  color: #fff;
+  background-color: #0061c9;
+}
+
+.badge-sql {
+  color: #fff;
+  background-color: #ff9500;
+}
+
+.badge-rn {
+  color: #fff;
+  background-color: #126dcf;
+}
+
+.badge-express {
+  color: #fff;
+  background-color: #98d400;
+}
+
+.badge-next {
+  color: #fff;
+  background-color: #6c8aa9;
+}

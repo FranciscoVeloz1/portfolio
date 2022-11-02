@@ -16,6 +16,7 @@ const Experience = () => {
           date={e.date}
           company={e.company}
           description={e.description}
+          exBadges={e.badges}
         />
       ))}
     </section>
