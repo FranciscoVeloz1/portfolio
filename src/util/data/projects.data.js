@@ -60,7 +60,7 @@ export const projects = [
     title: 'Smart House',
     video: 'vM1FTTQyAUg',
     date: 'Jun 4, 2020',
-    git: 'https://github.com/FranciscoVeloz1/IoT-House',
+    git: 'https://github.com/FranciscoVeloz1/Smart-house',
     badges: [2, 3, 5, 7],
     description:
       'Smart House is controlled by a web application made with JavaScript and NodeJS. This smart house has many different rooms that can be completely controlled by your smartphone. You can turn on and turn off the lights, fan, water, etc… And you can see the temperature, gas level and how much light has your house.'
