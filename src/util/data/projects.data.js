@@ -4,11 +4,33 @@ import mintel from '@assets/img/mintel.jpg'
 import boxbook from '@assets/img/boxbook.jpg'
 import lab from '@assets/img/lab.jpg'
 import stack from '@assets/img/stack.jpg'
-import r1 from '@assets/img/r1.jpg'
-import r2 from '@assets/img/r2.jpg'
+import rn from '@assets/img/rn.jpg'
+import template from '@assets/img/template.jpg'
 import r3 from '@assets/img/r3.jpg'
 
 export const projects = [
+  {
+    id: 10,
+    image: rn,
+    title: 'rn-speed-art',
+    date: 'Nov 1, 2022',
+    description: `React Native Speed Art is a design library made by me with many types of customizable and reusable components. It also has an object with many utility classes that will help you to write less code. In this case I show you a demo with a react native project, where I coded a restaurant menu with modern design and with a few code lines.`,
+    git: 'https://github.com/FranciscoVeloz1/rn-speed-art',
+    video: '9Gqwq0AfYt8',
+    badges: [1, 2, 4, 6]
+  },
+
+  {
+    id: 11,
+    image: template,
+    title: 'React-APIRest-Template',
+    date: 'Oct 20, 2022',
+    description: `This project is a monorepo template coded with React, Node.js and TypeScript. The backend was programed with express and has authentication using jwt, zod schema validations, user and company CRUDS and middlewares for validations and route protections. The frontend was programmed with React and Vite and has for Bootstrap 5 for design, CSS for custom styles and custom hooks. Im working to add more features to this template.`,
+    git: 'https://github.com/FranciscoVeloz1/react-node-template',
+    video: 'GHAM2VTqn0U',
+    badges: [1, 2, 4, 5, 7]
+  },
+
   {
     id: 1,
     image: boxbook,
@@ -77,35 +99,35 @@ export const projects = [
     badges: [1, 3],
     description:
       'Mintel landing page, made with Bootstrap and React. Mintel is how I called the smart house app, and this project is their landing page. Focused on showing the principal features of the smart house, with the most clear information about prices, advantages and features. Is completely responsive for smartphones and tables.'
-  },
-
-  {
-    id: 7,
-    image: r3,
-    title: 'Vex Robotics Starstruck',
-    date: 'April 14, 2017',
-    description:
-      'Vex robotics starstruck consists of 2 teams fighting, throwing the stars and cubes to each field. I participated in the Vex robotics world championship 2016-2017 in Louisville, Kentucky. I designed, programmed and built the robot of the red alliance, with ID 53578A. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 7th place among 100 teams.',
-    video: 'HbNMGtv_XZA'
-  },
-
-  {
-    id: 8,
-    image: r2,
-    title: 'VEX Robotics Nothing But Net',
-    date: 'April 18, 2016',
-    description:
-      'Vex robotics nothing but net consists of 2 teams fighting, throwing the balls to the networks. I participated in the Vex robotics world championship 2015-2016 in Louisville, Kentucky. I designed, programmed and built the robot of the blue alliance, with ID 8739E. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 37th place among 100 teams.',
-    video: 'm-pC46W6TSU'
-  },
-
-  {
-    id: 9,
-    image: r1,
-    title: 'VEX Robotics Highrise',
-    date: 'April 16, 2015',
-    description:
-      'Vex robotics highrise consists of 2 teams in alliance, building block towers depending on the color to win as many points as possible.. I participated in the Vex robotics world championship 2014-2015 in Louisville, Kentucky. I designed, programmed and built the robot on the left, with ID 11020H. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 56th place among 100 teams.',
-    video: 'IqKnjml3DBU'
   }
+
+  // {
+  //   id: 7,
+  //   image: r3,
+  //   title: 'Vex Robotics Starstruck',
+  //   date: 'April 14, 2017',
+  //   description:
+  //     'Vex robotics starstruck consists of 2 teams fighting, throwing the stars and cubes to each field. I participated in the Vex robotics world championship 2016-2017 in Louisville, Kentucky. I designed, programmed and built the robot of the red alliance, with ID 53578A. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 7th place among 100 teams.',
+  //   video: 'HbNMGtv_XZA'
+  // },
+
+  // {
+  //   id: 8,
+  //   image: r2,
+  //   title: 'VEX Robotics Nothing But Net',
+  //   date: 'April 18, 2016',
+  //   description:
+  //     'Vex robotics nothing but net consists of 2 teams fighting, throwing the balls to the networks. I participated in the Vex robotics world championship 2015-2016 in Louisville, Kentucky. I designed, programmed and built the robot of the blue alliance, with ID 8739E. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 37th place among 100 teams.',
+  //   video: 'm-pC46W6TSU'
+  // },
+
+  // {
+  //   id: 9,
+  //   image: r1,
+  //   title: 'VEX Robotics Highrise',
+  //   date: 'April 16, 2015',
+  //   description:
+  //     'Vex robotics highrise consists of 2 teams in alliance, building block towers depending on the color to win as many points as possible.. I participated in the Vex robotics world championship 2014-2015 in Louisville, Kentucky. I designed, programmed and built the robot on the left, with ID 11020H. In this project I learned how to program algorithms, solve problems and work in a team. I finished in 56th place among 100 teams.',
+  //   video: 'IqKnjml3DBU'
+  // }
 ]
