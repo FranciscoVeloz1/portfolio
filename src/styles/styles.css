@@ -1,4 +1,4 @@
-@import "./vars.css";
+@import './vars.css';
 
 .white-theme-variables {
   --background: rgb(240, 240, 240);
@@ -19,8 +19,7 @@
 body {
   font-size: var(--xl);
   color: var(--very-light-secondary);
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--background);
   line-height: 28px;
 }

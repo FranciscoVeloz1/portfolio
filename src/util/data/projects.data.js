@@ -28,7 +28,7 @@ export const projects = [
     description: `This project is a monorepo template coded with React, Node.js and TypeScript. The backend was programed with express and has authentication using jwt, zod schema validations, user and company CRUDS and middlewares for validations and route protections. The frontend was programmed with React and Vite and has for Bootstrap 5 for design, CSS for custom styles and custom hooks. Im working to add more features to this template.`,
     git: 'https://github.com/FranciscoVeloz1/react-node-template',
     video: 'GHAM2VTqn0U',
-    badges: [1, 2, 4, 5, 7]
+    badges: [1, 2, 4, 7]
   },
 
   {
