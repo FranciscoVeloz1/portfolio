@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  color: var(--light-secondary);
 }
 
 .certificate-subtitle p {
@@ -35,7 +36,7 @@
 .certificate-small {
   font-size: var(--sm);
   font-weight: 400;
-  color: var(--very-light-secondary);
+  color: var(--light-secondary);
 }
 
 .certificate-content {

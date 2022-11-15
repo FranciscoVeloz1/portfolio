@@ -5,7 +5,7 @@
 
   --secondary: #cfcfcf;
   --light-secondary: #eff1f2;
-  --very-light-secondary: #f7f7f7;
+  --very-light-secondary: #cfcfcf;
 
   --background: #090d40;
 
@@ -19,12 +19,12 @@
   --gray: #eee;
   --dark: #06082b;
 
-  --xs: 11px;
-  --sm: 12px;
-  --md: 14px;
-  --lg: 16px;
-  --xl: 18px;
-  --xl2: 20px;
-  --xl3: 22px;
-  --xl4: 32px;
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 20px;
+  --xl2: 22px;
+  --xl3: 24px;
+  --xl4: 34px;
 }

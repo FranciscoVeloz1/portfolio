@@ -3,7 +3,8 @@
 .white-theme-variables {
   --background: rgb(240, 240, 240);
   --very-dark-primary: #ffffff;
-  --very-light-secondary: #000000;
+  --light-secondary: #000000;
+  --very-light-secondary: #555555;
   --dark-primary: #24bdff;
   --secondary: #616161;
   --dark: #d4d4d4;
@@ -18,7 +19,8 @@
 body {
   font-size: var(--xl);
   color: var(--very-light-secondary);
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Roboto', sans-serif;
   background-color: var(--background);
   line-height: 28px;
 }

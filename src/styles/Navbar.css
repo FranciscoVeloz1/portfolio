@@ -1,4 +1,4 @@
-@import "./vars.css";
+@import './vars.css';
 
 nav {
   display: flex;
@@ -11,6 +11,7 @@ nav {
 
 nav .nav-brand {
   font-weight: 700;
+  color: var(--light-secondary);
 }
 
 nav .nav-brand:hover {
@@ -43,7 +44,7 @@ nav .nav-menu {
 }
 
 .btn-toggle i.active {
-  color: var(--very-light-secondary);
+  color: var(--light-secondary);
   background-color: var(--dark);
 }
 
@@ -57,25 +58,10 @@ nav .nav-menu {
   border-top-right-radius: 8px;
 }
 
-/* 
-.btn-toggle i {
-  font-size: 1.2rem;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: var(--dark);
-  justify-content: center;
-  background-color: var(--white);
-  border-radius: 8px;
-}
-
-.btn-toggle i:last-child {
-  background-color: var(--dark);
-  color: white;
-  border-radius: 8px;
-} */
-
 nav .nav-item a {
   font-size: var(--md);
+}
+
+nav .nav-item a:hover {
+  color: var(--light-secondary);
 }

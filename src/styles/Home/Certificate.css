@@ -14,6 +14,7 @@
 .certificates-title {
   font-size: var(--xl3);
   font-weight: 700;
+  color: var(--light-secondary);
 }
 
 .certificates-small {

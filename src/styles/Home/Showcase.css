@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import '../vars.css';
 
 .showcase {
   display: grid;
@@ -13,6 +13,7 @@
   font-size: var(--xl4);
   font-weight: 700;
   margin-bottom: 24px;
+  color: var(--light-secondary);
 }
 
 .showcase-content {

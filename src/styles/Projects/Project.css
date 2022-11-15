@@ -1,10 +1,19 @@
 @import '../vars.css';
 
+.project-small {
+  font-size: var(--sm);
+  color: var(--secondary);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
 .project-title {
   font-size: var(--xl4);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
+  color: var(--light-secondary);
 }
 
 .project-content {
@@ -27,18 +36,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: center;
-}
-
-.project-small {
-  font-size: var(--sm);
-  color: var(--secondary);
-  font-weight: 400;
 }
 
 .badge-container {
   display: flex;
-  justify-content: center;
   gap: 12px;
 }
 
@@ -46,11 +47,12 @@
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-bottom: 24px;
 }
 
 .project-button {
   font-size: var(--md);
-  padding: 6px 24px;
+  padding: 4px 24px;
   border-radius: 10px;
   width: fit-content;
   color: var(--white);

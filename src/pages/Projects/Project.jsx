@@ -23,25 +23,28 @@ const Project = () => {
 
   return (
     <>
+      <p className='project-small'>{data.date}</p>
       <p className='project-title'>{data.title}</p>
+
+      <div className='project-buttons'>
+        {data.demo ? (
+          <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
+            <i className='fa-solid fa-play' /> Live demo
+          </a>
+        ) : null}
+
+        {data.git ? (
+          <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
+            <i className='fa-brands fa-github' /> Repository
+          </a>
+        ) : null}
+      </div>
+
       <div className='project-content'>
+        <Video embedId={data.video} />
+
         <div className='project-description'>
           <p>{data.description}</p>
-          <p className='project-small'>{data.date}</p>
-
-          <div className='project-buttons'>
-            {data.demo ? (
-              <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
-                <i className='fa-solid fa-play' /> Live demo
-              </a>
-            ) : null}
-
-            {data.git ? (
-              <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
-                <i className='fa-brands fa-github' /> Repository
-              </a>
-            ) : null}
-          </div>
         </div>
 
         {tags.length > 0 ? (
@@ -51,8 +54,6 @@ const Project = () => {
             ))}
           </div>
         ) : null}
-
-        <Video embedId={data.video} />
       </div>
     </>
   )

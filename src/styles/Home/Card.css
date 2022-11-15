@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import '../vars.css';
 
 .projects-card,
 .page-projects-card {
@@ -20,6 +20,7 @@
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  filter: brightness(.9)
 }
 
 .projects-card-content {
@@ -33,11 +34,12 @@
 .projects-card-title {
   font-size: var(--xl);
   font-weight: 700;
+  color: var(--light-secondary);
 }
 
 .projects-card-small {
   font-size: var(--sm);
-  color: var(--very-light-secondary);
+  color: var(--light-secondary);
 }
 
 .projects-card-text {

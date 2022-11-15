@@ -10,5 +10,6 @@
 .experience-title {
   font-weight: 700;
   font-size: var(--xl3);
+  color: var(--light-secondary);
   margin-bottom: 24px;
 }

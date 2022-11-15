@@ -1,4 +1,4 @@
-@import "./vars.css";
+@import './vars.css';
 
 footer {
   padding: 48px 0px;
@@ -22,9 +22,11 @@ footer {
 
 .footer-item a {
   font-size: var(--md);
+  color: var(--light-secondary);
 }
 
 .footer-name {
   text-align: center;
   font-size: var(--lg);
+  color: var(--light-secondary);
 }
