@@ -1,4 +1,4 @@
-import img1 from '@assets/img/fotoA.jpg'
+import img1 from '@assets/img/foto.png'
 import '@styles/Home/Showcase.css'
 
 const Showcase = () => {
