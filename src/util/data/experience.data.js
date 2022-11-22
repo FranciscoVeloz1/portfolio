@@ -4,30 +4,29 @@ import setenal from '../../assets/img/setenal.jpg'
 
 export const experiences = [
   {
-    id: 1,
-    image: setenal,
-    title: 'Mobile Developer',
-    date: 'may. 2022 - oct. 2022',
-    company: 'Setenal - Zapopan, Jalisco, México',
-    badges: [1, 4, 6],
-    description: `Setenal is a company that seeks to empower their clients through IT solutions. I participate
-    in the maintenance of two mobile applications coded in Xamarin, one for business management and another for tire 
-    management called SIAN. I also developed a new version of the SIAN app, using React native as the main technology 
-    and TypeScript as the core programming language.`
-  },
-
-  {
-    id: 2,
+    id: 3,
     image: norte,
     title: 'Full Stack Developer',
     date: 'jul. 2022 - oct. 2022',
     company: 'Del Norte Distribution - Oxnard, California, United States',
     badges: [1, 2, 4, 5],
-    description: `Del Norte Distribution is the ideal choice for cold storage, freezer storage, dry storage and 
-    ripening needs. I developed a web application that helps to control the inventory in real time. With this app
-    they can manage the receiving and orders of the company, and know how many products have in their inventory.
-    I programmed this app with Node.js, Express and MySQL for backend, and React, Vite, TypeScript and Bootstrap 5 
-    for frontend.`
+    description: `I made an inventory app where the user can manage the receiving and orders of products, update the 
+    inventory in real time, and upload the product's receiving from excel. I coded the frontend of this app with React, 
+    TypeScript and Bootstrap, and for the backend I used Node.js, Express and MySQL. I deployed the app in Digital Ocean 
+    with pm2 and nginx for mange the app and the server.`
+  },
+
+  {
+    id: 2,
+    image: setenal,
+    title: 'Mobile development leader',
+    date: 'may. 2022 - oct. 2022',
+    company: 'Setenal - Zapopan, Jalisco, México',
+    badges: [1, 4, 6],
+    description: `I managed a team to develop the new version of the tire management application called SIAN EX. 
+    With this application, the user can carry out tire inspections by connecting a bluetooth scanner with the phone, and read 
+    and save the information obtained from the scanner. We made this app with React Native and Native Modules. With this new 
+    version we improve the user experience and performance of the app.`
   },
 
   {
@@ -37,10 +36,9 @@ export const experiences = [
     date: 'jun. 2021 - abr. 2022',
     company: 'Channel Islands Warehouse - Oxnard, California, United States',
     badges: [1, 2, 3, 7],
-    description: `Channel Islands Warehouse, Inc. is the leading 3PL service provider for the harbor at Port 
-    Hueneme California. They serve the import and export communities with a single source solution for their customers
-    logistics needs. I developed a system that helps to reduce inventory time, has better control and allows easy access 
-    to updated inventory information in real time. I coded this app using Node.js, Express and MySQL for backend, 
-    and React, JavaScript, Vite and Bootstrap 4 for frontend.`
+    description: `I made an inventory app where the user can manage the receiving and orders of products, and update the inventory
+    in real time. For this, I developed a web application with React.js, JavaScript and Bootstrap for the frontend, Node.js and Express 
+    for the backend and React Native for the mobile application. Before the app, inventory management took 2 hours per day, now after 
+    the app, this process takes 15 minutes.`
   }
 ]

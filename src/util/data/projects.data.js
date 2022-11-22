@@ -6,7 +6,6 @@ import lab from '@assets/img/lab.jpg'
 import stack from '@assets/img/stack.jpg'
 import rn from '@assets/img/rn.jpg'
 import template from '@assets/img/template.jpg'
-import r3 from '@assets/img/r3.jpg'
 
 export const projects = [
   {
@@ -14,7 +13,7 @@ export const projects = [
     image: rn,
     title: 'React native Speed Art',
     date: 'Nov 1, 2022',
-    description: `React Native Speed Art is a design library made by me with many types of customizable and reusable components. It also has an object with many utility classes that will help you to write less code. In this case I show you a demo with a react native project, where I coded a restaurant menu with modern design and with a few code lines.`,
+    description: 'React Native Speed Art is a design library made by me with many types of customizable and reusable components. It also has an object with many utility classes that will help you to write less code. In this case I show you a demo with a react native project, where I coded a restaurant menu with modern design and with a few code lines.',
     git: 'https://github.com/FranciscoVeloz1/rn-speed-art',
     video: '9Gqwq0AfYt8',
     badges: [1, 2, 4, 6]
@@ -25,7 +24,7 @@ export const projects = [
     image: template,
     title: 'React-APIRest-Template',
     date: 'Oct 20, 2022',
-    description: `This project is a monorepo template coded with React, Node.js and TypeScript. The backend was programed with express and has authentication using jwt, zod schema validations, user and company CRUDS and middlewares for validations and route protections. The frontend was programmed with React and Vite and has for Bootstrap 5 for design, CSS for custom styles and custom hooks. Im working to add more features to this template.`,
+    description: 'This project is a monorepo template coded with React, NodeJS and TypeScript. The backend was programed with express and has authentication using jwt, zod schema validations, user and company CRUDS and middlewares for validations and route protections. The frontend was programmed with React and Vite, and has Bootstrap 5 for design, CSS for custom styles and custom hooks. Im working to add more features to this template.',
     git: 'https://github.com/FranciscoVeloz1/react-node-template',
     video: 'GHAM2VTqn0U',
     badges: [1, 2, 4, 7]
@@ -36,7 +35,7 @@ export const projects = [
     image: boxbook,
     title: 'BoxBook',
     date: 'April 7, 2022',
-    description: `BoxBook is a virtual catalog of books. The user can sign up to the web, and add books to their catalog, see all the information and the cover of the book and mark if will read it, if is reading it or if has read it. When the user adds a book, is able to give a qualification between 1 and 5, where 5 is the biggest, and can write a review of the book. The user can also mark how much percentage has read the book. For contact with other users and see their catalogs, the user can search by name and send a request, for adding that person to the friends list. The system was programmed with a Next.js template made by me.`,
+    description: 'BoxBook is a virtual catalog of books. The user can sign up to the web, and add books to their catalog, see all the information and the cover of the book and mark if will read it, if is reading it or if has read it. When the user adds a book, is able to give a qualification between 1 and 5, where 5 is the biggest, and can write a review of the book. The user can also mark how much percentage has read the book. For contact with other users and see their catalogs, the user can search by name and send a request, for adding that person to the friends list. The system was programmed with a NextJS template made by me.',
     git: 'https://github.com/FranciscoVeloz1/React-Next-Dashboard',
     video: 'TNnKCNwQJE8',
     badges: [1, 2, 3, 8]
@@ -47,7 +46,7 @@ export const projects = [
     image: lab,
     title: 'Lab maintenance',
     date: 'March 23, 2022',
-    description: `A school needs to carry out maintenance and support reports for the laboratory computers, for which a web system was programmed to carry out the process described below. The system must have 2 types of profiles, Administrator with all permissions and user who can only register maintenance and support tickets. Register, cancel or modify a laboratory and register or modify a computer. The system was programmed with a Next.js template made by me.`,
+    description: 'A school needs to carry out maintenance and support reports for the laboratory computers, for which a web system was programmed to carry out the process described below. The system must have 2 types of profiles, Administrator with all permissions and user who can only register maintenance and support tickets. Register, cancel or modify a laboratory and register or modify a computer. The system was programmed with a NextJS template made by me.',
     git: 'https://github.com/FranciscoVeloz1/React-Next-Dashboard',
     video: 'AETMF4xCXJQ',
     badges: [1, 2, 3, 8]
@@ -58,7 +57,7 @@ export const projects = [
     image: stack,
     title: 'Stack Questions',
     date: 'March 10, 2022',
-    description: `A project was developed that functions as a Stack Overflow-style Q&A community. The main page can be consulted without the need to be registered. Only registered users will be able to post a question and answer.`,
+    description: 'A project was developed that functions as a Stack Overflow-style Q&A community. The main page can be consulted without the need to be registered. Only registered users will be able to post a question and answer.',
     git: 'https://github.com/FranciscoVeloz1/React-Next-Dashboard',
     video: '3KcSOKeZfYQ',
     badges: [1, 2, 3, 8]
