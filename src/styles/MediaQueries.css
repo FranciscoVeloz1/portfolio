@@ -15,9 +15,14 @@
   /* Showcase */
   .showcase-content {
     font-size: var(--lg);
+    width: 100%;
   }
 
   /* Experience */
+  .experience {
+    padding: 24px;
+  }
+
   .experience-title {
     font-size: var(--xl2);
   }
@@ -93,6 +98,10 @@
 
   .certificate-button {
     font-size: var(--sm);
+  }
+
+  .certificate-item {
+    padding: 24px;
   }
 
   /* Form */

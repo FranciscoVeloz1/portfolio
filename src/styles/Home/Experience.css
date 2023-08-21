@@ -2,9 +2,9 @@
 
 .experience {
   background-color: var(--very-dark-primary);
-  padding: 24px;
+  padding: 24px 48px;
   border-radius: 8px;
-  margin-bottom: 48px;
+  margin-bottom: 88px;
 }
 
 .experience-title {

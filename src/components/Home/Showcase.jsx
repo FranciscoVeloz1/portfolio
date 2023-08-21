@@ -9,7 +9,7 @@ const Showcase = () => {
           Hi, I'm Francisco <span className='txt-primary'>Veloz</span>
         </p>
         <p className='showcase-content'>
-          I am a computer systems engineer and Fullstack JavaScript/TypeScript developer with +3 years of
+          I am a computer systems engineer and Fullstack JavaScript/TypeScript developer with +4 years of
           experience. My objective is to participate as a fullstack developer implementing backend and frontend
           solutions with MERN stack or Next.js.
         </p>
