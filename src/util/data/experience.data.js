@@ -3,6 +3,9 @@ import norte from '../../assets/img/norte.jpg'
 import setenal from '../../assets/img/setenal.jpg'
 import pwc from '../../assets/img/pwc.jpeg'
 import nestle from '../../assets/img/nestle.jpeg'
+import fnatic from '../../assets/img/fnatic.png'
+import kodomi from '../../assets/img/kodomi2.png'
+import control from '../../assets/img/control.png'
 
 export const experiences = [
   {
@@ -58,7 +61,7 @@ export const experiences = [
 
   {
     id: 5,
-    image: null,
+    image: control,
     title: 'Full Stack Developer',
     date: 'dec. 2020 - jan. 2022',
     company: 'Control System - Lagos de Moreno, Jalisco, México',
@@ -71,7 +74,7 @@ export const experiences = [
 
   {
     id: 4,
-    image: null,
+    image: 'https://ui-avatars.com/api/?name=Optica',
     title: 'Full Stack Developer',
     date: 'feb. 2021 - jun. 2021',
     company: 'Centro óptico de Lagos - Lagos de Moreno, Jalisco, México',
@@ -95,7 +98,7 @@ export const experiences = [
 
   {
     id: 2,
-    image: null,
+    image: kodomi,
     title: 'Web Development',
     date: 'agu. 2017 - dic. 2017',
     company: 'Kodomi - Lagos de Moreno, Jalisco, México',
@@ -107,7 +110,7 @@ export const experiences = [
 
   {
     id: 1,
-    image: null,
+    image: fnatic,
     title: 'Robotics Designer',
     date: 'apr. 2016 - may. 2017',
     company: 'Fnatic Robotics - Lagos de Moreno, Jalisco, México',
