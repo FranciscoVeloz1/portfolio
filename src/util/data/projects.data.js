@@ -13,7 +13,7 @@ export const projects = [
     image: rn,
     title: 'React native Speed Art',
     date: 'Nov 1, 2022',
-    description: 'React Native Speed Art is a design library made by me with many types of customizable and reusable components. It also has an object with many utility classes that will help you to write less code. In this case I show you a demo with a react native project, where I coded a restaurant menu with modern design and with a few code lines.',
+    description: 'React Native Speed Art is a design library with many types of customizable and reusable components. It also has an object with many utility classes that will help you to write less code. In this case I show you a demo with a react native project, where I coded a restaurant menu with modern design and with a few code lines.',
     git: 'https://github.com/FranciscoVeloz1/rn-speed-art',
     video: '9Gqwq0AfYt8',
     badges: [1, 2, 4, 6]

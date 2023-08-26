@@ -26,6 +26,15 @@ const Badge = ({ id, label }) => {
 
       case 8:
         return 'next'
+
+      case 9:
+        return 'autodesk'
+
+      case 10:
+        return 'robotics'
+
+      case 11:
+        return 'c'
     }
   }
 

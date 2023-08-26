@@ -6,7 +6,7 @@
   gap: 24px;
   background-color: var(--very-dark-primary);
   border-radius: 8px;
-  padding: 24px 48px;
+  padding: 24px;
 }
 
 .certificate-item img {
@@ -40,7 +40,7 @@
 }
 
 .certificate-content {
-  font-size: var(--lg);
+  font-size: var(--md);
 }
 
 .certificate-button {
