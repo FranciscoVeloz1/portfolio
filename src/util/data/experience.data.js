@@ -1,11 +1,11 @@
-import channel from '../../assets/img/channel.jpg'
-import norte from '../../assets/img/norte.jpg'
-import setenal from '../../assets/img/setenal.jpg'
-import pwc from '../../assets/img/pwc.jpeg'
-import nestle from '../../assets/img/nestle.jpeg'
-import fnatic from '../../assets/img/fnatic.png'
-import kodomi from '../../assets/img/kodomi2.png'
-import control from '../../assets/img/control.png'
+import channel from '../../assets/img/channel.webp'
+import norte from '../../assets/img/norte.webp'
+import setenal from '../../assets/img/setenal.webp'
+import pwc from '../../assets/img/pwc.webp'
+import nestle from '../../assets/img/nestle.webp'
+import fnatic from '../../assets/img/fnatic.webp'
+import kodomi from '../../assets/img/kodomi2.webp'
+import control from '../../assets/img/control.webp'
 
 export const experiences = [
   {

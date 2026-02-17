@@ -1,4 +1,4 @@
-import platzi from '../../assets/img/platzi.jpg'
+import platzi from '../../assets/img/platzi.webp'
 
 export const certificates = [
   {
