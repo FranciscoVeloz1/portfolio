@@ -1,11 +1,11 @@
-import smart from '@assets/img/smart.jpg'
-import metatton from '@assets/img/metatton.jpg'
-import mintel from '@assets/img/mintel.jpg'
-import boxbook from '@assets/img/boxbook.jpg'
-import lab from '@assets/img/lab.jpg'
-import stack from '@assets/img/stack.jpg'
-import rn from '@assets/img/rn.jpg'
-import template from '@assets/img/template.jpg'
+import smart from '@assets/img/smart.webp'
+import metatton from '@assets/img/metatton.webp'
+import mintel from '@assets/img/mintel.webp'
+import boxbook from '@assets/img/boxbook.webp'
+import lab from '@assets/img/lab.webp'
+import stack from '@assets/img/stack.webp'
+import rn from '@assets/img/rn.webp'
+import template from '@assets/img/template.webp'
 
 export const projects = [
   {

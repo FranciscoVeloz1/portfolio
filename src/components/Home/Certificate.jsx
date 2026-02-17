@@ -21,8 +21,8 @@ const Certificate = () => {
       <div className='certificates-cards'>
         {certificates.slice(0, 3).map((c) => (
           <CertificateItem
-            key={c.id}
-            id={c.id}
+            key={c.link}
+            id={c.link}
             link={c.link}
             image={c.image}
             title={c.title}
