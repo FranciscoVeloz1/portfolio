@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1632px) {
   body {
     font-size: var(--lg);
   }
@@ -47,6 +47,8 @@
 
   .projects-card:last-child {
     grid-column: 1 / -1;
+    max-width: minmax(270px, 1fr);
+    justify-self: center;
   }
 
   .projects-title {
