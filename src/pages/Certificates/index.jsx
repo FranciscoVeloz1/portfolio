@@ -9,8 +9,13 @@ const Certificates = () => {
   useScroll()
   const { data, isLoading, isError } = useResumeData()
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const { certificates } = data
 

@@ -6,8 +6,13 @@ import '@styles/Home/Showcase.css'
 const Showcase = () => {
   const { data, isLoading, isError } = useResumeData()
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const { summary, profile } = data
 

@@ -10,8 +10,13 @@ const Experience = () => {
   const { data, isLoading, isError } = useResumeData()
   const [load, setLoad] = useState(3)
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const { experiences, skills } = data
 

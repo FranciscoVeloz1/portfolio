@@ -14,8 +14,13 @@ const Navbar = () => {
     document.body.classList.toggle('white-theme-variables')
   }
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const { profile, socialNetworks } = data
   const youtubeLink = getSocialLink('YouTube', socialNetworks)

@@ -9,8 +9,13 @@ import '@styles/Home/Certificate.css'
 const Certificate = () => {
   const { data, isLoading, isError } = useResumeData()
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const { certificates } = data
 

@@ -13,12 +13,19 @@ const Project = () => {
   const { id } = useParams()
   const { data, isLoading, isError } = useResumeData()
 
-  if (isLoading) return <Spinner />
-  if (isError) return <ErrorMessage />
+  if (isLoading) {
+    return <Spinner />
+  }
+
+  if (isError) {
+    return <ErrorMessage />
+  }
 
   const project = data.projects.find((p) => p.id === parseInt(id))
 
-  if (!project) return <ErrorMessage message='Project not found.' />
+  if (!project) {
+    return <ErrorMessage message='Project not found.' />
+  }
 
   const tags = resolveSkills(project.badges, data.skills)
 
