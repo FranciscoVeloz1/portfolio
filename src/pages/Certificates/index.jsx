@@ -1,10 +1,18 @@
 import CertificateItem from '@components/Home/CertificateItem'
+import Spinner from '@components/Spinner/Spinner'
+import ErrorMessage from '@components/ErrorMessage/ErrorMessage'
 import useScroll from '@hooks/useScroll'
-import { certificates } from '@util/data/certificates.data'
+import useResumeData from '@hooks/useResumeData'
 import '@styles/Home/Certificate.css'
 
 const Certificates = () => {
   useScroll()
+  const { data, isLoading, isError } = useResumeData()
+
+  if (isLoading) return <Spinner />
+  if (isError) return <ErrorMessage />
+
+  const { certificates } = data
 
   return (
     <section className='certificates'>
@@ -15,8 +23,7 @@ const Certificates = () => {
       <div className='certificates-cards'>
         {certificates.map((c) => (
           <CertificateItem
-            key={c.id}
-            id={c.id}
+            key={c.link}
             link={c.link}
             image={c.image}
             title={c.title}

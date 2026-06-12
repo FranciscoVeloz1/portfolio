@@ -8,7 +8,9 @@
       "@util/*": ["util/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@client/*": ["client/*"],
+      "@mappers/*": ["mappers/*"]
     }
   }
 }

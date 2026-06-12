@@ -1,44 +1,44 @@
 import Video from '@components/Video'
 import Badge from '@components/Badge'
+import Spinner from '@components/Spinner/Spinner'
+import ErrorMessage from '@components/ErrorMessage/ErrorMessage'
 import useScroll from '@hooks/useScroll'
 import { useParams } from 'react-router-dom'
-import { projects } from '@util/data/projects.data'
-import { badges } from '@util/data/badges.data'
+import useResumeData from '@hooks/useResumeData'
+import { resolveSkills } from '@util/resolveSkills'
 import '@styles/Projects/Project.css'
 
 const Project = () => {
   useScroll()
   const { id } = useParams()
-  const data = projects.find((p) => p.id === parseInt(id))
-  const tags = []
+  const { data, isLoading, isError } = useResumeData()
 
-  if (data.badges) {
-    data.badges.forEach((pb) => {
-      badges.forEach((b) => {
-        if (b.id === pb) {
-          tags.push(b)
-        }
-      })
-    })
-  }
+  if (isLoading) return <Spinner />
+  if (isError) return <ErrorMessage />
+
+  const project = data.projects.find((p) => p.id === parseInt(id))
+
+  if (!project) return <ErrorMessage message='Project not found.' />
+
+  const tags = resolveSkills(project.badges, data.skills)
 
   return (
     <>
-      <p className='project-small'>{data.date}</p>
-      <p className='project-title'>{data.title}</p>
+      <p className='project-small'>{project.date}</p>
+      <p className='project-title'>{project.title}</p>
 
       <div className='project-buttons'>
-        {data.demo
+        {project.demo
           ? (
-            <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
+            <a href={project.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
               <i className='fa-solid fa-play' /> Live demo
             </a>
             )
           : null}
 
-        {data.git
+        {project.git
           ? (
-            <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
+            <a href={project.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
               <i className='fa-brands fa-github' /> Repository
             </a>
             )
@@ -46,12 +46,12 @@ const Project = () => {
       </div>
 
       <div className='project-content'>
-        <Video embedId={data.video} />
+        {project.video ? <Video embedId={project.video} /> : null}
 
         <div className='project-description'>
-          {data.description
+          {project.description
             .split('.')
-            .filter(d => d !== '')
+            .filter((d) => d !== '')
             .map((d) => (
               <p key={d}>{`${d}.`}</p>
             ))}

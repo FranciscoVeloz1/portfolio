@@ -13,7 +13,9 @@ export default defineConfig({
       '@util': path.resolve(__dirname, './src/util'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@pages': path.resolve(__dirname, './src/pages'),
-      '@styles': path.resolve(__dirname, './src/styles')
+      '@styles': path.resolve(__dirname, './src/styles'),
+      '@client': path.resolve(__dirname, './src/client'),
+      '@mappers': path.resolve(__dirname, './src/mappers')
     }
   }
 })

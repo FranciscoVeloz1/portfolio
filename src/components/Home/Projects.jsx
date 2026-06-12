@@ -1,10 +1,19 @@
 import Card from './Card'
+import Spinner from '@components/Spinner/Spinner'
+import ErrorMessage from '@components/ErrorMessage/ErrorMessage'
 import { Link } from 'react-router-dom'
 import { URL } from '@util/constants'
-import { projects } from '@util/data/projects.data'
+import useResumeData from '@hooks/useResumeData'
 import '@styles/Home/Projects.css'
 
 const Projects = () => {
+  const { data, isLoading, isError } = useResumeData()
+
+  if (isLoading) return <Spinner />
+  if (isError) return <ErrorMessage />
+
+  const { projects } = data
+
   return (
     <section className='projects'>
       <div className='projects-header'>

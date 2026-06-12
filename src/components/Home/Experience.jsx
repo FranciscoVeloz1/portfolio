@@ -1,10 +1,19 @@
 import ExperienceItem from './ExperienceItem'
+import Spinner from '@components/Spinner/Spinner'
+import ErrorMessage from '@components/ErrorMessage/ErrorMessage'
 import { useState } from 'react'
-import { experiences } from '@util/data/experience.data'
+import useResumeData from '@hooks/useResumeData'
+import { resolveSkills } from '@util/resolveSkills'
 import '@styles/Home/Experience.css'
 
 const Experience = () => {
+  const { data, isLoading, isError } = useResumeData()
   const [load, setLoad] = useState(3)
+
+  if (isLoading) return <Spinner />
+  if (isError) return <ErrorMessage />
+
+  const { experiences, skills } = data
 
   const handleLoad = () => {
     if (load > 3) return setLoad(3)
@@ -28,7 +37,7 @@ const Experience = () => {
             date={e.date}
             company={e.company}
             description={e.description}
-            exBadges={e.badges}
+            tags={resolveSkills(e.badges, skills)}
           />
         ))}
 

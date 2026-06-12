@@ -1,18 +1,7 @@
 import Badge from '@components/Badge'
-import { badges } from '@util/data/badges.data'
 import '@styles/Home/ExperienceItem.css'
 
-const ExperienceItem = ({ id, image, title, date, company, description, exBadges }) => {
-  let tags = []
-
-  exBadges.map((pb) => {
-    badges.map((b) => {
-      if (b.id === pb) {
-        tags.push(b)
-      }
-    })
-  })
-
+const ExperienceItem = ({ image, title, date, company, description, tags = [] }) => {
   return (
     <div className='experience-item'>
       <img src={image} alt='logo' />

@@ -1,9 +1,17 @@
 import useScroll from '@hooks/useScroll'
 import Card from '@components/Projects/Card'
-import { projects } from '@util/data/projects.data'
+import Spinner from '@components/Spinner/Spinner'
+import ErrorMessage from '@components/ErrorMessage/ErrorMessage'
+import useResumeData from '@hooks/useResumeData'
 
 const Projects = () => {
   useScroll()
+  const { data, isLoading, isError } = useResumeData()
+
+  if (isLoading) return <Spinner />
+  if (isError) return <ErrorMessage />
+
+  const { projects } = data
 
   return (
     <section className='projects'>
@@ -18,7 +26,6 @@ const Projects = () => {
           <Card
             key={p.id}
             id={p.id}
-            link={p.link}
             image={p.image}
             title={p.title}
             date={p.date}
