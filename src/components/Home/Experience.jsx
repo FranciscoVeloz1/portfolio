@@ -1,39 +1,49 @@
-import ExperienceItem from './ExperienceItem'
 import { useState } from 'react'
-import { experiences } from '@util/data/experience.data'
+import ExperienceItem from './ExperienceItem'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/Experience.css'
 
 const Experience = () => {
+  const { data } = useResumeData()
   const [load, setLoad] = useState(3)
+  const experiences = data?.experiences || []
 
   const handleLoad = () => {
-    if (load > 3) return setLoad(3)
+    if (load > 3) {
+      setLoad(3)
+      return
+    }
 
-    return setLoad(experiences.length)
+    setLoad(experiences.length)
+  }
+
+  const visibleExperiences = experiences.slice(0, load)
+  let loadLabel = 'View all experiences'
+
+  if (load > 3) {
+    loadLabel = 'Hide experiences'
   }
 
   return (
     <section className='experience'>
       <p className='experience-title'>Experience</p>
 
-      {experiences
-        .sort((a, b) => b.id - a.id)
-        .slice(0, load)
-        .map((e) => (
+      {visibleExperiences.map((experience) => {
+        return (
           <ExperienceItem
-            key={e.id}
-            id={e.id}
-            image={e.image}
-            title={e.title}
-            date={e.date}
-            company={e.company}
-            description={e.description}
-            exBadges={e.badges}
+            key={experience.id}
+            image={experience.image}
+            title={experience.title}
+            date={experience.date}
+            company={experience.company}
+            responsibilities={experience.responsibilities}
+            badges={experience.badges}
           />
-        ))}
+        )
+      })}
 
       <p className='experience-load-small' onClick={handleLoad}>
-        {load === 3 ? 'View all experiences' : 'Hide experiences'}
+        {loadLabel}
       </p>
     </section>
   )

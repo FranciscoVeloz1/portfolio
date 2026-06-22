@@ -1,10 +1,13 @@
 import CertificateItem from './CertificateItem'
 import { Link } from 'react-router-dom'
 import { URL } from '@util/constants'
-import { certificates } from '@util/data/certificates.data'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/Certificate.css'
 
 const Certificate = () => {
+  const { data } = useResumeData()
+  const certificates = data?.certificates || []
+
   return (
     <section className='certificates'>
       <div className='certificates-header'>
@@ -19,17 +22,18 @@ const Certificate = () => {
       </div>
 
       <div className='certificates-cards'>
-        {certificates.slice(0, 3).map((c) => (
-          <CertificateItem
-            key={c.link}
-            id={c.link}
-            link={c.link}
-            image={c.image}
-            title={c.title}
-            date={c.date}
-            description={c.description}
-          />
-        ))}
+        {certificates.slice(0, 3).map((certificate) => {
+          return (
+            <CertificateItem
+              key={certificate.id}
+              link={certificate.link}
+              image={certificate.image}
+              title={certificate.title}
+              date={certificate.date}
+              description={certificate.description}
+            />
+          )
+        })}
       </div>
     </section>
   )

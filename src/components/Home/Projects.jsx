@@ -1,10 +1,13 @@
 import Card from './Card'
 import { Link } from 'react-router-dom'
 import { URL } from '@util/constants'
-import { projects } from '@util/data/projects.data'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/Projects.css'
 
 const Projects = () => {
+  const { data } = useResumeData()
+  const projects = data?.projects || []
+
   return (
     <section className='projects'>
       <div className='projects-header'>
@@ -19,16 +22,18 @@ const Projects = () => {
       </div>
 
       <div className='project-cards'>
-        {projects.slice(0, 3).map((p) => (
-          <Card
-            key={p.id}
-            id={p.id}
-            image={p.image}
-            title={p.title}
-            date={p.date}
-            description={p.description}
-          />
-        ))}
+        {projects.slice(0, 3).map((project) => {
+          return (
+            <Card
+              key={project.id}
+              id={project.id}
+              image={project.image}
+              title={project.title}
+              date={project.date}
+              description={project.description}
+            />
+          )
+        })}
       </div>
     </section>
   )

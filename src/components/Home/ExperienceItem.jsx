@@ -1,18 +1,8 @@
 import Badge from '@components/Badge'
-import { badges } from '@util/data/badges.data'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/ExperienceItem.css'
 
-const ExperienceItem = ({ id, image, title, date, company, description, exBadges }) => {
-  let tags = []
-
-  exBadges.map((pb) => {
-    badges.map((b) => {
-      if (b.id === pb) {
-        tags.push(b)
-      }
-    })
-  })
-
+const ExperienceItem = ({ image, title, date, company, responsibilities, badges }) => {
   return (
     <div className='experience-item'>
       <img src={image} alt='logo' />
@@ -25,13 +15,17 @@ const ExperienceItem = ({ id, image, title, date, company, description, exBadges
 
         <p className='experience-small'>{company}</p>
 
-        <p className='experience-content'>{description}</p>
+        <div className='experience-content'>
+          {responsibilities.map((responsibility) => {
+            return <p key={responsibility}>{responsibility}</p>
+          })}
+        </div>
 
-        {tags.length > 0 ? (
+        {badges.length > 0 ? (
           <div className='experience-badges'>
-            {tags.map((t) => (
-              <Badge id={t.id} label={t.label} key={t.id} />
-            ))}
+            {badges.map((skill) => {
+              return <Badge skill={skill} key={skill.id} />
+            })}
           </div>
         ) : null}
       </div>
