@@ -34,6 +34,18 @@
 
 .experience-content {
   font-size: var(--md);
+  margin: 8px 0 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.experience-content li {
+  margin-bottom: 6px;
+  color: var(--light-secondary);
+}
+
+.experience-content li:last-child {
+  margin-bottom: 0;
 }
 
 .experience-badges {

@@ -2,70 +2,82 @@ import Video from '@components/Video'
 import Badge from '@components/Badge'
 import useScroll from '@hooks/useScroll'
 import { useParams } from 'react-router-dom'
-import { projects } from '@util/data/projects.data'
-import { badges } from '@util/data/badges.data'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Projects/Project.css'
 
 const Project = () => {
   useScroll()
   const { id } = useParams()
-  const data = projects.find((p) => p.id === parseInt(id))
-  const tags = []
+  const { data } = useResumeData()
+  const projects = data?.projects || []
+  const project = projects.find((item) => {
+    return item.id === parseInt(id, 10)
+  })
 
-  if (data.badges) {
-    data.badges.forEach((pb) => {
-      badges.forEach((b) => {
-        if (b.id === pb) {
-          tags.push(b)
-        }
-      })
-    })
+  if (!project) {
+    return (
+      <div className='project-not-found'>
+        <p>Project not found.</p>
+      </div>
+    )
+  }
+
+  const descriptionParagraphs = project.description.split('.').filter((paragraph) => {
+    return paragraph !== ''
+  })
+
+  let demoButton = null
+
+  if (project.demo) {
+    demoButton = (
+      <a href={project.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
+        <i className='fa-solid fa-play' /> Live demo
+      </a>
+    )
+  }
+
+  let repositoryButton = null
+
+  if (project.git) {
+    repositoryButton = (
+      <a href={project.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
+        <i className='fa-brands fa-github' /> Repository
+      </a>
+    )
+  }
+
+  let badgesSection = null
+
+  if (project.badges.length > 0) {
+    badgesSection = (
+      <div className='badge-container'>
+        {project.badges.map((skill) => {
+          return <Badge skill={skill} key={skill.id} />
+        })}
+      </div>
+    )
   }
 
   return (
     <>
-      <p className='project-small'>{data.date}</p>
-      <p className='project-title'>{data.title}</p>
+      <p className='project-small'>{project.date}</p>
+      <p className='project-title'>{project.title}</p>
 
       <div className='project-buttons'>
-        {data.demo
-          ? (
-            <a href={data.demo} className='project-button btn-dark-primary' target='_blank' rel='noreferrer'>
-              <i className='fa-solid fa-play' /> Live demo
-            </a>
-            )
-          : null}
-
-        {data.git
-          ? (
-            <a href={data.git} className='project-button btn-secondary' target='_blank' rel='noreferrer'>
-              <i className='fa-brands fa-github' /> Repository
-            </a>
-            )
-          : null}
+        {demoButton}
+        {repositoryButton}
       </div>
 
       <div className='project-content'>
-        <Video embedId={data.video} />
+        <Video embedId={project.video} />
 
         <div className='project-description'>
-          {data.description
-            .split('.')
-            .filter(d => d !== '')
-            .map((d) => (
-              <p key={d}>{`${d}.`}</p>
-            ))}
+          {descriptionParagraphs.map((paragraph) => {
+            return <p key={paragraph}>{`${paragraph}.`}</p>
+          })}
         </div>
 
-        {tags.length > 0
-          ? (
-            <div className='badge-container'>
-              {tags.map((t) => (
-                <Badge id={t.id} label={t.label} key={t.id} />
-              ))}
-            </div>
-            )
-          : null}
+        {badgesSection}
       </div>
     </>
   )

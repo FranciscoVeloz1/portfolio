@@ -20,7 +20,7 @@
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  filter: brightness(.9)
+  filter: brightness(0.9);
 }
 
 .projects-card-content {

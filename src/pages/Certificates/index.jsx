@@ -1,10 +1,12 @@
 import CertificateItem from '@components/Home/CertificateItem'
 import useScroll from '@hooks/useScroll'
-import { certificates } from '@util/data/certificates.data'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/Certificate.css'
 
 const Certificates = () => {
   useScroll()
+  const { data } = useResumeData()
+  const certificates = data?.certificates || []
 
   return (
     <section className='certificates'>
@@ -13,17 +15,18 @@ const Certificates = () => {
       </p>
 
       <div className='certificates-cards'>
-        {certificates.map((c) => (
-          <CertificateItem
-            key={c.id}
-            id={c.id}
-            link={c.link}
-            image={c.image}
-            title={c.title}
-            date={c.date}
-            description={c.description}
-          />
-        ))}
+        {certificates.map((certificate) => {
+          return (
+            <CertificateItem
+              key={certificate.id}
+              link={certificate.link}
+              image={certificate.image}
+              title={certificate.title}
+              date={certificate.date}
+              description={certificate.description}
+            />
+          )
+        })}
       </div>
     </section>
   )

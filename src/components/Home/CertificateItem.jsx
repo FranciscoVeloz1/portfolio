@@ -1,6 +1,6 @@
 import '@styles/Home/CertificateItem.css'
 
-const CertificateItem = ({ id, image, link, title, date, description }) => {
+const CertificateItem = ({ image, link, title, date, description }) => {
   return (
     <div className='certificate-item'>
       <img src={image} alt='logo' />

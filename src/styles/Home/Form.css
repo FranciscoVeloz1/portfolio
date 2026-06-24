@@ -1,4 +1,4 @@
-@import "../vars.css";
+@import '../vars.css';
 
 .form-container {
   margin-bottom: 88px;
@@ -29,7 +29,7 @@
   width: 100%;
   color: var(--very-light-secondary) !important;
   font-size: var(--md);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 input:-webkit-autofill,
