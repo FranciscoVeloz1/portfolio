@@ -22,11 +22,9 @@ const Project = () => {
     )
   }
 
-  const descriptionParagraphs = project.description
-    .split('.')
-    .filter((paragraph) => {
-      return paragraph !== ''
-    })
+  const descriptionParagraphs = project.description.split('.').filter((paragraph) => {
+    return paragraph !== ''
+  })
 
   let demoButton = null
 

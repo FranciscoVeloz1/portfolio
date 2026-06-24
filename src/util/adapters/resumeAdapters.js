@@ -1,21 +1,9 @@
-const MONTHS = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec'
-]
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 export const formatProjectDate = (isoDate) => {
   if (!isoDate) {
     const emptyDate = ''
+
     return emptyDate
   }
 
@@ -26,28 +14,33 @@ export const formatProjectDate = (isoDate) => {
   }
 
   const formattedDate = `${MONTHS[month - 1]} ${day}, ${year}`
+
   return formattedDate
 }
 
 const parseStartDate = (startDate) => {
   if (!startDate) {
     const fallback = 0
+
     return fallback
   }
 
   const [year, month] = startDate.split('-').map(Number)
   const parsedDate = year * 100 + (month || 1)
+
   return parsedDate
 }
 
 const parseProjectDate = (date) => {
   if (!date) {
     const fallback = 0
+
     return fallback
   }
 
   const [year, month, day] = date.split('-').map(Number)
   const parsedDate = year * 10000 + (month || 1) * 100 + (day || 1)
+
   return parsedDate
 }
 
@@ -96,19 +89,23 @@ export const adaptSkills = (skills) => {
 }
 
 export const adaptWorkExperience = (workExperience, skills) => {
-  const skillMap = new Map(skills.map((skill) => {
-    return [skill.id, skill]
-  }))
+  const skillMap = new Map(
+    skills.map((skill) => {
+      return [skill.id, skill]
+    })
+  )
 
   const adaptedExperiences = [...workExperience]
     .sort((a, b) => {
       const sortValue = parseStartDate(b.startDate) - parseStartDate(a.startDate)
+
       return sortValue
     })
     .map((experience, index) => {
       const badges = (experience.skills || [])
         .map((skillId) => {
           const skill = skillMap.get(skillId)
+
           return skill
         })
         .filter(Boolean)
@@ -130,19 +127,23 @@ export const adaptWorkExperience = (workExperience, skills) => {
 }
 
 export const adaptProjects = (projects, skills) => {
-  const skillMap = new Map(skills.map((skill) => {
-    return [skill.id, skill]
-  }))
+  const skillMap = new Map(
+    skills.map((skill) => {
+      return [skill.id, skill]
+    })
+  )
 
   const adaptedProjects = [...projects]
     .sort((a, b) => {
       const sortValue = parseProjectDate(b.date) - parseProjectDate(a.date)
+
       return sortValue
     })
     .map((project) => {
       const badges = (project.skills || [])
         .map((skillId) => {
           const skill = skillMap.get(skillId)
+
           return skill
         })
         .filter(Boolean)

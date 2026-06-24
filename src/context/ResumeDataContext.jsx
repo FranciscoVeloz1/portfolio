@@ -12,11 +12,7 @@ export const ResumeDataProvider = ({ children }) => {
     }
   }, [])
 
-  return (
-    <ResumeDataContext.Provider value={value}>
-      {children}
-    </ResumeDataContext.Provider>
-  )
+  return <ResumeDataContext.Provider value={value}>{children}</ResumeDataContext.Provider>
 }
 
 export const useResumeData = () => {

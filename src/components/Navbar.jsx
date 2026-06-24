@@ -19,8 +19,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to='/' className='nav-brand'>
-        {profile?.firstName || 'Francisco'}{' '}
-        <span className='txt-primary'>{profile?.lastName || 'Veloz'}</span>
+        {profile?.firstName || 'Francisco'} <span className='txt-primary'>{profile?.lastName || 'Veloz'}</span>
       </Link>
 
       <ul className='nav-menu'>
