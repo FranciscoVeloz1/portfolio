@@ -26,6 +26,11 @@
   font-size: var(--xl);
 }
 
+.experience-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
 .experience-small {
   font-size: var(--sm);
   font-weight: 400;
@@ -37,6 +42,8 @@
   margin: 8px 0 0;
   padding-left: 20px;
   list-style-type: disc;
+  list-style-position: inside;
+  overflow-wrap: break-word;
 }
 
 .experience-content li {
@@ -50,6 +57,7 @@
 
 .experience-badges {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 8px;
 }

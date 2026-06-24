@@ -148,7 +148,21 @@
 
   .experience-item {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .experience-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experience-content {
+    text-align: left;
+  }
+
+  .experience-subtitle p,
+  .experience-subtitle .experience-small {
     text-align: center;
   }
 
@@ -178,8 +192,13 @@
   /* Certificates */
   .certificate-item {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+  }
+
+  .certificate-wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 
   .certificate-subtitle {
