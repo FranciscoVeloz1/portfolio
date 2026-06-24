@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { URL } from './util/constants'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ResumeDataProvider } from '@context/ResumeDataContext'
-import ResumeDataBoundary from '@components/ResumeDataBoundary'
 
 // Importing pages
 import Home from './pages/Home'
@@ -34,18 +33,16 @@ const App = () => {
 
   return (
     <ResumeDataProvider>
-      <ResumeDataBoundary>
-        <HashRouter>
-          <Layout>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path={`${URL}/projects`} element={<Projects />} />
-              <Route path={`${URL}/projects/:id`} element={<Project />} />
-              <Route path={`${URL}/certificates`} element={<Certificates />} />
-            </Routes>
-          </Layout>
-        </HashRouter>
-      </ResumeDataBoundary>
+      <HashRouter>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path={`${URL}/projects`} element={<Projects />} />
+            <Route path={`${URL}/projects/:id`} element={<Project />} />
+            <Route path={`${URL}/certificates`} element={<Certificates />} />
+          </Routes>
+        </Layout>
+      </HashRouter>
     </ResumeDataProvider>
   )
 }

@@ -5,23 +5,33 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const portfolioRoot = resolve(__dirname, '..')
 const source = resolve(portfolioRoot, '../resume-data-source/index.json')
-const destination = resolve(portfolioRoot, 'public/resume-data/index.json')
+const destinations = [
+  resolve(portfolioRoot, 'src/data/index.json'),
+  resolve(portfolioRoot, 'public/resume-data/index.json')
+]
 
 if (existsSync(source)) {
-  mkdirSync(dirname(destination), { recursive: true })
-  copyFileSync(source, destination)
-  console.log(`Synced resume data to ${destination}`)
+  for (const destination of destinations) {
+    mkdirSync(dirname(destination), { recursive: true })
+    copyFileSync(source, destination)
+    console.log(`Synced resume data to ${destination}`)
+  }
+
   process.exit(0)
 }
 
-if (existsSync(destination)) {
+const missingDestinations = destinations.filter((destination) => {
+  return !existsSync(destination)
+})
+
+if (missingDestinations.length === 0) {
   console.warn(
-    `Resume data source not found at ${source}; using committed ${destination}`
+    `Resume data source not found at ${source}; using committed copies in src/data and public/resume-data`
   )
   process.exit(0)
 }
 
 console.error(
-  `Resume data source not found at ${source} and no committed copy at ${destination}`
+  `Resume data source not found at ${source} and missing committed copies at:\n${missingDestinations.join('\n')}`
 )
 process.exit(1)
