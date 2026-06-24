@@ -13,8 +13,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettify": "prettier --write .",
-    "precommit": "npm run prettify && npm run lint && npm run lint:fix",
-    "deploy": "gh-pages -d dist"
+    "precommit": "npm run prettify && npm run lint && npm run lint:fix"
   },
   "dependencies": {
     "react": "18.2.0",
