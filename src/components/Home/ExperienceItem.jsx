@@ -1,5 +1,4 @@
 import Badge from '@components/Badge'
-import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/ExperienceItem.css'
 
 const ExperienceItem = ({ image, title, date, company, responsibilities, badges }) => {
@@ -15,11 +14,11 @@ const ExperienceItem = ({ image, title, date, company, responsibilities, badges 
 
         <p className='experience-small'>{company}</p>
 
-        <div className='experience-content'>
+        <ul className='experience-content'>
           {responsibilities.map((responsibility) => {
-            return <p key={responsibility}>{responsibility}</p>
+            return <li key={responsibility}>{responsibility}</li>
           })}
-        </div>
+        </ul>
 
         {badges.length > 0 ? (
           <div className='experience-badges'>
