@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useResumeData } from '@hooks/useResumeData'
+import { orderSocialNetworks } from '@util/socialOrder'
 import '@styles/Navbar.css'
-
-const SOCIAL_ORDER = ['YouTube', 'GitHub', 'LinkedIn']
 
 const Navbar = () => {
   const { data } = useResumeData()
@@ -15,13 +14,7 @@ const Navbar = () => {
     document.body.classList.toggle('white-theme-variables')
   }
 
-  const orderedSocialNetworks = SOCIAL_ORDER
-    .map((platform) => {
-      return socialNetworks.find((network) => {
-        return network.platform === platform
-      })
-    })
-    .filter(Boolean)
+  const orderedSocialNetworks = orderSocialNetworks(socialNetworks)
 
   return (
     <nav>

@@ -1,4 +1,5 @@
 import { useResumeData } from '@hooks/useResumeData'
+import { orderSocialNetworks } from '@util/socialOrder'
 import '@styles/Footer.css'
 
 const SOCIAL_ICON_MAP = {
@@ -37,9 +38,7 @@ const Footer = () => {
     return platform
   }
 
-  const primarySocialNetworks = socialNetworks.filter((network) => {
-    return ['YouTube', 'GitHub', 'LinkedIn'].includes(network.platform)
-  })
+  const orderedSocialNetworks = orderSocialNetworks(socialNetworks)
 
   return (
     <footer>
@@ -52,7 +51,7 @@ const Footer = () => {
               </a>
             ) : null}
 
-            {primarySocialNetworks
+            {orderedSocialNetworks
               .filter((network) => {
                 return network.platform === 'YouTube'
               })
@@ -66,17 +65,13 @@ const Footer = () => {
           </div>
 
           <div className='footer-item'>
-            {primarySocialNetworks
-              .filter((network) => {
-                return ['GitHub', 'LinkedIn'].includes(network.platform)
-              })
-              .map((network) => {
-                return (
-                  <a href={network.link} key={network.platform} target='_blank' rel='noreferrer'>
-                    <i className={getSocialIcon(network.platform)} /> {getSocialLabel(network.platform)}
-                  </a>
-                )
-              })}
+            {orderSocialNetworks(socialNetworks, ['GitHub', 'LinkedIn']).map((network) => {
+              return (
+                <a href={network.link} key={network.platform} target='_blank' rel='noreferrer'>
+                  <i className={getSocialIcon(network.platform)} /> {getSocialLabel(network.platform)}
+                </a>
+              )
+            })}
           </div>
 
           <div className='footer-item'>
