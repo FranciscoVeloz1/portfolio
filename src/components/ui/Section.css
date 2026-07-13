@@ -1,0 +1,35 @@
+.section {
+  padding: var(--space-9) 0;
+}
+
+.section-header {
+  margin-bottom: var(--space-7);
+}
+
+.section-header.centered {
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.section-title {
+  font-size: var(--xl3);
+}
+
+.section-description {
+  margin-top: var(--space-3);
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+.section-header.centered .section-description {
+  margin-inline: auto;
+}

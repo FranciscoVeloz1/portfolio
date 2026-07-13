@@ -1,0 +1,221 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Francisco Veloz" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+      - button "Open navigation menu" [ref=e614] [cursor=pointer]:
+        - img [ref=e615]
+  - main [ref=e26]:
+    - region "Introduction" [ref=e616]:
+      - generic [ref=e617]:
+        - paragraph [ref=e618]: Senior Full-Stack Engineer | React, Node.js, Python & AI
+        - heading "Hi, I'm Francisco Veloz" [level=1] [ref=e619]
+        - paragraph [ref=e620]: Full-stack software engineer with 8+ years of experience in technology, building scalable web, mobile, and AI-powered applications with React, Node.js, Python, and cloud infrastructure. Currently a Dev Lead at PwC México, leading development teams, architecting production systems, and delivering blockchain and data engineering solutions for enterprise clients. Track record of measurable impact, including cutting daily inventory processing time by 88% through workflow automation.
+        - generic [ref=e621]:
+          - link "View projects" [ref=e622] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Get in touch" [ref=e623] [cursor=pointer]:
+            - /url: "#contact"
+      - img "Francisco González Veloz" [ref=e624]
+    - generic [ref=e626]:
+      - generic [ref=e627]:
+        - generic [ref=e628]: Career
+        - heading "Experience" [level=2] [ref=e629]
+      - generic [ref=e630]:
+        - generic [ref=e631]:
+          - img "PwC México" [ref=e632]
+          - generic [ref=e633]:
+            - generic [ref=e634]:
+              - paragraph [ref=e635]: Dev Lead - Senior Associate
+              - generic [ref=e636]: Current
+            - paragraph [ref=e637]: PwC México - Guadalajara, Jalisco, México · Jun 2025 - Present
+            - list [ref=e638]:
+              - listitem [ref=e639]: Lead end-to-end full-stack delivery across a React microservices frontend, Node.js and Python backend services, and PySpark data pipelines
+              - listitem [ref=e640]: Drive vulnerability remediation through software composition analysis scanning, reducing security risk and keeping services compliant
+            - button "Show more" [ref=e641] [cursor=pointer]
+            - generic [ref=e642]:
+              - generic [ref=e643]: React
+              - generic [ref=e644]: TypeScript
+              - generic [ref=e645]: Node.js
+              - generic [ref=e646]: Python
+              - generic [ref=e647]: PySpark
+              - generic [ref=e648]: AI Agents
+              - generic [ref=e649]: Azure DevOps
+        - generic [ref=e650]:
+          - img "PwC México" [ref=e651]
+          - generic [ref=e652]:
+            - paragraph [ref=e654]: Associate
+            - paragraph [ref=e655]: PwC México - Guadalajara, Jalisco, México · Feb 2023 - Jun 2025
+            - list [ref=e656]:
+              - listitem [ref=e657]: Built scalable web platforms integrated with blockchain-based data pipelines for enterprise clients
+              - listitem [ref=e658]: Designed secure data engineering workflows with Python and Databricks, processing on-chain and off-chain datasets through custom ETL and analytics pipelines
+            - button "Show more" [ref=e659] [cursor=pointer]
+            - generic [ref=e660]:
+              - generic [ref=e661]: Python
+              - generic [ref=e662]: Databricks
+              - generic [ref=e663]: PySpark
+              - generic [ref=e664]: Blockchain Data Pipelines
+              - generic [ref=e665]: LLM Integration
+              - generic [ref=e666]: React
+              - generic [ref=e667]: TypeScript
+        - generic [ref=e668]:
+          - img "Del Norte Distribution" [ref=e669]
+          - generic [ref=e670]:
+            - paragraph [ref=e672]: Full Stack Developer
+            - paragraph [ref=e673]: Del Norte Distribution - Oxnard, California, United States · Jul 2022 - Oct 2022
+            - list [ref=e674]:
+              - listitem [ref=e675]: Built a full-stack inventory management platform with real-time stock synchronization and order processing
+              - listitem [ref=e676]: Automated bulk inventory intake through Excel import workflows, replacing manual data entry
+            - button "Show more" [ref=e677] [cursor=pointer]
+            - generic [ref=e678]:
+              - generic [ref=e679]: React
+              - generic [ref=e680]: TypeScript
+              - generic [ref=e681]: Node.js
+              - generic [ref=e682]: Express
+              - generic [ref=e683]: MySQL
+              - generic [ref=e684]: DigitalOcean
+      - button "View all experiences" [ref=e686] [cursor=pointer]
+    - generic [ref=e688]:
+      - generic [ref=e689]:
+        - generic [ref=e690]:
+          - generic [ref=e691]: Work
+          - heading "Recent projects" [level=2] [ref=e692]
+        - link "View all projects" [ref=e693] [cursor=pointer]:
+          - /url: "#/projects"
+          - text: View all projects
+          - img [ref=e694]
+      - generic [ref=e696]:
+        - link "React Native Speed Art View project React Native Speed Art Nov 1, 2022 Design library for React Native with customizable, reusable components and a utility-class system th... React Native React TypeScript" [ref=e697] [cursor=pointer]:
+          - /url: "#/projects/10"
+          - generic [ref=e698]:
+            - img "React Native Speed Art" [ref=e699]
+            - generic [ref=e700]:
+              - text: View project
+              - img [ref=e701]
+          - generic [ref=e704]:
+            - paragraph [ref=e705]: React Native Speed Art
+            - paragraph [ref=e706]: Nov 1, 2022
+            - paragraph [ref=e707]: Design library for React Native with customizable, reusable components and a utility-class system th...
+            - generic [ref=e708]:
+              - generic [ref=e709]: React Native
+              - generic [ref=e710]: React
+              - generic [ref=e711]: TypeScript
+        - link "React & Node.js REST API Template View project React & Node.js REST API Template Oct 20, 2022 Production-ready monorepo template built with React, Node.js, and TypeScript. Includes JWT authentic... React Node.js TypeScript" [ref=e712] [cursor=pointer]:
+          - /url: "#/projects/11"
+          - generic [ref=e713]:
+            - img "React & Node.js REST API Template" [ref=e714]
+            - generic [ref=e715]:
+              - text: View project
+              - img [ref=e716]
+          - generic [ref=e719]:
+            - paragraph [ref=e720]: React & Node.js REST API Template
+            - paragraph [ref=e721]: Oct 20, 2022
+            - paragraph [ref=e722]: Production-ready monorepo template built with React, Node.js, and TypeScript. Includes JWT authentic...
+            - generic [ref=e723]:
+              - generic [ref=e724]: React
+              - generic [ref=e725]: Node.js
+              - generic [ref=e726]: TypeScript
+        - link "BoxBook View project BoxBook Apr 7, 2022 Social book-tracking platform built with Next.js that lets users manage reading progress, reviews, r... React Node.js JavaScript" [ref=e727] [cursor=pointer]:
+          - /url: "#/projects/1"
+          - generic [ref=e728]:
+            - img "BoxBook" [ref=e729]
+            - generic [ref=e730]:
+              - text: View project
+              - img [ref=e731]
+          - generic [ref=e734]:
+            - paragraph [ref=e735]: BoxBook
+            - paragraph [ref=e736]: Apr 7, 2022
+            - paragraph [ref=e737]: Social book-tracking platform built with Next.js that lets users manage reading progress, reviews, r...
+            - generic [ref=e738]:
+              - generic [ref=e739]: React
+              - generic [ref=e740]: Node.js
+              - generic [ref=e741]: JavaScript
+    - generic [ref=e743]:
+      - generic [ref=e744]:
+        - generic [ref=e745]:
+          - generic [ref=e746]: Credentials
+          - heading "Licenses and certifications" [level=2] [ref=e747]
+        - link "View all certifications" [ref=e748] [cursor=pointer]:
+          - /url: "#/certificates"
+          - text: View all certifications
+          - img [ref=e749]
+      - generic [ref=e751]:
+        - generic [ref=e752]:
+          - 'img "Databricks Course: Delta Lake Architecture" [ref=e753]'
+          - generic [ref=e754]:
+            - generic [ref=e755]:
+              - paragraph [ref=e756]: "Databricks Course: Delta Lake Architecture"
+              - generic [ref=e757]: Jan 2025
+            - paragraph [ref=e758]: "Delta Lake architecture on Databricks: building bronze, silver, and gold medallion layers, designing ETL flows, and leveraging the storage advantages of the Parquet and Delta formats."
+            - link "See certificate" [ref=e759] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/9540-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e760]
+        - generic [ref=e763]:
+          - img "Project Management Fundamentals" [ref=e764]
+          - generic [ref=e765]:
+            - generic [ref=e766]:
+              - paragraph [ref=e767]: Project Management Fundamentals
+              - generic [ref=e768]: Oct 2023
+            - paragraph [ref=e769]: "Project lifecycle management: planning and controlling time, resources, and cost; identifying risks; handling crises; and closing projects with fundamental project management practices."
+            - link "See certificate" [ref=e770] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/2654-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e771]
+        - generic [ref=e774]:
+          - 'img "Python Course: PIP and Virtual Environments" [ref=e775]'
+          - generic [ref=e776]:
+            - generic [ref=e777]:
+              - paragraph [ref=e778]: "Python Course: PIP and Virtual Environments"
+              - generic [ref=e779]: Oct 2023
+            - paragraph [ref=e780]: "Professional Python tooling: dependency management with pip and virtual environments, containerizing applications with Docker, building web servers with FastAPI, and working with libraries such as Pandas and Requests."
+            - link "See certificate" [ref=e781] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/4261-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e782]
+    - generic [ref=e786]:
+      - generic [ref=e787]:
+        - generic [ref=e788]: Say hello
+        - heading "Contact me" [level=2] [ref=e789]
+      - generic [ref=e790]:
+        - generic [ref=e791]:
+          - generic [ref=e792]: Email
+          - textbox "Email" [ref=e793]:
+            - /placeholder: you@example.com
+        - generic [ref=e794]:
+          - generic [ref=e795]: Message
+          - textbox "Message" [ref=e796]:
+            - /placeholder: How can I help?
+        - button "Submit" [ref=e797] [cursor=pointer]
+  - contentinfo [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - link "franciscoveloz245@gmail.com" [ref=e32] [cursor=pointer]:
+            - /url: mailto:franciscoveloz245@gmail.com
+            - img [ref=e33]
+            - text: franciscoveloz245@gmail.com
+          - link "Francisco Veloz" [ref=e36] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+            - img [ref=e37]
+            - text: Francisco Veloz
+        - generic [ref=e39]:
+          - link "FranciscoVeloz1" [ref=e40] [cursor=pointer]:
+            - /url: https://github.com/FranciscoVeloz1
+            - img [ref=e41]
+            - text: FranciscoVeloz1
+          - link "Francisco González Veloz" [ref=e43] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/franciscoveloz/
+            - img [ref=e44]
+            - text: Francisco González Veloz
+        - link "+52 474 130 9933" [ref=e47] [cursor=pointer]:
+          - /url: tel:+524741309933
+          - img [ref=e48]
+          - text: +52 474 130 9933
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: © 2026 Francisco González Veloz
+        - button "Back to top" [ref=e52]:
+          - img [ref=e53]
+          - text: Back to top

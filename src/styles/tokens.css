@@ -1,0 +1,99 @@
+@layer tokens {
+  :root {
+    /* Primitive palette */
+    --color-black: #05060d;
+    --color-ink-900: #06080f;
+    --color-ink-800: #0c1024;
+    --color-ink-700: #121734;
+    --color-ink-600: #1e2547;
+    --color-ink-400: #3a4276;
+    --color-mist-300: #9aa4c4;
+    --color-mist-100: #e8ecf5;
+    --color-white: #ffffff;
+
+    --color-cyan-500: #24bdff;
+    --color-cyan-400: #5cd0ff;
+    --color-cyan-700: #1721a6;
+    --color-violet-500: #7c6cf0;
+    --color-danger-500: #ef4444;
+    --color-success-500: #22c55e;
+
+    /* Semantic - dark (default) */
+    --bg: var(--color-ink-900);
+    --surface: var(--color-ink-800);
+    --surface-raised: var(--color-ink-700);
+    --border: var(--color-ink-600);
+    --border-strong: var(--color-ink-400);
+    --text: var(--color-mist-100);
+    --text-muted: var(--color-mist-300);
+    --text-on-accent: var(--color-ink-900);
+    --accent: var(--color-cyan-500);
+    --accent-strong: var(--color-cyan-400);
+    --accent-muted: var(--color-cyan-700);
+    --secondary-accent: var(--color-violet-500);
+    --focus: var(--color-cyan-400);
+    --danger: var(--color-danger-500);
+    --success: var(--color-success-500);
+
+    --shadow-color: 220 60% 2%;
+    --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.4);
+    --shadow-md: 0 8px 24px hsl(var(--shadow-color) / 0.45);
+    --shadow-lg: 0 16px 48px hsl(var(--shadow-color) / 0.55);
+
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+
+    /* Radii */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 999px;
+
+    /* Type scale */
+    --xs: 0.8125rem;
+    --sm: 0.9375rem;
+    --md: 1rem;
+    --lg: 1.125rem;
+    --xl: 1.25rem;
+    --xl2: 1.5rem;
+    --xl3: 2rem;
+    --xl4: 2.75rem;
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+
+    --transition-fast: 150ms ease;
+    --transition-base: 220ms ease;
+
+    --container-max: min(1120px, 92vw);
+  }
+
+  :root[data-theme='light'] {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --border: #e2e6f0;
+    --border-strong: #c7ceE0;
+    --text: #0b1020;
+    --text-muted: #55607a;
+    --text-on-accent: #ffffff;
+    --accent: #0d8cff;
+    --accent-strong: #0075e2;
+    --accent-muted: #dceeff;
+    --shadow-color: 220 30% 80%;
+    --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.5);
+    --shadow-md: 0 8px 24px hsl(var(--shadow-color) / 0.45);
+    --shadow-lg: 0 16px 48px hsl(var(--shadow-color) / 0.4);
+  }
+}

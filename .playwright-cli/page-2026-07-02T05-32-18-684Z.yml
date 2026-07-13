@@ -1,0 +1,160 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Francisco Veloz" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Projects" [ref=e10] [cursor=pointer]:
+              - /url: "#/projects"
+          - listitem [ref=e11]:
+            - link "Certificates" [ref=e12] [cursor=pointer]:
+              - /url: "#/certificates"
+        - generic [ref=e13]:
+          - link "YouTube" [ref=e14] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+            - img [ref=e15]
+          - link "GitHub" [ref=e17] [cursor=pointer]:
+            - /url: https://github.com/FranciscoVeloz1
+            - img [ref=e18]
+          - link "LinkedIn" [ref=e20] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/franciscoveloz/
+            - img [ref=e21]
+        - button "Switch to dark theme" [ref=e237] [cursor=pointer]:
+          - img [ref=e238]
+  - main [ref=e26]:
+    - generic [ref=e401]:
+      - paragraph [ref=e402]: Licenses and certifications
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - 'img "Databricks Course: Delta Lake Architecture" [ref=e405]'
+          - generic [ref=e406]:
+            - generic [ref=e407]:
+              - paragraph [ref=e408]: "Databricks Course: Delta Lake Architecture"
+              - generic [ref=e409]: Jan 2025
+            - paragraph [ref=e410]: "Delta Lake architecture on Databricks: building bronze, silver, and gold medallion layers, designing ETL flows, and leveraging the storage advantages of the Parquet and Delta formats."
+            - link "See certificate" [ref=e411] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/9540-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e412]
+        - generic [ref=e415]:
+          - img "Project Management Fundamentals" [ref=e416]
+          - generic [ref=e417]:
+            - generic [ref=e418]:
+              - paragraph [ref=e419]: Project Management Fundamentals
+              - generic [ref=e420]: Oct 2023
+            - paragraph [ref=e421]: "Project lifecycle management: planning and controlling time, resources, and cost; identifying risks; handling crises; and closing projects with fundamental project management practices."
+            - link "See certificate" [ref=e422] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/2654-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e423]
+        - generic [ref=e426]:
+          - 'img "Python Course: PIP and Virtual Environments" [ref=e427]'
+          - generic [ref=e428]:
+            - generic [ref=e429]:
+              - paragraph [ref=e430]: "Python Course: PIP and Virtual Environments"
+              - generic [ref=e431]: Oct 2023
+            - paragraph [ref=e432]: "Professional Python tooling: dependency management with pip and virtual environments, containerizing applications with Docker, building web servers with FastAPI, and working with libraries such as Pandas and Requests."
+            - link "See certificate" [ref=e433] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/4261-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e434]
+        - generic [ref=e437]:
+          - img "React.js Practical Course" [ref=e438]
+          - generic [ref=e439]:
+            - generic [ref=e440]:
+              - paragraph [ref=e441]: React.js Practical Course
+              - generic [ref=e442]: Feb 2022
+            - paragraph [ref=e443]: Building reusable React components from HTML and CSS layouts, configuring a development environment with Webpack and Babel, and structuring components, containers, routes, and hooks.
+            - link "See certificate" [ref=e444] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/2484-react-practico/diploma/detalle/
+              - text: See certificate
+              - img [ref=e445]
+        - generic [ref=e448]:
+          - 'img "Next.js Course: Authentication" [ref=e449]'
+          - generic [ref=e450]:
+            - generic [ref=e451]:
+              - paragraph [ref=e452]: "Next.js Course: Authentication"
+              - generic [ref=e453]: Feb 2022
+            - paragraph [ref=e454]: "Authentication strategies in Next.js: session- and token-based authentication for views and APIs, role and permission management, and route protection on both client and server."
+            - link "See certificate" [ref=e455] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/2428-course/diploma/detalle/
+              - text: See certificate
+              - img [ref=e456]
+        - generic [ref=e459]:
+          - img "Frontend Developer Practical Course" [ref=e460]
+          - generic [ref=e461]:
+            - generic [ref=e462]:
+              - paragraph [ref=e463]: Frontend Developer Practical Course
+              - generic [ref=e464]: Dec 2021
+            - paragraph [ref=e465]: HTML document anatomy, CSS elements and properties, and responsive design applied to building the main screens of a production website.
+            - link "See certificate" [ref=e466] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/2477-frontend-developer-practico/diploma/detalle/
+              - text: See certificate
+              - img [ref=e467]
+        - generic [ref=e470]:
+          - img "React Router and Redux Course" [ref=e471]
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - paragraph [ref=e474]: React Router and Redux Course
+              - generic [ref=e475]: Jun 2021
+            - paragraph [ref=e476]: Client-side routing with React Router DOM and centralized state management with Redux, covering the full Redux data flow in interactive web applications.
+            - link "See certificate" [ref=e477] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/course/1652-react-router-redux/diploma/detalle/
+              - text: See certificate
+              - img [ref=e478]
+        - generic [ref=e481]:
+          - img "ECMAScript 6+ Course" [ref=e482]
+          - generic [ref=e483]:
+            - generic [ref=e484]:
+              - paragraph [ref=e485]: ECMAScript 6+ Course
+              - generic [ref=e486]: Jul 2020
+            - paragraph [ref=e487]: Modern JavaScript language features introduced from ES6 through ES13, following the yearly ECMAScript specification process.
+            - link "See certificate" [ref=e488] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/1815-ecmascript-6/diploma/detalle/
+              - text: See certificate
+              - img [ref=e489]
+        - generic [ref=e492]:
+          - img "Asynchronous JavaScript Course" [ref=e493]
+          - generic [ref=e494]:
+            - generic [ref=e495]:
+              - paragraph [ref=e496]: Asynchronous JavaScript Course
+              - generic [ref=e497]: Jul 2020
+            - paragraph [ref=e498]: "JavaScript's asynchronous model: callbacks, promises, and async/await, applied to building real asynchronous solutions."
+            - link "See certificate" [ref=e499] [cursor=pointer]:
+              - /url: https://platzi.com/p/FranciscoVeloz1/curso/1789-asincronismo-js/diploma/detalle/
+              - text: See certificate
+              - img [ref=e500]
+  - contentinfo [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - link "franciscoveloz245@gmail.com" [ref=e32] [cursor=pointer]:
+            - /url: mailto:franciscoveloz245@gmail.com
+            - img [ref=e33]
+            - text: franciscoveloz245@gmail.com
+          - link "Francisco Veloz" [ref=e36] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+            - img [ref=e37]
+            - text: Francisco Veloz
+        - generic [ref=e39]:
+          - link "FranciscoVeloz1" [ref=e40] [cursor=pointer]:
+            - /url: https://github.com/FranciscoVeloz1
+            - img [ref=e41]
+            - text: FranciscoVeloz1
+          - link "Francisco González Veloz" [ref=e43] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/franciscoveloz/
+            - img [ref=e44]
+            - text: Francisco González Veloz
+        - link "+52 474 130 9933" [ref=e47] [cursor=pointer]:
+          - /url: tel:+524741309933
+          - img [ref=e48]
+          - text: +52 474 130 9933
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: © 2026 Francisco González Veloz
+        - button "Back to top" [ref=e52]:
+          - img [ref=e53]
+          - text: Back to top

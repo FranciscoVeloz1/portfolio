@@ -1,0 +1,246 @@
+- generic:
+  - generic:
+    - link:
+      - /url: "#main"
+      - text: Skip to main content
+    - banner:
+      - navigation:
+        - link:
+          - /url: "#/"
+          - text: Francisco Veloz
+        - generic:
+          - button [expanded]:
+            - img
+    - main:
+      - region:
+        - generic:
+          - paragraph: Senior Full-Stack Engineer | React, Node.js, Python & AI
+          - heading [level=1]: Hi, I'm Francisco Veloz
+          - paragraph: Full-stack software engineer with 8+ years of experience in technology, building scalable web, mobile, and AI-powered applications with React, Node.js, Python, and cloud infrastructure. Currently a Dev Lead at PwC México, leading development teams, architecting production systems, and delivering blockchain and data engineering solutions for enterprise clients. Track record of measurable impact, including cutting daily inventory processing time by 88% through workflow automation.
+          - generic:
+            - link:
+              - /url: "#projects"
+              - text: View projects
+            - link:
+              - /url: "#contact"
+              - text: Get in touch
+        - img
+      - generic:
+        - generic:
+          - generic:
+            - generic: Career
+            - heading [level=2]: Experience
+          - generic:
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: Dev Lead - Senior Associate
+                  - generic: Current
+                - paragraph: PwC México - Guadalajara, Jalisco, México · Jun 2025 - Present
+                - list:
+                  - listitem: Lead end-to-end full-stack delivery across a React microservices frontend, Node.js and Python backend services, and PySpark data pipelines
+                  - listitem: Drive vulnerability remediation through software composition analysis scanning, reducing security risk and keeping services compliant
+                - button: Show more
+                - generic:
+                  - generic: React
+                  - generic: TypeScript
+                  - generic: Node.js
+                  - generic: Python
+                  - generic: PySpark
+                  - generic: AI Agents
+                  - generic: Azure DevOps
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: Associate
+                - paragraph: PwC México - Guadalajara, Jalisco, México · Feb 2023 - Jun 2025
+                - list:
+                  - listitem: Built scalable web platforms integrated with blockchain-based data pipelines for enterprise clients
+                  - listitem: Designed secure data engineering workflows with Python and Databricks, processing on-chain and off-chain datasets through custom ETL and analytics pipelines
+                - button: Show more
+                - generic:
+                  - generic: Python
+                  - generic: Databricks
+                  - generic: PySpark
+                  - generic: Blockchain Data Pipelines
+                  - generic: LLM Integration
+                  - generic: React
+                  - generic: TypeScript
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: Full Stack Developer
+                - paragraph: Del Norte Distribution - Oxnard, California, United States · Jul 2022 - Oct 2022
+                - list:
+                  - listitem: Built a full-stack inventory management platform with real-time stock synchronization and order processing
+                  - listitem: Automated bulk inventory intake through Excel import workflows, replacing manual data entry
+                - button: Show more
+                - generic:
+                  - generic: React
+                  - generic: TypeScript
+                  - generic: Node.js
+                  - generic: Express
+                  - generic: MySQL
+                  - generic: DigitalOcean
+          - generic:
+            - button: View all experiences
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Work
+              - heading [level=2]: Recent projects
+            - link:
+              - /url: "#/projects"
+              - text: View all projects
+              - img
+          - generic:
+            - link:
+              - /url: "#/projects/10"
+              - generic:
+                - img
+                - generic:
+                  - text: View project
+                  - img
+              - generic:
+                - paragraph: React Native Speed Art
+                - paragraph: Nov 1, 2022
+                - paragraph: Design library for React Native with customizable, reusable components and a utility-class system th...
+                - generic:
+                  - generic: React Native
+                  - generic: React
+                  - generic: TypeScript
+            - link:
+              - /url: "#/projects/11"
+              - generic:
+                - img
+                - generic:
+                  - text: View project
+                  - img
+              - generic:
+                - paragraph: React & Node.js REST API Template
+                - paragraph: Oct 20, 2022
+                - paragraph: Production-ready monorepo template built with React, Node.js, and TypeScript. Includes JWT authentic...
+                - generic:
+                  - generic: React
+                  - generic: Node.js
+                  - generic: TypeScript
+            - link:
+              - /url: "#/projects/1"
+              - generic:
+                - img
+                - generic:
+                  - text: View project
+                  - img
+              - generic:
+                - paragraph: BoxBook
+                - paragraph: Apr 7, 2022
+                - paragraph: Social book-tracking platform built with Next.js that lets users manage reading progress, reviews, r...
+                - generic:
+                  - generic: React
+                  - generic: Node.js
+                  - generic: JavaScript
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Credentials
+              - heading [level=2]: Licenses and certifications
+            - link:
+              - /url: "#/certificates"
+              - text: View all certifications
+              - img
+          - generic:
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: "Databricks Course: Delta Lake Architecture"
+                  - generic: Jan 2025
+                - paragraph: "Delta Lake architecture on Databricks: building bronze, silver, and gold medallion layers, designing ETL flows, and leveraging the storage advantages of the Parquet and Delta formats."
+                - link:
+                  - /url: https://platzi.com/p/FranciscoVeloz1/curso/9540-course/diploma/detalle/
+                  - text: See certificate
+                  - img
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: Project Management Fundamentals
+                  - generic: Oct 2023
+                - paragraph: "Project lifecycle management: planning and controlling time, resources, and cost; identifying risks; handling crises; and closing projects with fundamental project management practices."
+                - link:
+                  - /url: https://platzi.com/p/FranciscoVeloz1/curso/2654-course/diploma/detalle/
+                  - text: See certificate
+                  - img
+            - generic:
+              - img
+              - generic:
+                - generic:
+                  - paragraph: "Python Course: PIP and Virtual Environments"
+                  - generic: Oct 2023
+                - paragraph: "Professional Python tooling: dependency management with pip and virtual environments, containerizing applications with Docker, building web servers with FastAPI, and working with libraries such as Pandas and Requests."
+                - link:
+                  - /url: https://platzi.com/p/FranciscoVeloz1/curso/4261-course/diploma/detalle/
+                  - text: See certificate
+                  - img
+      - generic:
+        - generic:
+          - generic:
+            - generic: Say hello
+            - heading [level=2]: Contact me
+          - generic:
+            - generic:
+              - generic: Email
+              - textbox:
+                - /placeholder: you@example.com
+            - generic:
+              - generic: Message
+              - textbox:
+                - /placeholder: How can I help?
+            - button: Submit
+    - contentinfo:
+      - generic:
+        - generic:
+          - generic:
+            - link:
+              - /url: mailto:franciscoveloz245@gmail.com
+              - img
+              - text: franciscoveloz245@gmail.com
+            - link:
+              - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+              - img
+              - text: Francisco Veloz
+          - generic:
+            - link:
+              - /url: https://github.com/FranciscoVeloz1
+              - img
+              - text: FranciscoVeloz1
+            - link:
+              - /url: https://www.linkedin.com/in/franciscoveloz/
+              - img
+              - text: Francisco González Veloz
+          - generic:
+            - link:
+              - /url: tel:+524741309933
+              - img
+              - text: +52 474 130 9933
+        - generic:
+          - paragraph: © 2026 Francisco González Veloz
+          - button:
+            - img
+            - text: Back to top
+  - menu "Open navigation menu" [active] [ref=e798]:
+    - generic [ref=e800]: Site navigation
+    - menuitem "Projects" [ref=e801] [cursor=pointer]
+    - menuitem "Certificates" [ref=e802] [cursor=pointer]
+    - separator [ref=e803]
+    - menuitem "YouTube" [ref=e804] [cursor=pointer]
+    - menuitem "GitHub" [ref=e805] [cursor=pointer]
+    - menuitem "LinkedIn" [ref=e806] [cursor=pointer]
+    - separator [ref=e807]
+    - button "Switch to dark theme" [ref=e809] [cursor=pointer]:
+      - img [ref=e810]

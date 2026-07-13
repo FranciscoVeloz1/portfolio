@@ -1,0 +1,58 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Francisco Veloz" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Projects" [ref=e10] [cursor=pointer]:
+              - /url: "#/projects"
+          - listitem [ref=e11]:
+            - link "Certificates" [ref=e12] [cursor=pointer]:
+              - /url: "#/certificates"
+        - generic [ref=e13]:
+          - link "YouTube" [ref=e14] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+            - img [ref=e15]
+          - link "GitHub" [ref=e17] [cursor=pointer]:
+            - /url: https://github.com/FranciscoVeloz1
+            - img [ref=e18]
+          - link "LinkedIn" [ref=e20] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/franciscoveloz/
+            - img [ref=e21]
+        - button "Switch to light theme" [pressed] [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+  - main [ref=e26]
+  - contentinfo [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - link "franciscoveloz245@gmail.com" [ref=e32] [cursor=pointer]:
+            - /url: mailto:franciscoveloz245@gmail.com
+            - img [ref=e33]
+            - text: franciscoveloz245@gmail.com
+          - link "Francisco Veloz" [ref=e36] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC_OcxydUU_51oT8mbcedriw
+            - img [ref=e37]
+            - text: Francisco Veloz
+        - generic [ref=e39]:
+          - link "FranciscoVeloz1" [ref=e40] [cursor=pointer]:
+            - /url: https://github.com/FranciscoVeloz1
+            - img [ref=e41]
+            - text: FranciscoVeloz1
+          - link "Francisco González Veloz" [ref=e43] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/franciscoveloz/
+            - img [ref=e44]
+            - text: Francisco González Veloz
+        - link "+52 474 130 9933" [ref=e47] [cursor=pointer]:
+          - /url: tel:+524741309933
+          - img [ref=e48]
+          - text: +52 474 130 9933
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: © 2026 Francisco González Veloz
+        - button "Back to top" [ref=e52]:
+          - img [ref=e53]
+          - text: Back to top

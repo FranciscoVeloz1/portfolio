@@ -1,0 +1,84 @@
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--xs);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  width: fit-content;
+}
+
+.badge-react {
+  color: #bfe0ff;
+  background-color: rgba(0, 123, 255, 0.18);
+  border-color: rgba(0, 123, 255, 0.4);
+}
+
+.badge-node {
+  color: #b6f2c2;
+  background-color: rgba(3, 184, 27, 0.18);
+  border-color: rgba(3, 184, 27, 0.4);
+}
+
+.badge-js {
+  color: #ffe98a;
+  background-color: rgba(255, 213, 0, 0.16);
+  border-color: rgba(255, 213, 0, 0.4);
+}
+
+.badge-ts {
+  color: #a8ccff;
+  background-color: rgba(0, 97, 201, 0.18);
+  border-color: rgba(0, 97, 201, 0.4);
+}
+
+.badge-sql {
+  color: #ffd199;
+  background-color: rgba(255, 149, 0, 0.16);
+  border-color: rgba(255, 149, 0, 0.4);
+}
+
+.badge-rn {
+  color: #a9d3ff;
+  background-color: rgba(18, 109, 207, 0.18);
+  border-color: rgba(18, 109, 207, 0.4);
+}
+
+.badge-express {
+  color: #d5f79b;
+  background-color: rgba(152, 212, 0, 0.16);
+  border-color: rgba(152, 212, 0, 0.4);
+}
+
+.badge-next {
+  color: #cbd8e6;
+  background-color: rgba(108, 138, 169, 0.2);
+  border-color: rgba(108, 138, 169, 0.45);
+}
+
+.badge-autodesk {
+  color: #ffe08a;
+  background-color: rgba(220, 173, 3, 0.18);
+  border-color: rgba(220, 173, 3, 0.4);
+}
+
+.badge-robotics {
+  color: #ffb0b5;
+  background-color: rgba(218, 38, 47, 0.18);
+  border-color: rgba(218, 38, 47, 0.4);
+}
+
+.badge-c {
+  color: #c3c9f7;
+  background-color: rgba(98, 113, 193, 0.18);
+  border-color: rgba(98, 113, 193, 0.4);
+}
+
+.badge-default {
+  color: var(--text-muted);
+  background-color: var(--surface-raised);
+  border-color: var(--border);
+}

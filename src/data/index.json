@@ -33,7 +33,15 @@
         "Mentor junior developers through code reviews, technical guidance, and development planning",
         "Work directly with technical and business stakeholders to align engineering priorities with product goals"
       ],
-      "skills": [7, 2, 16, 3, 21, 23, 30]
+      "skills": [
+        7,
+        2,
+        16,
+        3,
+        21,
+        23,
+        30
+      ]
     },
     {
       "position": "Associate",
@@ -50,7 +58,15 @@
         "Developed AI-powered applications using LLM integrations and agent-based workflows with tools such as Cursor and Claude Code",
         "Created React interfaces for blockchain data visualization and enterprise reporting"
       ],
-      "skills": [3, 22, 21, 25, 24, 7, 2]
+      "skills": [
+        3,
+        22,
+        21,
+        25,
+        24,
+        7,
+        2
+      ]
     },
     {
       "position": "Full Stack Developer",
@@ -67,7 +83,14 @@
         "Developed the React and TypeScript frontend alongside Node.js/Express REST APIs",
         "Deployed and operated production infrastructure on DigitalOcean using PM2 and Nginx"
       ],
-      "skills": [7, 2, 16, 17, 31, 26]
+      "skills": [
+        7,
+        2,
+        16,
+        17,
+        31,
+        26
+      ]
     },
     {
       "position": "Dev Lead",
@@ -83,7 +106,11 @@
         "Integrated Bluetooth scanner hardware through native modules for real-time inspection data capture",
         "Improved mobile application performance and user experience using React Native native modules"
       ],
-      "skills": [9, 7, 2]
+      "skills": [
+        9,
+        7,
+        2
+      ]
     },
     {
       "position": "Full Stack Developer",
@@ -100,7 +127,14 @@
         "Built authenticated, performance-optimized React and React Native applications",
         "Designed Node.js/Express APIs that unified goods receiving and inventory management into a single system"
       ],
-      "skills": [7, 9, 16, 1, 17, 8]
+      "skills": [
+        7,
+        9,
+        16,
+        1,
+        17,
+        8
+      ]
     },
     {
       "position": "Full Stack Developer",
@@ -117,7 +151,13 @@
         "Implemented secure authentication workflows using Passport.js",
         "Delivered responsive tracking dashboards used for daily fleet operations"
       ],
-      "skills": [16, 1, 17, 31, 20]
+      "skills": [
+        16,
+        1,
+        17,
+        31,
+        20
+      ]
     },
     {
       "position": "Full Stack Developer",
@@ -133,7 +173,14 @@
         "Developed Node.js/Express backend services with Passport.js authentication",
         "Created responsive interfaces using Handlebars, CSS, and Bootstrap"
       ],
-      "skills": [16, 1, 17, 31, 20, 10]
+      "skills": [
+        16,
+        1,
+        17,
+        31,
+        20,
+        10
+      ]
     },
     {
       "position": "Industrial Electromechanical Technician",
@@ -148,7 +195,9 @@
         "Maintained industrial electromechanical systems and production equipment in a high-volume manufacturing plant",
         "Earned certifications in power transmission, equipment alignment, and SKF sealing systems through Nestlé's technical training program in automation, control systems, maintenance, and welding"
       ],
-      "skills": [34]
+      "skills": [
+        34
+      ]
     },
     {
       "position": "Web Developer",
@@ -163,7 +212,12 @@
         "Developed an e-commerce platform using HAML, SASS, Bootstrap, jQuery, and JavaScript",
         "Enabled online product browsing and direct customer communication through the website"
       ],
-      "skills": [1, 10, 11, 12]
+      "skills": [
+        1,
+        10,
+        11,
+        12
+      ]
     }
   ],
   "projects": [
@@ -175,7 +229,12 @@
       "repo": "https://github.com/FranciscoVeloz1/rn-speed-art",
       "video": "9Gqwq0AfYt8",
       "demo": "",
-      "skills": [9, 7, 2, 16],
+      "skills": [
+        9,
+        7,
+        2,
+        16
+      ],
       "description": "Design library for React Native with customizable, reusable components and a utility-class system that reduces boilerplate styling code. The demo showcases a restaurant menu app with a modern design built in just a few lines of code.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/speed-art.webp"
     },
@@ -187,7 +246,12 @@
       "repo": "https://github.com/FranciscoVeloz1/react-node-template",
       "video": "GHAM2VTqn0U",
       "demo": "",
-      "skills": [7, 16, 2, 17],
+      "skills": [
+        7,
+        16,
+        2,
+        17
+      ],
       "description": "Production-ready monorepo template built with React, Node.js, and TypeScript. Includes JWT authentication, Zod schema validation, REST APIs, route protection middleware, and a reusable, scalable architecture for both frontend and backend.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/template.webp"
     },
@@ -199,7 +263,12 @@
       "repo": "https://github.com/FranciscoVeloz1/React-Next-Dashboard",
       "video": "TNnKCNwQJE8",
       "demo": "",
-      "skills": [7, 16, 1, 8],
+      "skills": [
+        7,
+        16,
+        1,
+        8
+      ],
       "description": "Social book-tracking platform built with Next.js that lets users manage reading progress, reviews, ratings, and social connections through a modern web interface.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/boxbook.webp"
     },
@@ -211,7 +280,12 @@
       "repo": "https://github.com/FranciscoVeloz1/React-Next-Dashboard",
       "video": "AETMF4xCXJQ",
       "demo": "",
-      "skills": [7, 16, 1, 8],
+      "skills": [
+        7,
+        16,
+        1,
+        8
+      ],
       "description": "Maintenance and support ticketing system for school computer laboratories, built on a custom Next.js dashboard template. Supports administrator and user roles, ticket registration, and full CRUD management of laboratories and their computers.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/lab.webp"
     },
@@ -223,7 +297,12 @@
       "repo": "https://github.com/FranciscoVeloz1/React-Next-Dashboard",
       "video": "3KcSOKeZfYQ",
       "demo": "",
-      "skills": [7, 16, 1, 8],
+      "skills": [
+        7,
+        16,
+        1,
+        8
+      ],
       "description": "Stack Overflow-style Q&A community built with Next.js. Anyone can browse questions and answers, while registered users can post questions and contribute answers.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/stack.webp"
     },
@@ -235,7 +314,11 @@
       "repo": "https://github.com/FranciscoVeloz1/Mettaton-compiler",
       "video": "L29yk_CP0_I",
       "demo": "",
-      "skills": [16, 1, 17],
+      "skills": [
+        16,
+        1,
+        17
+      ],
       "description": "Custom robotics-focused programming language and compiler for Arduino, built with JavaScript and Node.js. Includes an integrated code editor, terminal, syntax validation, and automated Arduino compilation workflows.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/metatton.webp"
     },
@@ -247,7 +330,12 @@
       "repo": "https://github.com/FranciscoVeloz1/Smart-house",
       "video": "vM1FTTQyAUg",
       "demo": "",
-      "skills": [16, 1, 31, 17],
+      "skills": [
+        16,
+        1,
+        31,
+        17
+      ],
       "description": "IoT smart home platform built with JavaScript and Node.js, enabling remote control of lighting, fans, water systems, and environmental sensors through a web application.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/smart.webp"
     },
@@ -259,7 +347,11 @@
       "repo": "https://github.com/FranciscoVeloz1/mintel",
       "video": "AUW6WLGywXE",
       "demo": "https://franciscoveloz1.github.io/mintel/",
-      "skills": [7, 1, 10],
+      "skills": [
+        7,
+        1,
+        10
+      ],
       "description": "Fully responsive landing page for the Smart House platform, built with React and Bootstrap. Presents the product's main features, pricing, and advantages with a clear, mobile-first design.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/mintel.webp"
     }

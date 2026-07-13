@@ -1,0 +1,23 @@
+.certificates-page {
+  padding: var(--space-7) 0 var(--space-9);
+}
+
+.certificates-page-title {
+  font-size: var(--xl4);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.certificates-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.certificates-page-empty {
+  text-align: center;
+  color: var(--text-muted);
+}

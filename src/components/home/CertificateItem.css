@@ -1,0 +1,65 @@
+.certificate-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+
+.certificate-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--color-white);
+}
+
+.certificate-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.certificate-subtitle {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.certificate-subtitle p {
+  font-weight: 700;
+  font-size: var(--lg);
+}
+
+.certificate-small {
+  font-size: var(--xs);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.certificate-content {
+  font-size: var(--sm);
+  color: var(--text-muted);
+}
+
+.certificate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--sm);
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  width: fit-content;
+  color: var(--text);
+}
+
+.certificate-button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
