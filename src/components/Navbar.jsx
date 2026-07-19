@@ -3,16 +3,10 @@ import { useResumeData } from '@hooks/useResumeData'
 import { orderSocialNetworks } from '@util/socialOrder'
 import '@styles/Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ theme, onToggleTheme }) => {
   const { data } = useResumeData()
   const profile = data?.profile
   const socialNetworks = data?.socialNetworks || []
-
-  const handleToggle = () => {
-    const theme = window.localStorage.getItem('theme')
-    window.localStorage.setItem('theme', theme === 'dark' ? 'white' : 'dark')
-    document.body.classList.toggle('white-theme-variables')
-  }
 
   const orderedSocialNetworks = orderSocialNetworks(socialNetworks)
 
@@ -34,10 +28,15 @@ const Navbar = () => {
         })}
 
         <li className='nav-item'>
-          <div className='btn-toggle' onClick={handleToggle}>
-            <i className='fa-solid fa-sun' />
-            <i className='fa-solid fa-moon active' />
-          </div>
+          <button
+            type='button'
+            className='btn-toggle'
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+          >
+            <i className={`fa-solid fa-sun ${theme === 'white' ? 'active' : ''}`} aria-hidden='true' />
+            <i className={`fa-solid fa-moon ${theme === 'dark' ? 'active' : ''}`} aria-hidden='true' />
+          </button>
         </li>
       </ul>
     </nav>

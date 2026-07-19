@@ -15,8 +15,11 @@
 }
 
 .experience-load-small {
+  padding: 0;
+  border: 0;
   font-size: var(--sm);
   color: var(--very-light-secondary);
+  background: transparent;
   text-align: center;
   cursor: pointer;
 }

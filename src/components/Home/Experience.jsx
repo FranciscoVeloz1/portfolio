@@ -26,7 +26,7 @@ const Experience = () => {
 
   return (
     <section className='experience'>
-      <p className='experience-title'>Experience</p>
+      <h2 className='experience-title'>Experience</h2>
 
       {visibleExperiences.map((experience) => {
         return (
@@ -42,9 +42,9 @@ const Experience = () => {
         )
       })}
 
-      <p className='experience-load-small' onClick={handleLoad}>
+      <button type='button' className='experience-load-small' onClick={handleLoad}>
         {loadLabel}
-      </p>
+      </button>
     </section>
   )
 }

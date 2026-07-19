@@ -1,6 +1,7 @@
 import Video from '@components/Video'
 import Badge from '@components/Badge'
 import useScroll from '@hooks/useScroll'
+import { splitParagraphs } from '@util/text'
 import { useParams } from 'react-router-dom'
 import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Projects/Project.css'
@@ -22,9 +23,7 @@ const Project = () => {
     )
   }
 
-  const descriptionParagraphs = project.description.split('.').filter((paragraph) => {
-    return paragraph !== ''
-  })
+  const descriptionParagraphs = splitParagraphs(project.description)
 
   let demoButton = null
 
@@ -61,7 +60,7 @@ const Project = () => {
   return (
     <>
       <p className='project-small'>{project.date}</p>
-      <p className='project-title'>{project.title}</p>
+      <h1 className='project-title'>{project.title}</h1>
 
       <div className='project-buttons'>
         {demoButton}
@@ -69,11 +68,11 @@ const Project = () => {
       </div>
 
       <div className='project-content'>
-        <Video embedId={project.video} />
+        <Video embedId={project.video} title={project.title} />
 
         <div className='project-description'>
           {descriptionParagraphs.map((paragraph) => {
-            return <p key={paragraph}>{`${paragraph}.`}</p>
+            return <p key={paragraph}>{paragraph}</p>
           })}
         </div>
 
