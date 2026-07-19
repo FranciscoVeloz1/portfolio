@@ -1,6 +1,6 @@
 import '@styles/Video.css'
 
-const Video = ({ embedId }) => {
+const Video = ({ embedId, title }) => {
   return (
     <div className='video-responsive'>
       <iframe
@@ -10,7 +10,8 @@ const Video = ({ embedId }) => {
         frameBorder='0'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
         allowFullScreen
-        title='Embedded youtube'
+        loading='lazy'
+        title={`${title} project video`}
       />
     </div>
   )

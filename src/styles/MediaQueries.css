@@ -47,7 +47,7 @@
 
   .projects-card:last-child {
     grid-column: 1 / -1;
-    max-width: minmax(270px, 1fr);
+    width: min(100%, 560px);
     justify-self: center;
   }
 
@@ -123,6 +123,17 @@
 
   .footer-name {
     font-size: var(--md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

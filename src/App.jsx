@@ -1,5 +1,5 @@
 import Layout from './components/Layout'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { URL } from './util/constants'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ResumeDataProvider } from '@context/ResumeDataContext'
@@ -14,27 +14,31 @@ import Certificates from './pages/Certificates'
 import './styles/styles.css'
 
 const App = () => {
+  const [theme, setTheme] = useState(() => {
+    try {
+      return window.localStorage.getItem('theme') || 'dark'
+    } catch {
+      return 'dark'
+    }
+  })
+
   useEffect(() => {
-    const theme = window.localStorage.getItem('theme')
-
-    if (!theme) {
-      window.localStorage.setItem('theme', 'dark')
+    document.body.classList.toggle('white-theme-variables', theme === 'white')
+    try {
+      window.localStorage.setItem('theme', theme)
+    } catch {
+      // Keep the selected theme for this session when storage is unavailable.
     }
+  }, [theme])
 
-    if (theme === 'dark') {
-      document.body.classList.remove('white-theme-variables')
-      return
-    }
-
-    if (theme === 'white') {
-      document.body.classList.add('white-theme-variables')
-    }
-  }, [])
+  const handleToggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === 'dark' ? 'white' : 'dark'))
+  }
 
   return (
     <ResumeDataProvider>
       <HashRouter>
-        <Layout>
+        <Layout theme={theme} onToggleTheme={handleToggleTheme}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path={`${URL}/projects`} element={<Projects />} />

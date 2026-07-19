@@ -37,19 +37,25 @@ const Form = () => {
   }
 
   return (
-    <div className='form-container'>
-      <p className='form-title'>Contact me</p>
+    <section className='form-container' aria-labelledby='contact-title'>
+      <h2 id='contact-title' className='form-title'>
+        Contact me
+      </h2>
 
       <form className='form' action='https://formspree.io/f/mwkzrqzw' method='POST' onSubmit={handleSubmit}>
-        <input type='email' name='email' className='form-control' placeholder='Email' required />
+        <label htmlFor='contact-email'>Email</label>
+        <input id='contact-email' type='email' name='email' className='form-control' required />
 
-        <textarea name='message' className='form-control' placeholder='Message' required />
+        <label htmlFor='contact-message'>Message</label>
+        <textarea id='contact-message' name='message' className='form-control' required />
 
         <button className='form-button'>Submit</button>
 
-        <p>{status}</p>
+        <p role='status' aria-live='polite'>
+          {status}
+        </p>
       </form>
-    </div>
+    </section>
   )
 }
 

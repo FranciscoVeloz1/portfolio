@@ -10,11 +10,11 @@ const Showcase = () => {
   }
 
   return (
-    <main className='showcase'>
+    <main id='main-content' className='showcase'>
       <div>
-        <p className='showcase-title'>
+        <h1 className='showcase-title'>
           Hi, I'm {profile.firstName} <span className='txt-primary'>{profile.lastName}</span>
-        </p>
+        </h1>
         <p className='showcase-content'>{profile.summary}</p>
       </div>
 

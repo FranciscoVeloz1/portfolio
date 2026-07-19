@@ -28,10 +28,14 @@ nav .nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
+  border: 0;
   height: 24px;
   width: 72px;
   cursor: pointer;
   font-size: var(--md);
+  color: inherit;
+  background: transparent;
 }
 
 .btn-toggle i {
