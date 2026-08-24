@@ -1,5 +1,10 @@
 # Portfolio
 
+## Status
+
+- **Stage:** production ready
+- **Audited:** 2026-08-23
+
 Personal portfolio
 
 ## Resume data
