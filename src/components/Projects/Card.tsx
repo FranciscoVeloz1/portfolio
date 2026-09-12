@@ -1,11 +1,14 @@
 import { URL } from '@util/constants'
 import { Link } from 'react-router-dom'
 import { createExcerpt } from '@util/text'
+import type { Project } from '@portfolio-types/resume'
 import '@styles/Home/Card.css'
 
-const Card = ({ id, image, title, date, description }) => {
+type CardProps = Pick<Project, 'id' | 'image' | 'title' | 'date' | 'description'>
+
+const Card = ({ id, image, title, date, description }: CardProps) => {
   return (
-    <Link to={`${URL}/projects/${id}`} className='projects-card '>
+    <Link to={`${URL}/projects/${id}`} className='page-projects-card '>
       <img src={image} alt={`${title} project preview`} />
 
       <div className='projects-card-content'>

@@ -1,16 +1,40 @@
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import '@styles/Home/Form.css'
+
+interface FormspreeErrorResponse {
+  errors: Array<{ message: string }>
+}
+
+const isFormspreeErrorResponse = (value: unknown): value is FormspreeErrorResponse => {
+  if (typeof value !== 'object' || value === null || !('errors' in value)) {
+    return false
+  }
+
+  const { errors } = value
+
+  if (!Array.isArray(errors)) {
+    return false
+  }
+
+  return errors.every((error) => {
+    if (typeof error !== 'object' || error === null || !('message' in error)) {
+      return false
+    }
+
+    return typeof error.message === 'string'
+  })
+}
 
 const Form = () => {
   const [status, setStatus] = useState('')
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     try {
       event.preventDefault()
-      // eslint-disable-next-line no-undef
-      const data = new FormData(event.target)
+      const form = event.currentTarget
+      const data = new FormData(form)
 
-      const response = await fetch(event.target.action, {
+      const response = await fetch(form.action, {
         method: 'POST',
         body: data,
         headers: {
@@ -20,9 +44,9 @@ const Form = () => {
 
       const result = await response.ok
       if (!result) {
-        const data = await response.json()
-        if (Object.hasOwn(data, 'errors')) {
-          setStatus(data.errors.map((error) => error.message).join(', '))
+        const responseData: unknown = await response.json()
+        if (isFormspreeErrorResponse(responseData)) {
+          setStatus(responseData.errors.map((error) => error.message).join(', '))
         } else {
           setStatus('Oops! There was a problem submitting your form')
         }
@@ -31,7 +55,7 @@ const Form = () => {
       }
 
       setStatus('Thanks for your submission!')
-    } catch (error) {
+    } catch {
       setStatus('Oops! There was a problem submitting your form')
     }
   }

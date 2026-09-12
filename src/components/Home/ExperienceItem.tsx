@@ -1,7 +1,10 @@
 import Badge from '@components/Badge'
+import type { Experience } from '@portfolio-types/resume'
 import '@styles/Home/ExperienceItem.css'
 
-const ExperienceItem = ({ image, title, date, company, responsibilities, badges }) => {
+type ExperienceItemProps = Pick<Experience, 'image' | 'title' | 'date' | 'company' | 'responsibilities' | 'badges'>
+
+const ExperienceItem = ({ image, title, date, company, responsibilities, badges }: ExperienceItemProps) => {
   return (
     <div className='experience-item'>
       <img src={image} alt='logo' />
