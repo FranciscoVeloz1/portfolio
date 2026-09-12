@@ -1,4 +1,6 @@
-const SKILL_CLASS_MAP = {
+import type { Skill } from '@portfolio-types/resume'
+
+const SKILL_CLASS_MAP: Record<string, string> = {
   React: 'react',
   'Node.js': 'node',
   JavaScript: 'js',
@@ -12,7 +14,7 @@ const SKILL_CLASS_MAP = {
   C: 'c'
 }
 
-const CATEGORY_CLASS_MAP = {
+const CATEGORY_CLASS_MAP: Record<string, string> = {
   languages: 'js',
   frontend: 'react',
   backend: 'node',
@@ -22,18 +24,10 @@ const CATEGORY_CLASS_MAP = {
   other: 'c'
 }
 
-export const getSkillBadgeClass = (skill) => {
+export const getSkillBadgeClass = (skill?: Skill): string => {
   if (!skill) {
     return 'default'
   }
 
-  if (SKILL_CLASS_MAP[skill.name]) {
-    return SKILL_CLASS_MAP[skill.name]
-  }
-
-  if (skill.category && CATEGORY_CLASS_MAP[skill.category]) {
-    return CATEGORY_CLASS_MAP[skill.category]
-  }
-
-  return 'default'
+  return SKILL_CLASS_MAP[skill.name] ?? CATEGORY_CLASS_MAP[skill.category] ?? 'default'
 }

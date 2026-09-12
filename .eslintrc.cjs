@@ -12,6 +12,14 @@ module.exports = {
       jsx: true
     }
   },
+  overrides: [
+    {
+      files: ['**/*.{ts,tsx}'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended']
+    }
+  ],
   settings: {
     react: {
       version: 'detect'

@@ -1,7 +1,12 @@
 import '@styles/Badge.css'
 import { getSkillBadgeClass } from '@util/skillBadgeClass'
+import type { Skill } from '@portfolio-types/resume'
 
-const Badge = ({ skill }) => {
+interface BadgeProps {
+  skill?: Skill
+}
+
+const Badge = ({ skill }: BadgeProps) => {
   const badgeClass = getSkillBadgeClass(skill)
   const label = skill?.name || ''
 

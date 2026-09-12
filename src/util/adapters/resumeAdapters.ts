@@ -1,6 +1,24 @@
+import type {
+  Certificate,
+  Experience,
+  Profile,
+  Project,
+  RawCertification,
+  RawProfile,
+  RawProject,
+  RawResumeData,
+  RawSocialNetwork,
+  RawWorkExperience,
+  ResumeData,
+  Skill,
+  SkillId,
+  SocialNetwork,
+  Summary
+} from '@portfolio-types/resume'
+
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-export const formatProjectDate = (isoDate) => {
+export const formatProjectDate = (isoDate?: string | null): string => {
   if (!isoDate) {
     const emptyDate = ''
 
@@ -18,7 +36,7 @@ export const formatProjectDate = (isoDate) => {
   return formattedDate
 }
 
-const parseStartDate = (startDate) => {
+const parseStartDate = (startDate?: string | null): number => {
   if (!startDate) {
     const fallback = 0
 
@@ -31,7 +49,7 @@ const parseStartDate = (startDate) => {
   return parsedDate
 }
 
-const parseProjectDate = (date) => {
+const parseProjectDate = (date?: string | null): number => {
   if (!date) {
     const fallback = 0
 
@@ -44,7 +62,7 @@ const parseProjectDate = (date) => {
   return parsedDate
 }
 
-export const adaptProfile = (profile, summary) => {
+export const adaptProfile = (profile: RawProfile, summary: Summary): Profile => {
   const adaptedProfile = {
     firstName: profile.firstName,
     lastName: profile.lastName,
@@ -61,7 +79,7 @@ export const adaptProfile = (profile, summary) => {
   return adaptedProfile
 }
 
-export const adaptSocialNetworks = (socialNetworks) => {
+export const adaptSocialNetworks = (socialNetworks: RawSocialNetwork[]): SocialNetwork[] => {
   const adaptedNetworks = socialNetworks.map((network) => {
     const adaptedNetwork = {
       platform: network.platform,
@@ -74,7 +92,7 @@ export const adaptSocialNetworks = (socialNetworks) => {
   return adaptedNetworks
 }
 
-export const adaptSkills = (skills) => {
+export const adaptSkills = (skills: Skill[]): Skill[] => {
   const adaptedSkills = skills.map((skill) => {
     const adaptedSkill = {
       id: skill.id,
@@ -88,9 +106,12 @@ export const adaptSkills = (skills) => {
   return adaptedSkills
 }
 
-export const adaptWorkExperience = (workExperience, skills) => {
-  const skillMap = new Map(
-    skills.map((skill) => {
+export const adaptWorkExperience = (
+  workExperience: RawWorkExperience[],
+  skills: Skill[]
+): Experience[] => {
+  const skillMap = new Map<SkillId, Skill>(
+    skills.map((skill): [SkillId, Skill] => {
       return [skill.id, skill]
     })
   )
@@ -102,13 +123,11 @@ export const adaptWorkExperience = (workExperience, skills) => {
       return sortValue
     })
     .map((experience, index) => {
-      const badges = (experience.skills || [])
-        .map((skillId) => {
-          const skill = skillMap.get(skillId)
+      const badges = (experience.skills ?? []).flatMap((skillId) => {
+        const skill = skillMap.get(skillId)
 
-          return skill
-        })
-        .filter(Boolean)
+        return skill ? [skill] : []
+      })
 
       const adaptedExperience = {
         id: index + 1,
@@ -126,9 +145,9 @@ export const adaptWorkExperience = (workExperience, skills) => {
   return adaptedExperiences
 }
 
-export const adaptProjects = (projects, skills) => {
-  const skillMap = new Map(
-    skills.map((skill) => {
+export const adaptProjects = (projects: RawProject[], skills: Skill[]): Project[] => {
+  const skillMap = new Map<SkillId, Skill>(
+    skills.map((skill): [SkillId, Skill] => {
       return [skill.id, skill]
     })
   )
@@ -140,13 +159,11 @@ export const adaptProjects = (projects, skills) => {
       return sortValue
     })
     .map((project) => {
-      const badges = (project.skills || [])
-        .map((skillId) => {
-          const skill = skillMap.get(skillId)
+      const badges = (project.skills ?? []).flatMap((skillId) => {
+        const skill = skillMap.get(skillId)
 
-          return skill
-        })
-        .filter(Boolean)
+        return skill ? [skill] : []
+      })
 
       const adaptedProject = {
         id: project.id,
@@ -166,7 +183,7 @@ export const adaptProjects = (projects, skills) => {
   return adaptedProjects
 }
 
-export const adaptCertifications = (certifications) => {
+export const adaptCertifications = (certifications: RawCertification[]): Certificate[] => {
   const adaptedCertifications = certifications.map((certification, index) => {
     const adaptedCertification = {
       id: certification.link || `cert-${index}`,
@@ -184,16 +201,16 @@ export const adaptCertifications = (certifications) => {
   return adaptedCertifications
 }
 
-export const adaptResumeData = (raw) => {
-  const skills = adaptSkills(raw.skills || [])
+export const adaptResumeData = (raw: RawResumeData): ResumeData => {
+  const skills = adaptSkills(raw.skills ?? [])
 
   const adaptedData = {
     profile: adaptProfile(raw.profile, raw.summary),
-    socialNetworks: adaptSocialNetworks(raw.socialNetworks || []),
+    socialNetworks: adaptSocialNetworks(raw.socialNetworks ?? []),
     skills,
-    experiences: adaptWorkExperience(raw.workExperience || [], skills),
-    projects: adaptProjects(raw.projects || [], skills),
-    certificates: adaptCertifications(raw.certifications || [])
+    experiences: adaptWorkExperience(raw.workExperience ?? [], skills),
+    projects: adaptProjects(raw.projects ?? [], skills),
+    certificates: adaptCertifications(raw.certifications ?? [])
   }
 
   return adaptedData

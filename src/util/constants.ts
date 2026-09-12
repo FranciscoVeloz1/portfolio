@@ -1,4 +1,4 @@
 // const URL = ''
-const URL = '/portfolio'
+const URL: string = '/portfolio'
 
 export { URL }

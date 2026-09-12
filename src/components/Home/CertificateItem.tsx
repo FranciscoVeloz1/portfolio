@@ -1,6 +1,9 @@
 import '@styles/Home/CertificateItem.css'
+import type { Certificate } from '@portfolio-types/resume'
 
-const CertificateItem = ({ image, link, title, date, description }) => {
+type CertificateItemProps = Pick<Certificate, 'image' | 'link' | 'title' | 'date' | 'description'>
+
+const CertificateItem = ({ image, link, title, date, description }: CertificateItemProps) => {
   return (
     <div className='certificate-item'>
       <img src={image} alt='logo' />

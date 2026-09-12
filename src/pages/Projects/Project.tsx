@@ -11,9 +11,8 @@ const Project = () => {
   const { id } = useParams()
   const { data } = useResumeData()
   const projects = data?.projects || []
-  const project = projects.find((item) => {
-    return item.id === parseInt(id, 10)
-  })
+  const projectId = Number.parseInt(id ?? '', 10)
+  const project = projects.find((item) => item.id === projectId)
 
   if (!project) {
     return (
