@@ -12,10 +12,15 @@
 }
 
 .project-card-image {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.project-card-image-fallback {
+  flex-shrink: 0;
 }
 
 .project-card-body {

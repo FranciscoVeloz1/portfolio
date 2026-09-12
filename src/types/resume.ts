@@ -45,6 +45,7 @@ export interface RawProject {
   demo: string
   skills: SkillId[]
   description: string
+  writeup: string
   image: string
 }
 
@@ -93,6 +94,7 @@ export interface Project {
   title: string
   date: string
   description: string
+  writeup: string
   git: string
   video: string
   demo: string | null

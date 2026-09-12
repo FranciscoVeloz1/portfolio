@@ -22,6 +22,7 @@ describe('adaptProjects', () => {
         demo: '',
         skills: [1, 999],
         description: 'Old project',
+        writeup: 'Old what.\n\nOld why.\n\nOld how.',
         image: 'old.webp'
       },
       {
@@ -34,6 +35,7 @@ describe('adaptProjects', () => {
         demo: '',
         skills: [1],
         description: 'New project',
+        writeup: '',
         image: 'new.webp'
       }
     ]
@@ -42,5 +44,7 @@ describe('adaptProjects', () => {
 
     expect(result.map((project) => project.id)).toEqual([2, 1])
     expect(result[1].badges).toEqual([{ id: 1, name: 'JavaScript', category: 'languages' }])
+    expect(result[0].writeup).toBe('New project')
+    expect(result[1].writeup).toBe('Old what.\n\nOld why.\n\nOld how.')
   })
 })

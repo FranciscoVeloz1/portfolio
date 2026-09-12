@@ -172,6 +172,7 @@ export const adaptProjects = (projects: RawProject[], skills: Skill[]): Project[
         title: project.name,
         date: formatProjectDate(project.date),
         description: project.description,
+        writeup: project.writeup.trim() || project.description,
         git: project.repo || project.link || '',
         video: project.video,
         demo: project.demo || null,

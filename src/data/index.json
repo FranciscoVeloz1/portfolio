@@ -35,7 +35,6 @@
         "Drive vulnerability remediation through software composition analysis scanning, reducing security risk and keeping services compliant",
         "Own release documentation and feature promotion workflows, improving deployment reliability across services",
         "Integrate AI-assisted development workflows with tools such as Cursor and Claude Code into the team's daily practice, accelerating feature delivery, debugging, and maintenance",
-
         "Define commit standards and repository management practices to keep codebases clean and auditable",
         "Mentor junior developers through code reviews, technical guidance, and development planning",
         "Work directly with technical and business stakeholders to align engineering priorities with product goals"
@@ -243,6 +242,7 @@
         16
       ],
       "description": "Design library for React Native with customizable, reusable components and a utility-class system that reduces boilerplate styling code. The demo showcases a restaurant menu app with a modern design built in just a few lines of code.",
+      "writeup": "React Native Speed Art is a design library of reusable mobile UI pieces—buttons, inputs, containers—plus a set of utility classes so screens can be assembled with less one-off styling.\n\nIt exists to cut boilerplate in React Native apps. The published demo is a restaurant menu built in a few lines to show that the same components can carry a full layout.\n\nThe package is TypeScript compiled to dist/, published as rn-speed-art on npm, and imported by name from the library entry. Each component takes required and optional props rather than a separate CSS-in-JS layer.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/speed-art.webp"
     },
     {
@@ -260,6 +260,7 @@
         17
       ],
       "description": "Production-ready monorepo template built with React, Node.js, and TypeScript. Includes JWT authentication, Zod schema validation, REST APIs, route protection middleware, and a reusable, scalable architecture for both frontend and backend.",
+      "writeup": "This is a TypeScript monorepo template with a Vite React frontend and an Express API in npm workspaces. The backend includes JWT auth, Zod request validation, bcrypt password hashing, MySQL via mysql2, and REST routes for auth, users, and companies.\n\nIt exists as a starting point for full-stack products so a new app does not rebuild login, schema checks, and a split frontend/backend layout from scratch.\n\nThe API listens on Express, serves the built SPA from public/, and uses CORS plus JSON body parsing. Workspace scripts start the API and the Vite app independently.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/template.webp"
     },
     {
@@ -277,6 +278,7 @@
         8
       ],
       "description": "Social book-tracking platform built with Next.js that lets users manage reading progress, reviews, ratings, and social connections through a modern web interface.",
+      "writeup": "BoxBook is a social book-tracking platform. Users record reading progress, write reviews and ratings, and keep social connections through a web dashboard.\n\nIt was built so a reading community could live in the browser instead of a spreadsheet or a notes app.\n\nIt runs on a shared Next.js 12 dashboard (React 17, Bootstrap, next-auth, MySQL, cookie sessions) with public pages, auth, profile, and an admin area.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/boxbook.webp"
     },
     {
@@ -294,6 +296,7 @@
         8
       ],
       "description": "Maintenance and support ticketing system for school computer laboratories, built on a custom Next.js dashboard template. Supports administrator and user roles, ticket registration, and full CRUD management of laboratories and their computers.",
+      "writeup": "Lab Maintenance is a support ticketing system for school computer laboratories. Administrators and users register tickets and run CRUD on laboratories and the computers inside them.\n\nIt exists to replace informal lab support with one dashboard where staff can see which rooms and machines need work.\n\nIt uses the same Next.js 12, MySQL, next-auth, and Bootstrap dashboard template as the other products in that repository, with admin and user roles in the page tree.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/lab.webp"
     },
     {
@@ -311,6 +314,7 @@
         8
       ],
       "description": "Stack Overflow-style Q&A community built with Next.js. Anyone can browse questions and answers, while registered users can post questions and contribute answers.",
+      "writeup": "Stack Questions is a Q&A community in the style of Stack Overflow. Anyone can browse questions and answers; registered users can post both.\n\nIt was built so a class or group could host their own Q&A without standing up a third-party forum.\n\nIt shares the Next.js 12 dashboard stack—MySQL, next-auth, Bootstrap—with auth pages for sign-in and the rest of the UI as React pages over API routes.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/stack.webp"
     },
     {
@@ -327,6 +331,7 @@
         17
       ],
       "description": "Custom robotics-focused programming language and compiler for Arduino, built with JavaScript and Node.js. Includes an integrated code editor, terminal, syntax validation, and automated Arduino compilation workflows.",
+      "writeup": "Mettaton Compiler is a custom language and toolchain aimed at Arduino robotics. The web app is a code editor with a terminal and syntax checks, and the repo also holds AVR tooling, Arduino cores, hex output, and an uploader.\n\nIt exists so robotics students can write a simpler language and still flash an Arduino without driving the full avr-gcc command line themselves.\n\nThe editor is an Express + EJS Node server. Routes post source to a controller; vendored avr binaries and Arduino cores sit beside the app.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/metatton.webp"
     },
     {
@@ -344,6 +349,7 @@
         17
       ],
       "description": "IoT smart home platform built with JavaScript and Node.js, enabling remote control of lighting, fans, water systems, and environmental sensors through a web application.",
+      "writeup": "Smart House is an IoT home controller. A web application drives lighting, fans, water systems, and environmental sensors on the attached hardware.\n\nIt exists to operate real devices from a browser instead of only physical switches, with the Node server sitting next to the microcontroller link.\n\nThe stack is Express, Handlebars, MySQL sessions, Passport local auth, Socket.io, and Johnny-Five on a serial port (the project scripts chmod /dev/ttyACM0 for the board).",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/smart.webp"
     },
     {
@@ -360,6 +366,7 @@
         10
       ],
       "description": "Fully responsive landing page for the Smart House platform, built with React and Bootstrap. Presents the product's main features, pricing, and advantages with a clear, mobile-first design.",
+      "writeup": "Mintel is a marketing landing page for an IoT automation product aimed at homes and businesses. It presents the product's features, pricing, and advantages.\n\nIt exists as the public face of the Smart House idea—a place to explain the product without logging into the control app.\n\nThe current site is a Vite + React SPA with no backend, built and previewed with npm scripts and hosted on GitHub Pages.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/mintel.webp"
     },
     {
@@ -376,6 +383,7 @@
         18
       ],
       "description": "Command-line client for the personal-api kanban module. Login, tags, and task CRUD over HTTP with a stored session.",
+      "writeup": "Kanban CLI is a terminal client for the kanban module on personal-api. You log in, list or edit tags, and run task CRUD; each verb issues HTTP instead of drawing a TUI.\n\nIt exists so the same board can be driven from a shell without opening the dashboard. Accounts are provisioned by an admin, and a stored session keeps later commands from asking for a password every time.\n\nIt is a TypeScript Node process. Session tokens live in ~/.config/kanban-cli/session.json; access tokens expire in 15 minutes and the client retries once against POST /api/v1/auth/refresh. The API origin comes from KANBAN_API_URL.",
       "image": ""
     },
     {
@@ -393,6 +401,7 @@
         19
       ],
       "description": "Personal three-column kanban board backed by personal-api. Create tags and tasks, drag cards between columns, and persist state after reload.",
+      "writeup": "Kanban Dashboard is a personal three-column board backed by personal-api. After login you create tags and tasks, open edit pages, and the board stays in sync after reload.\n\nIt exists so the same kanban data used by the CLI can be managed on a web desk instead of only in a terminal. Accounts are provisioned; there is no public signup.\n\nIt is a Vite React SPA with TanStack Query and React Router. Refresh tokens live in localStorage under kanban:refresh:v1; access tokens stay in memory. Production builds deploy to GitHub Pages with VITE_API_BASE_URL pointing at the Railway API.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/kanban-dashboard.webp"
     },
     {
@@ -412,6 +421,7 @@
         32
       ],
       "description": "Shared platform REST API (Express, TypeScript, PostgreSQL, JWT). Hosts users, fitness, groceries, finance, and kanban modules on Railway.",
+      "writeup": "personal-api is a modular Express + TypeScript REST API on PostgreSQL with JWT access and refresh tokens. It hosts auth, users, health, demo, fitness, groceries, finance, and kanban modules.\n\nIt exists as one backend for several personal apps so each SPA or CLI does not own its own database and login. Public registration is off; the first admin is seeded.\n\nPrisma migrations run on deploy. GitHub CI covers lint, build, and tests. The service runs on Railway; frontends are allowed through CORS_ORIGINS. Fitness routes stay self-only even when the caller is an admin of other modules.",
       "image": ""
     },
     {
@@ -429,6 +439,7 @@
         12
       ],
       "description": "Mobile-first grocery list. Browse a static catalog by category, build a cart with quantities, and export it to Excel in the browser.",
+      "writeup": "Mandado App is a mobile-first grocery list. You browse a static catalog by category, search by name, add quantities to a cart, and export an Excel file with subtotals and totals.\n\nIt exists for building a shopping list in the browser without an account or a server.\n\nIt is React 19 and TypeScript on Vite. Product data is static JSON; ExcelJS is lazy-loaded for the export. GitHub Pages hosts the build with base /groceries-app/.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/groceries.webp"
     },
     {
@@ -445,6 +456,7 @@
         16
       ],
       "description": "Local generator for vertical educational decks (TikTok 9:16) using React and Reveal.js. Agents emit validated JSON; the app renders typed slide templates.",
+      "writeup": "Slides Generator is a local app for vertical educational decks (1080×1920, TikTok 9:16). Agents emit validated JSON; the UI renders typed Reveal.js templates such as cover, keyPoint, and steps—no arbitrary JSX.\n\nIt exists so short lessons can be drafted as data and previewed fullscreen, not edited as slides in a heavy GUI.\n\nThe preview is Vite + React. A CLI inits and validates kebab-case JSON against the schema in presentation-schema.ts. There is no LLM call, account, or export inside the app.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/slides-generator.webp"
     },
     {
@@ -460,6 +472,7 @@
         16
       ],
       "description": "CLI that converts HEIC/HEIF photos to lossless PNG or high-quality JPG, for a single file or a whole folder.",
+      "writeup": "heic-to-png is a CLI that converts HEIC/HEIF photos to PNG (default, lossless) or maximum-quality JPG, for a single file or a whole folder. Originals are never deleted; existing outputs can be overwritten.\n\nIt exists because phones store HEIC and many tools and sites still want PNG or JPG.\n\nIt is a TypeScript CLI run with tsx, using heic-convert, on Node 20+. Flags set --format and --out.",
       "image": ""
     },
     {
@@ -477,6 +490,7 @@
         19
       ],
       "description": "Fitness and nutrition tracker. Log meals, workouts, and weight, then sync history to personal-api after sign-in.",
+      "writeup": "FitTrack is a fitness and nutrition tracker. You log meals as followed, modified, or skipped, plus workouts and weight, then view a dashboard, history calendar, and analytics. After sign-in the data syncs to personal-api fitness routes.\n\nIt exists to keep personal fitness history in one installable PWA, including offline, instead of scattered notes.\n\nThe stack is React 19, Vite, Tailwind, TanStack Query, Zustand, IndexedDB with a localStorage fallback, and a Workbox service worker. Role comes from GET /auth/me: READ_ONLY can read; ADMIN can mutate. Fitness data is always self-only.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/fitness.webp"
     },
     {
@@ -494,6 +508,7 @@
         19
       ],
       "description": "Admin SPA for personal-api users. Provision accounts, assign global roles, and manage the user directory from the same origin as the API.",
+      "writeup": "User Management is an admin SPA for personal-api accounts. Administrators provision users, assign a global READ_ONLY or ADMIN role, and edit or delete the directory.\n\nIt exists because public registration is disabled and someone has to create users. The API can host the built SPA at the same origin, or Vite can run it on its own port.\n\nAccess tokens stay in memory. Refresh tokens persist under user-management:session:v1 in localStorage. Route guards improve UX; personal-api remains the authorization source of truth.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/user-management.webp"
     },
     {
@@ -509,6 +524,7 @@
         16
       ],
       "description": "CLI that renders every page of a PDF to page-N.png using pdf.js.",
+      "writeup": "pdf-to-png is a CLI that renders every page of a PDF to page-1.png, page-2.png, and so on.\n\nIt exists to turn documents into images without opening a GUI, for previews and pipelines.\n\nIt is TypeScript on Node 20+ (22+ recommended). pdfjs-dist draws with @napi-rs/canvas; Zod validates CLI arguments. Use tsx in development or the compiled dist/cli.js after build.",
       "image": ""
     },
     {
@@ -526,6 +542,7 @@
         12
       ],
       "description": "Browser screen recorder. Capture display (and optional system/mic audio), preview live, and download session recordings.",
+      "writeup": "Screen Recorder is a browser app that captures the display with getDisplayMedia, optional system and microphone audio, a live preview, FPS and resolution controls, and downloads for recordings in the current session.\n\nIt exists to record the screen without installing a desktop app, as long as the page is HTTPS or localhost.\n\nIt is React 19 and TypeScript on Vite with CSS Modules. MediaRecorder picks WebM or MP4 at runtime. A GitHub Actions workflow deploys to GitHub Pages.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/screen-recorder.webp"
     },
     {
@@ -541,6 +558,7 @@
         29
       ],
       "description": "Single source of truth for resume JSON (profile, work, projects, skills) consumed by the portfolio and CV generator.",
+      "writeup": "Resume Data Source is the JSON source of truth for profile, work, projects, certifications, and skills, plus hosted images for the portfolio.\n\nIt exists so the portfolio and CV generator do not each copy resume fields. Change index.json once; consumers sync from this repo.\n\nThe project is static files on GitHub Pages. The portfolio copies the JSON with npm run sync:data and loads images from the Pages URL.",
       "image": ""
     },
     {
@@ -558,6 +576,7 @@
         31
       ],
       "description": "Maintenance history tracker for a Chevrolet Cavalier 2021. Stores service visits and inspections in MySQL and exposes a JSON export plus a web timeline.",
+      "writeup": "Car History App is a maintenance tracker for a Chevrolet Cavalier 2021. It stores service visits, inspections, tire checks, and guidelines, then shows a web timeline and a JSON export of the full history.\n\nIt exists to keep real service records queryable instead of a folder of PDFs and receipt photos.\n\nThe backend is Node with MySQL, SQL migrations, seeds, and an export CLI. The frontend is Vite, React, and Tailwind, with a script that syncs exported JSON into the UI.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/car-history.webp"
     },
     {
@@ -573,6 +592,7 @@
         16
       ],
       "description": "Scraper and JSON dataset of Greed Island card lists.",
+      "writeup": "Greed Island Card API is a scraper and JSON dataset of Hunter × Hunter Greed Island card lists. It pulls the fandom wiki page into index.json and downloads card images.\n\nIt exists so card data can be a local JSON dataset rather than scraping the wiki on every read.\n\nIt is a Node ESM script. Puppeteer (via getPageContent) fetches the wiki, writeFile saves index.json, and downloadImages writes into src/images.",
       "image": ""
     }
   ],

@@ -37,6 +37,13 @@
   box-shadow: var(--shadow-sm);
 }
 
+.project-detail-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .project-description {
   display: flex;
   flex-direction: column;
@@ -46,6 +53,7 @@
   margin-top: var(--space-7);
   font-size: var(--text-body);
   color: var(--text-secondary);
+  text-align: left;
 }
 
 .project-badges {

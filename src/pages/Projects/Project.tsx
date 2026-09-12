@@ -1,10 +1,10 @@
-import Video from '@components/Video'
 import Badge from '@components/Badge'
 import useScroll from '@hooks/useScroll'
 import { splitParagraphs } from '@util/text'
 import { Link, useParams } from 'react-router-dom'
 import { URL } from '@util/constants'
 import { useResumeData } from '@hooks/useResumeData'
+import ProjectMedia from './ProjectMedia'
 import '@styles/Projects/Project.css'
 
 const Project = () => {
@@ -35,7 +35,7 @@ const Project = () => {
     )
   }
 
-  const descriptionParagraphs = splitParagraphs(project.description)
+  const descriptionParagraphs = splitParagraphs(project.writeup)
 
   let demoButton = null
 
@@ -83,9 +83,12 @@ const Project = () => {
               )
             : null}
 
-          <div className='project-video'>
-            <Video embedId={project.video} title={project.title} />
-          </div>
+          <ProjectMedia
+            key={project.id}
+            video={project.video}
+            image={project.image}
+            title={project.title}
+          />
 
           <div className='project-description'>
             {descriptionParagraphs.map((paragraph) => {
