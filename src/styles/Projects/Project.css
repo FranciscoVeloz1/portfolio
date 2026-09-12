@@ -2,6 +2,12 @@
 
 .project-detail {
   max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.project-detail .page-back {
+  text-align: left;
 }
 
 .project-detail-date {
@@ -19,6 +25,7 @@
 
 .project-actions {
   display: flex;
+  justify-content: center;
   gap: var(--space-3);
   margin-bottom: var(--space-7);
 }
@@ -35,6 +42,7 @@
   flex-direction: column;
   gap: var(--space-4);
   max-width: 68ch;
+  margin-inline: auto;
   margin-top: var(--space-7);
   font-size: var(--text-body);
   color: var(--text-secondary);
@@ -43,6 +51,7 @@
 .project-badges {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-2);
   margin-top: var(--space-6);
 }

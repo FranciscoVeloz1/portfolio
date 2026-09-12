@@ -103,113 +103,115 @@ const Form = () => {
 
   return (
     <section id='contact' className='contact' aria-labelledby='contact-title'>
-      <h2 id='contact-title' className='section-header section-header-center'>
-        Get in <span className='txt-accent'>touch</span>
-      </h2>
-      <p className='section-subtitle'>
-        Have a project in mind or want to talk shop? My inbox is always open.
-      </p>
+      <div className='container'>
+        <h2 id='contact-title' className='section-header section-header-center'>
+          Get in <span className='txt-accent'>touch</span>
+        </h2>
+        <p className='section-subtitle'>
+          Have a project in mind or want to talk shop? My inbox is always open.
+        </p>
 
-      {status === 'success'
-        ? (
-          <div className='card contact-success' role='status'>
-            <i className='fa-solid fa-circle-check contact-success-icon' aria-hidden='true' />
-            <h3 className='contact-success-title'>Message sent</h3>
-            <p className='contact-success-body'>
-              Thanks for reaching out — I&apos;ll get back to you within a day or two.
-            </p>
-          </div>
-          )
-        : (
-          <form
-            className='form'
-            action='https://formspree.io/f/mwkzrqzw'
-            method='POST'
-            noValidate
-            onSubmit={handleSubmit}
-          >
-            {status === 'error'
-              ? (
-                <div className='contact-error' role='alert'>
-                  {errorMessage || (
-                    <>
-                      Something went wrong — please try again or email me directly at{' '}
-                      <a href={`mailto:${profile?.email || ''}`}>{profile?.email || 'me'}</a>.
-                    </>
-                  )}
-                </div>
-                )
-              : null}
-
-            <div className='form-field'>
-              <label className='field-label' htmlFor='contact-name'>
-                Name
-              </label>
-              <input
-                id='contact-name'
-                type='text'
-                name='name'
-                className={`field ${fieldErrors.name ? 'field--error' : ''}`}
-                required
-                disabled={isSubmitting}
-              />
-              {fieldErrors.name
-                ? <p className='field-error-message'>{fieldErrors.name}</p>
-                : null}
+        {status === 'success'
+          ? (
+            <div className='card contact-success' role='status'>
+              <i className='fa-solid fa-circle-check contact-success-icon' aria-hidden='true' />
+              <h3 className='contact-success-title'>Message sent</h3>
+              <p className='contact-success-body'>
+                Thanks for reaching out — I&apos;ll get back to you within a day or two.
+              </p>
             </div>
-
-            <div className='form-field'>
-              <label className='field-label' htmlFor='contact-email'>
-                Email
-              </label>
-              <input
-                id='contact-email'
-                type='email'
-                name='email'
-                className={`field ${fieldErrors.email ? 'field--error' : ''}`}
-                required
-                disabled={isSubmitting}
-              />
-              {fieldErrors.email
-                ? <p className='field-error-message'>{fieldErrors.email}</p>
-                : null}
-            </div>
-
-            <div className='form-field'>
-              <label className='field-label' htmlFor='contact-message'>
-                Message
-              </label>
-              <textarea
-                id='contact-message'
-                name='message'
-                rows={6}
-                className={`field ${fieldErrors.message ? 'field--error' : ''}`}
-                required
-                disabled={isSubmitting}
-              />
-              {fieldErrors.message
-                ? <p className='field-error-message'>{fieldErrors.message}</p>
-                : null}
-            </div>
-
-            <button
-              type='submit'
-              className='btn btn-primary btn-md form-submit'
-              disabled={isSubmitting}
-              aria-busy={isSubmitting}
+            )
+          : (
+            <form
+              className='form'
+              action='https://formspree.io/f/mwkzrqzw'
+              method='POST'
+              noValidate
+              onSubmit={handleSubmit}
             >
-              {isSubmitting
+              {status === 'error'
                 ? (
-                  <>
-                    <i className='fa-solid fa-circle-notch fa-spin' aria-hidden='true' /> Sending…
-                  </>
+                  <div className='contact-error' role='alert'>
+                    {errorMessage || (
+                      <>
+                        Something went wrong — please try again or email me directly at{' '}
+                        <a href={`mailto:${profile?.email || ''}`}>{profile?.email || 'me'}</a>.
+                      </>
+                    )}
+                  </div>
                   )
-                : (
-                    'Send message'
-                  )}
-            </button>
-          </form>
-          )}
+                : null}
+
+              <div className='form-field'>
+                <label className='field-label' htmlFor='contact-name'>
+                  Name
+                </label>
+                <input
+                  id='contact-name'
+                  type='text'
+                  name='name'
+                  className={`field ${fieldErrors.name ? 'field--error' : ''}`}
+                  required
+                  disabled={isSubmitting}
+                />
+                {fieldErrors.name
+                  ? <p className='field-error-message'>{fieldErrors.name}</p>
+                  : null}
+              </div>
+
+              <div className='form-field'>
+                <label className='field-label' htmlFor='contact-email'>
+                  Email
+                </label>
+                <input
+                  id='contact-email'
+                  type='email'
+                  name='email'
+                  className={`field ${fieldErrors.email ? 'field--error' : ''}`}
+                  required
+                  disabled={isSubmitting}
+                />
+                {fieldErrors.email
+                  ? <p className='field-error-message'>{fieldErrors.email}</p>
+                  : null}
+              </div>
+
+              <div className='form-field'>
+                <label className='field-label' htmlFor='contact-message'>
+                  Message
+                </label>
+                <textarea
+                  id='contact-message'
+                  name='message'
+                  rows={6}
+                  className={`field ${fieldErrors.message ? 'field--error' : ''}`}
+                  required
+                  disabled={isSubmitting}
+                />
+                {fieldErrors.message
+                  ? <p className='field-error-message'>{fieldErrors.message}</p>
+                  : null}
+              </div>
+
+              <button
+                type='submit'
+                className='btn btn-primary btn-md form-submit'
+                disabled={isSubmitting}
+                aria-busy={isSubmitting}
+              >
+                {isSubmitting
+                  ? (
+                    <>
+                      <i className='fa-solid fa-circle-notch fa-spin' aria-hidden='true' /> Sending…
+                    </>
+                    )
+                  : (
+                      'Send message'
+                    )}
+              </button>
+            </form>
+            )}
+      </div>
     </section>
   )
 }

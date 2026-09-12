@@ -63,7 +63,7 @@ img {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: 24px;
 }
@@ -95,6 +95,4 @@ img {
 /* Full-bleed subtle band for alternating sections (Skills, Certificates) */
 .section-alt {
   background: var(--bg-subtle);
-  box-shadow: 0 0 0 100vmax var(--bg-subtle);
-  clip-path: inset(0 -100vmax);
 }

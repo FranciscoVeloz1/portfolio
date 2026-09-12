@@ -14,10 +14,8 @@ const Layout = ({ children, theme, onToggleTheme }: LayoutProps) => {
       <a className='skip-link' href='#main-content'>
         Skip to main content
       </a>
-      <div className='container'>
-        <Navbar theme={theme} onToggleTheme={onToggleTheme} />
-        {children}
-      </div>
+      <Navbar theme={theme} onToggleTheme={onToggleTheme} />
+      {children}
       <Footer />
     </>
   )

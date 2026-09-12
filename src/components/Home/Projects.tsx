@@ -10,31 +10,33 @@ const Projects = () => {
 
   return (
     <section id='projects' className='projects' aria-labelledby='projects-title'>
-      <div className='section-header-row'>
-        <h2 id='projects-title' className='section-header'>
-          Recent <span className='txt-accent'>projects</span>
-        </h2>
+      <div className='container'>
+        <div className='section-header-row'>
+          <h2 id='projects-title' className='section-header'>
+            Recent <span className='txt-accent'>projects</span>
+          </h2>
 
-        <Link to={`${URL}/projects`} className='section-header-link'>
-          View all projects
-          <i className='fa-solid fa-arrow-right' aria-hidden='true' />
-        </Link>
-      </div>
+          <Link to={`${URL}/projects`} className='section-header-link'>
+            View all projects
+            <i className='fa-solid fa-arrow-right' aria-hidden='true' />
+          </Link>
+        </div>
 
-      <div className='project-cards'>
-        {projects.slice(0, 6).map((project) => {
-          return (
-            <Card
-              key={project.id}
-              id={project.id}
-              image={project.image}
-              title={project.title}
-              date={project.date}
-              description={project.description}
-              badges={project.badges}
-            />
-          )
-        })}
+        <div className='project-cards'>
+          {projects.slice(0, 6).map((project) => {
+            return (
+              <Card
+                key={project.id}
+                id={project.id}
+                image={project.image}
+                title={project.title}
+                date={project.date}
+                description={project.description}
+                badges={project.badges}
+              />
+            )
+          })}
+        </div>
       </div>
     </section>
   )

@@ -1,11 +1,13 @@
 @import '../vars.css';
 
 .about {
-  padding: var(--space-9) 0;
+  padding: var(--space-7) 0 var(--space-9);
 }
 
 .about-body {
   max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .about-body p {
@@ -26,6 +28,6 @@
 
 @media (max-width: 760px) {
   .about {
-    padding: var(--space-8) 0;
+    padding: var(--space-6) 0 var(--space-8);
   }
 }

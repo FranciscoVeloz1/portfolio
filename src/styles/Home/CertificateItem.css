@@ -67,9 +67,18 @@
 }
 
 @media (max-width: 760px) {
+  .certificate-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
   .certificate-logo {
     width: 40px;
     height: 40px;
+  }
+
+  .certificate-row-body {
+    flex: 1 1 0;
   }
 
   .certificate-row-title {
@@ -77,5 +86,9 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .certificate-row-icon {
+    align-self: center;
   }
 }

@@ -10,30 +10,32 @@ const Certificate = () => {
 
   return (
     <section id='certificates' className='certificates section-alt' aria-labelledby='certificates-title'>
-      <div className='section-header-row'>
-        <h2 id='certificates-title' className='section-header'>
-          Licenses and <span className='txt-accent'>certifications</span>
-        </h2>
+      <div className='container'>
+        <div className='section-header-row'>
+          <h2 id='certificates-title' className='section-header'>
+            Licenses and <span className='txt-accent'>certifications</span>
+          </h2>
 
-        <Link to={`${URL}/certificates`} className='section-header-link'>
-          View all certifications
-          <i className='fa-solid fa-arrow-right' aria-hidden='true' />
-        </Link>
-      </div>
+          <Link to={`${URL}/certificates`} className='section-header-link'>
+            View all certifications
+            <i className='fa-solid fa-arrow-right' aria-hidden='true' />
+          </Link>
+        </div>
 
-      <div className='certificates-list'>
-        {certificates.slice(0, 4).map((certificate) => {
-          return (
-            <CertificateItem
-              key={certificate.id}
-              link={certificate.link}
-              image={certificate.image}
-              title={certificate.title}
-              date={certificate.date}
-              issuer={certificate.issuer}
-            />
-          )
-        })}
+        <div className='certificates-list'>
+          {certificates.slice(0, 4).map((certificate) => {
+            return (
+              <CertificateItem
+                key={certificate.id}
+                link={certificate.link}
+                image={certificate.image}
+                title={certificate.title}
+                date={certificate.date}
+                issuer={certificate.issuer}
+              />
+            )
+          })}
+        </div>
       </div>
     </section>
   )

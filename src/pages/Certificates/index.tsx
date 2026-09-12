@@ -11,31 +11,33 @@ const Certificates = () => {
 
   return (
     <section className='page' aria-labelledby='certificates-page-title'>
-      <div className='page-back'>
-        <Link to='/' className='btn btn-ghost btn-sm'>
-          <i className='fa-solid fa-arrow-left' aria-hidden='true' /> Back home
-        </Link>
-      </div>
+      <div className='container'>
+        <div className='page-back'>
+          <Link to='/' className='btn btn-ghost btn-sm'>
+            <i className='fa-solid fa-arrow-left' aria-hidden='true' /> Back home
+          </Link>
+        </div>
 
-      <h1 id='certificates-page-title' className='page-title'>
-        Licenses and <span className='txt-accent'>certifications</span>
-      </h1>
-      <p className='page-subtitle'>All {certificates.length} credentials.</p>
+        <h1 id='certificates-page-title' className='page-title'>
+          Licenses and <span className='txt-accent'>certifications</span>
+        </h1>
+        <p className='page-subtitle'>All {certificates.length} credentials.</p>
 
-      <div className='certificates-list'>
-        {certificates.map((certificate) => {
-          return (
-            <CertificateItem
-              key={certificate.id}
-              link={certificate.link}
-              image={certificate.image}
-              title={certificate.title}
-              date={certificate.date}
-              issuer={certificate.issuer}
-              description={certificate.description}
-            />
-          )
-        })}
+        <div className='certificates-list'>
+          {certificates.map((certificate) => {
+            return (
+              <CertificateItem
+                key={certificate.id}
+                link={certificate.link}
+                image={certificate.image}
+                title={certificate.title}
+                date={certificate.date}
+                issuer={certificate.issuer}
+                description={certificate.description}
+              />
+            )
+          })}
+        </div>
       </div>
     </section>
   )

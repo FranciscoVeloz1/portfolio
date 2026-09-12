@@ -4,6 +4,17 @@
   padding: var(--space-9) 0;
 }
 
+.projects .section-header-row {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-page .page-title,
+.projects-page .page-subtitle {
+  text-align: center;
+}
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

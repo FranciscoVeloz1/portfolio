@@ -22,30 +22,34 @@ const Skills = () => {
 
   return (
     <section id='skills' className='skills section-alt' aria-labelledby='skills-title'>
-      <h2 id='skills-title' className='section-header'>
-        Technologies I <span className='txt-accent'>work with</span>
-      </h2>
+      <div className='container'>
+        <h2 id='skills-title' className='section-header'>
+          Technologies I <span className='txt-accent'>work with</span>
+        </h2>
 
-      {SKILL_GROUPS.map((group) => {
-        const groupSkills = skills.filter((skill) => {
-          return skill.category === group.key
-        })
+        <div className='skills-grid'>
+          {SKILL_GROUPS.map((group) => {
+            const groupSkills = skills.filter((skill) => {
+              return skill.category === group.key
+            })
 
-        if (groupSkills.length === 0) {
-          return null
-        }
+            if (groupSkills.length === 0) {
+              return null
+            }
 
-        return (
-          <div className='skills-group' key={group.key}>
-            <h3 className='skills-group-label'>{group.label}</h3>
-            <div className='skills-pills'>
-              {groupSkills.map((skill) => {
-                return <Badge skill={skill} key={skill.id} />
-              })}
-            </div>
-          </div>
-        )
-      })}
+            return (
+              <div className='card skills-group' key={group.key}>
+                <h3 className='skills-group-label'>{group.label}</h3>
+                <div className='skills-pills'>
+                  {groupSkills.map((skill) => {
+                    return <Badge skill={skill} key={skill.id} />
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </section>
   )
 }

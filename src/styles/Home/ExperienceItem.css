@@ -80,7 +80,7 @@
 
   .experience-date {
     flex-basis: 100%;
-    margin-left: calc(56px + var(--space-4));
+    margin-left: 0;
     width: fit-content;
   }
 }

@@ -1,13 +1,9 @@
 @import './vars.css';
 
-nav {
+.site-nav {
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-5);
   height: 72px;
   background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(12px);
@@ -16,8 +12,16 @@ nav {
   transition: box-shadow var(--dur-med) var(--ease-out);
 }
 
-nav.nav-scrolled {
+.site-nav.nav-scrolled {
   box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  height: 72px;
 }
 
 .nav-brand {
@@ -63,7 +67,7 @@ nav.nav-scrolled {
   gap: var(--space-3);
 }
 
-.nav-menu-toggle {
+.site-nav .icon-btn.nav-menu-toggle {
   display: none;
 }
 
@@ -71,12 +75,13 @@ nav.nav-scrolled {
   display: none;
 }
 
-@media (max-width: 760px) {
-  .nav-cta {
+@media (max-width: 1080px) {
+  /* Beat `.btn { display: inline-flex }` from primitives.css (loaded after this file). */
+  .nav-actions .btn.nav-cta {
     display: none;
   }
 
-  .nav-menu-toggle {
+  .site-nav .icon-btn.nav-menu-toggle {
     display: inline-flex;
   }
 

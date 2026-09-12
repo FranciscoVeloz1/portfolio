@@ -136,6 +136,7 @@ a:hover .badge {
 
 .section-header-row .section-header {
   margin-bottom: 0;
+  min-width: 0;
 }
 
 .section-header-link {
@@ -152,6 +153,18 @@ a:hover .badge {
 .section-header-link:hover {
   gap: var(--space-2);
   color: var(--accent-strong);
+}
+
+@media (max-width: 760px) {
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .section-header-link {
+    flex-shrink: 1;
+  }
 }
 
 /* ============ Page header (inner pages) ============ */

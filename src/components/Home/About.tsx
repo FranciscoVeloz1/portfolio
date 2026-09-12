@@ -63,14 +63,16 @@ const About = () => {
 
   return (
     <section id='about' className='about' aria-labelledby='about-title'>
-      <h2 id='about-title' className='section-header'>
-        About <span className='txt-accent'>Me</span>
-      </h2>
+      <div className='container'>
+        <h2 id='about-title' className='section-header section-header-center'>
+          About <span className='txt-accent'>Me</span>
+        </h2>
 
-      <div className='about-body'>
-        {paragraphs.map((paragraph) => {
-          return <p key={paragraph.slice(0, 40)}>{renderWithHighlights(paragraph, highlights)}</p>
-        })}
+        <div className='about-body'>
+          {paragraphs.map((paragraph) => {
+            return <p key={paragraph.slice(0, 40)}>{renderWithHighlights(paragraph, highlights)}</p>
+          })}
+        </div>
       </div>
     </section>
   )

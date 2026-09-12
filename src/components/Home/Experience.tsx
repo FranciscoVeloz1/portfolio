@@ -27,29 +27,31 @@ const Experience = () => {
 
   return (
     <section id='experience' className='experience' aria-labelledby='experience-title'>
-      <h2 id='experience-title' className='section-header'>
-        Work <span className='txt-accent'>experience</span>
-      </h2>
+      <div className='container'>
+        <h2 id='experience-title' className='section-header'>
+          Work <span className='txt-accent'>experience</span>
+        </h2>
 
-      <div className='experience-list'>
-        {visibleExperiences.map((experience) => {
-          return (
-            <ExperienceItem
-              key={experience.id}
-              image={experience.image}
-              title={experience.title}
-              date={experience.date}
-              company={experience.company}
-              responsibilities={experience.responsibilities}
-              badges={experience.badges}
-            />
-          )
-        })}
+        <div className='experience-list'>
+          {visibleExperiences.map((experience) => {
+            return (
+              <ExperienceItem
+                key={experience.id}
+                image={experience.image}
+                title={experience.title}
+                date={experience.date}
+                company={experience.company}
+                responsibilities={experience.responsibilities}
+                badges={experience.badges}
+              />
+            )
+          })}
+        </div>
+
+        <button type='button' className='btn btn-ghost btn-md experience-toggle' onClick={handleLoad}>
+          {loadLabel}
+        </button>
       </div>
-
-      <button type='button' className='btn btn-ghost btn-md experience-toggle' onClick={handleLoad}>
-        {loadLabel}
-      </button>
     </section>
   )
 }
