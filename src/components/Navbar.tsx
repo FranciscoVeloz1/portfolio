@@ -3,7 +3,12 @@ import { useResumeData } from '@hooks/useResumeData'
 import { orderSocialNetworks } from '@util/socialOrder'
 import '@styles/Navbar.css'
 
-const Navbar = ({ theme, onToggleTheme }) => {
+interface NavbarProps {
+  theme: 'dark' | 'white'
+  onToggleTheme: () => void
+}
+
+const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
   const { data } = useResumeData()
   const profile = data?.profile
   const socialNetworks = data?.socialNetworks || []

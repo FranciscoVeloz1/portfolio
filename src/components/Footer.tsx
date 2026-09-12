@@ -2,7 +2,7 @@ import { useResumeData } from '@hooks/useResumeData'
 import { orderSocialNetworks } from '@util/socialOrder'
 import '@styles/Footer.css'
 
-const SOCIAL_ICON_MAP = {
+const SOCIAL_ICON_MAP: Record<string, string> = {
   YouTube: 'fa-brands fa-youtube',
   GitHub: 'fa-brands fa-github',
   LinkedIn: 'fa-brands fa-linkedin',
@@ -14,7 +14,7 @@ const Footer = () => {
   const profile = data?.profile
   const socialNetworks = data?.socialNetworks || []
 
-  const getSocialIcon = (platform) => {
+  const getSocialIcon: (platform: string) => string = (platform) => {
     if (SOCIAL_ICON_MAP[platform]) {
       return SOCIAL_ICON_MAP[platform]
     }
@@ -22,7 +22,7 @@ const Footer = () => {
     return 'fa-solid fa-link'
   }
 
-  const getSocialLabel = (platform) => {
+  const getSocialLabel: (platform: string) => string = (platform) => {
     if (platform === 'GitHub') {
       return 'FranciscoVeloz1'
     }

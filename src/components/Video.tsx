@@ -1,6 +1,11 @@
 import '@styles/Video.css'
 
-const Video = ({ embedId, title }) => {
+interface VideoProps {
+  embedId: string
+  title: string
+}
+
+const Video = ({ embedId, title }: VideoProps) => {
   return (
     <div className='video-responsive'>
       <iframe

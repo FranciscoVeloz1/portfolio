@@ -13,10 +13,12 @@ import Certificates from './pages/Certificates'
 // Importing styles
 import './styles/styles.css'
 
+type Theme = 'dark' | 'white'
+
 const App = () => {
-  const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState<Theme>(() => {
     try {
-      return window.localStorage.getItem('theme') || 'dark'
+      return window.localStorage.getItem('theme') === 'white' ? 'white' : 'dark'
     } catch {
       return 'dark'
     }
