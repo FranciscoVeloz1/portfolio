@@ -1,6 +1,8 @@
 import useScroll from '@hooks/useScroll'
-import Card from '@components/Projects/Card'
+import Card from '@components/Home/Card'
+import { Link } from 'react-router-dom'
 import { useResumeData } from '@hooks/useResumeData'
+import '@styles/Home/Projects.css'
 
 const Projects = () => {
   useScroll()
@@ -9,14 +11,19 @@ const Projects = () => {
   const profile = data?.profile
 
   return (
-    <section className='projects'>
-      <div className='page-projects-header'>
-        <p className='page-projects-title'>
-          {profile?.firstName || 'Francisco'}'s <span className='txt-primary'>projects</span>
-        </p>
+    <section className='page' aria-labelledby='projects-page-title'>
+      <div className='page-back'>
+        <Link to='/' className='btn btn-ghost btn-sm'>
+          <i className='fa-solid fa-arrow-left' aria-hidden='true' /> Back home
+        </Link>
       </div>
 
-      <div className='page-project-cards'>
+      <h1 id='projects-page-title' className='page-title'>
+        {profile?.firstName || 'Francisco'}&apos;s <span className='txt-accent'>projects</span>
+      </h1>
+      <p className='page-subtitle'>All {projects.length} projects — code, demos, and write-ups.</p>
+
+      <div className='project-cards'>
         {projects.map((project) => {
           return (
             <Card
@@ -26,6 +33,7 @@ const Projects = () => {
               title={project.title}
               date={project.date}
               description={project.description}
+              badges={project.badges}
             />
           )
         })}

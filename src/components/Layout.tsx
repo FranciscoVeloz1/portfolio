@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 
 interface LayoutProps {
   children: ReactNode
-  theme: 'dark' | 'white'
+  theme: 'light' | 'dark'
   onToggleTheme: () => void
 }
 

@@ -1,76 +1,64 @@
 @import '../vars.css';
 
-.project-small {
-  font-size: var(--sm);
-  color: var(--secondary);
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 12px;
+.project-detail {
+  max-width: 860px;
 }
 
-.project-title {
-  font-size: var(--xl4);
+.project-detail-date {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.project-detail-title {
+  font-size: var(--text-h1);
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 24px;
-  color: var(--light-secondary);
+  color: var(--text);
+  text-wrap: balance;
+  margin: var(--space-2) 0 var(--space-5);
 }
 
-.project-content {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 88px;
+.project-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
 }
 
-.project-content img {
-  width: 70%;
-  height: 380px;
-  margin: auto;
-  object-fit: cover;
-  border-radius: 8px;
+.project-video {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
 .project-description {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-4);
+  max-width: 68ch;
+  margin-top: var(--space-7);
+  font-size: var(--text-body);
+  color: var(--text-secondary);
 }
 
-.badge-container {
+.project-badges {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
 }
 
-.project-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 24px;
+.project-not-found {
+  padding: var(--space-9) 0;
+  text-align: center;
 }
 
-.project-button {
-  font-size: var(--md);
-  padding: 4px 24px;
-  border-radius: 10px;
-  width: fit-content;
-  color: var(--white);
-}
+@media (max-width: 760px) {
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-.project-button:hover {
-  opacity: 0.9;
-}
-
-.btn-dark-primary {
-  background-color: var(--dark-primary);
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-  color: var(--dark);
-}
-
-.btn-secondary:hover {
-  color: var(--dark);
+  .project-actions .btn {
+    justify-content: center;
+  }
 }

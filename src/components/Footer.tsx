@@ -1,93 +1,82 @@
 import { useResumeData } from '@hooks/useResumeData'
+import useSectionScroll from '@hooks/useSectionScroll'
 import { orderSocialNetworks } from '@util/socialOrder'
+import { getSocialIcon } from '@util/socialIcons'
+import { SECTION_LINKS } from '@util/constants'
 import '@styles/Footer.css'
-
-const SOCIAL_ICON_MAP: Record<string, string> = {
-  YouTube: 'fa-brands fa-youtube',
-  GitHub: 'fa-brands fa-github',
-  LinkedIn: 'fa-brands fa-linkedin',
-  Portfolio: 'fa-solid fa-globe'
-}
 
 const Footer = () => {
   const { data } = useResumeData()
   const profile = data?.profile
   const socialNetworks = data?.socialNetworks || []
-
-  const getSocialIcon: (platform: string) => string = (platform) => {
-    if (SOCIAL_ICON_MAP[platform]) {
-      return SOCIAL_ICON_MAP[platform]
-    }
-
-    return 'fa-solid fa-link'
-  }
-
-  const getSocialLabel: (platform: string) => string = (platform) => {
-    if (platform === 'GitHub') {
-      return 'FranciscoVeloz1'
-    }
-
-    if (platform === 'LinkedIn') {
-      return profile?.fullName || 'Francisco González Veloz'
-    }
-
-    if (platform === 'YouTube') {
-      return `${profile?.firstName || 'Francisco'} ${profile?.lastName || 'Veloz'}`
-    }
-
-    return platform
-  }
+  const { handleSectionClick } = useSectionScroll()
 
   const orderedSocialNetworks = orderSocialNetworks(socialNetworks)
+  const year = new Date().getFullYear()
 
   return (
     <footer>
       <div className='container'>
-        <div className='footer-contact'>
-          <div className='footer-item'>
-            {profile?.email
-              ? (
-                <a href={`mailto:${profile.email}`} target='_blank' rel='noreferrer'>
-                  <i className='fa-solid fa-envelope' /> {profile.email}
-                </a>
-                )
+        <div className='footer-grid'>
+          <div className='footer-brand'>
+            <p className='footer-brand-name'>
+              {profile?.firstName || 'Francisco'}{' '}
+              <span className='footer-brand-accent'>{profile?.lastName || 'Veloz'}</span>
+            </p>
+            {profile?.headline
+              ? <p className='footer-headline'>{profile.headline}</p>
               : null}
-
-            {orderedSocialNetworks
-              .filter((network) => {
-                return network.platform === 'YouTube'
-              })
-              .map((network) => {
-                return (
-                  <a href={network.link} key={network.platform} target='_blank' rel='noreferrer'>
-                    <i className={getSocialIcon(network.platform)} /> {getSocialLabel(network.platform)}
-                  </a>
-                )
-              })}
           </div>
 
-          <div className='footer-item'>
-            {orderSocialNetworks(socialNetworks, ['GitHub', 'LinkedIn']).map((network) => {
+          <nav className='footer-links' aria-label='Footer'>
+            {SECTION_LINKS.map((link) => {
               return (
-                <a href={network.link} key={network.platform} target='_blank' rel='noreferrer'>
-                  <i className={getSocialIcon(network.platform)} /> {getSocialLabel(network.platform)}
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(event) => {
+                    handleSectionClick(event, link.id)
+                  }}
+                >
+                  {link.label}
                 </a>
               )
             })}
-          </div>
+          </nav>
 
-          <div className='footer-item'>
-            {profile?.phone
+          <div className='footer-social'>
+            <div className='footer-social-icons'>
+              {orderedSocialNetworks.map((network) => {
+                return (
+                  <a
+                    key={network.platform}
+                    className='icon-btn icon-btn-on-dark'
+                    href={network.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    aria-label={network.platform}
+                  >
+                    <i className={getSocialIcon(network.platform)} aria-hidden='true' />
+                  </a>
+                )
+              })}
+            </div>
+            {profile?.email
               ? (
-                <a href={`tel:${profile.phone.replace(/\s/g, '')}`} target='_blank' rel='noreferrer'>
-                  <i className='fa-solid fa-phone' /> {profile.phone}
+                <a className='footer-email' href={`mailto:${profile.email}`}>
+                  <i className='fa-solid fa-envelope' aria-hidden='true' /> {profile.email}
                 </a>
                 )
               : null}
           </div>
         </div>
 
-        <p className='footer-name'>&copy; {profile?.fullName || 'Francisco González Veloz'}</p>
+        <div className='footer-bottom'>
+          <p className='footer-copy'>
+            &copy; {year} {profile?.fullName || 'Francisco González Veloz'} ·{' '}
+            {profile?.location || 'Guadalajara, México'}
+          </p>
+        </div>
       </div>
     </footer>
   )

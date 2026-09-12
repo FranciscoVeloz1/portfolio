@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { useResumeData } from '@hooks/useResumeData'
 import '@styles/Home/Form.css'
 
 interface FormspreeErrorResponse {
@@ -25,60 +26,190 @@ const isFormspreeErrorResponse = (value: unknown): value is FormspreeErrorRespon
   })
 }
 
+type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
+
+interface FieldErrors {
+  name?: string
+  email?: string
+  message?: string
+}
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 const Form = () => {
-  const [status, setStatus] = useState('')
+  const { data } = useResumeData()
+  const profile = data?.profile
+
+  const [status, setStatus] = useState<FormStatus>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    try {
-      event.preventDefault()
-      const form = event.currentTarget
-      const data = new FormData(form)
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
 
+    const name = String(formData.get('name') || '').trim()
+    const email = String(formData.get('email') || '').trim()
+    const message = String(formData.get('message') || '').trim()
+
+    const nextFieldErrors: FieldErrors = {}
+    if (!name) {
+      nextFieldErrors.name = 'Please enter your name'
+    }
+    if (!email || !EMAIL_PATTERN.test(email)) {
+      nextFieldErrors.email = 'Please enter a valid email'
+    }
+    if (!message) {
+      nextFieldErrors.message = 'Please write a message'
+    }
+
+    setFieldErrors(nextFieldErrors)
+    if (Object.keys(nextFieldErrors).length > 0) {
+      return
+    }
+
+    setStatus('submitting')
+
+    try {
       const response = await fetch(form.action, {
         method: 'POST',
-        body: data,
+        body: formData,
         headers: {
           Accept: 'application/json'
         }
       })
 
-      const result = await response.ok
-      if (!result) {
+      if (!response.ok) {
         const responseData: unknown = await response.json()
         if (isFormspreeErrorResponse(responseData)) {
-          setStatus(responseData.errors.map((error) => error.message).join(', '))
+          setErrorMessage(responseData.errors.map((error) => error.message).join(', '))
         } else {
-          setStatus('Oops! There was a problem submitting your form')
+          setErrorMessage('')
         }
+        setStatus('error')
 
         return
       }
 
-      setStatus('Thanks for your submission!')
+      setStatus('success')
     } catch {
-      setStatus('Oops! There was a problem submitting your form')
+      setErrorMessage('')
+      setStatus('error')
     }
   }
 
+  const isSubmitting = status === 'submitting'
+
   return (
-    <section className='form-container' aria-labelledby='contact-title'>
-      <h2 id='contact-title' className='form-title'>
-        Contact me
+    <section id='contact' className='contact' aria-labelledby='contact-title'>
+      <h2 id='contact-title' className='section-header section-header-center'>
+        Get in <span className='txt-accent'>touch</span>
       </h2>
+      <p className='section-subtitle'>
+        Have a project in mind or want to talk shop? My inbox is always open.
+      </p>
 
-      <form className='form' action='https://formspree.io/f/mwkzrqzw' method='POST' onSubmit={handleSubmit}>
-        <label htmlFor='contact-email'>Email</label>
-        <input id='contact-email' type='email' name='email' className='form-control' required />
+      {status === 'success'
+        ? (
+          <div className='card contact-success' role='status'>
+            <i className='fa-solid fa-circle-check contact-success-icon' aria-hidden='true' />
+            <h3 className='contact-success-title'>Message sent</h3>
+            <p className='contact-success-body'>
+              Thanks for reaching out — I&apos;ll get back to you within a day or two.
+            </p>
+          </div>
+          )
+        : (
+          <form
+            className='form'
+            action='https://formspree.io/f/mwkzrqzw'
+            method='POST'
+            noValidate
+            onSubmit={handleSubmit}
+          >
+            {status === 'error'
+              ? (
+                <div className='contact-error' role='alert'>
+                  {errorMessage || (
+                    <>
+                      Something went wrong — please try again or email me directly at{' '}
+                      <a href={`mailto:${profile?.email || ''}`}>{profile?.email || 'me'}</a>.
+                    </>
+                  )}
+                </div>
+                )
+              : null}
 
-        <label htmlFor='contact-message'>Message</label>
-        <textarea id='contact-message' name='message' className='form-control' required />
+            <div className='form-field'>
+              <label className='field-label' htmlFor='contact-name'>
+                Name
+              </label>
+              <input
+                id='contact-name'
+                type='text'
+                name='name'
+                className={`field ${fieldErrors.name ? 'field--error' : ''}`}
+                required
+                disabled={isSubmitting}
+              />
+              {fieldErrors.name
+                ? <p className='field-error-message'>{fieldErrors.name}</p>
+                : null}
+            </div>
 
-        <button className='form-button'>Submit</button>
+            <div className='form-field'>
+              <label className='field-label' htmlFor='contact-email'>
+                Email
+              </label>
+              <input
+                id='contact-email'
+                type='email'
+                name='email'
+                className={`field ${fieldErrors.email ? 'field--error' : ''}`}
+                required
+                disabled={isSubmitting}
+              />
+              {fieldErrors.email
+                ? <p className='field-error-message'>{fieldErrors.email}</p>
+                : null}
+            </div>
 
-        <p role='status' aria-live='polite'>
-          {status}
-        </p>
-      </form>
+            <div className='form-field'>
+              <label className='field-label' htmlFor='contact-message'>
+                Message
+              </label>
+              <textarea
+                id='contact-message'
+                name='message'
+                rows={6}
+                className={`field ${fieldErrors.message ? 'field--error' : ''}`}
+                required
+                disabled={isSubmitting}
+              />
+              {fieldErrors.message
+                ? <p className='field-error-message'>{fieldErrors.message}</p>
+                : null}
+            </div>
+
+            <button
+              type='submit'
+              className='btn btn-primary btn-md form-submit'
+              disabled={isSubmitting}
+              aria-busy={isSubmitting}
+            >
+              {isSubmitting
+                ? (
+                  <>
+                    <i className='fa-solid fa-circle-notch fa-spin' aria-hidden='true' /> Sending…
+                  </>
+                  )
+                : (
+                    'Send message'
+                  )}
+            </button>
+          </form>
+          )}
     </section>
   )
 }

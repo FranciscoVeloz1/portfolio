@@ -1,0 +1,31 @@
+@import '../vars.css';
+
+.about {
+  padding: var(--space-9) 0;
+}
+
+.about-body {
+  max-width: 68ch;
+}
+
+.about-body p {
+  font-size: var(--text-body-lg);
+  color: var(--text-secondary);
+}
+
+.about-body p + p {
+  margin-top: var(--space-4);
+}
+
+.about-mark {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+@media (max-width: 760px) {
+  .about {
+    padding: var(--space-8) 0;
+  }
+}

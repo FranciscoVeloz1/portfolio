@@ -1,0 +1,49 @@
+@import '../vars.css';
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.stats-cell {
+  padding: 0 var(--space-6);
+}
+
+.stats-cell:first-child {
+  padding-left: 0;
+}
+
+.stats-cell + .stats-cell {
+  border-left: 1px solid var(--border);
+}
+
+.stats-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-strong);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.stats-label {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+@media (max-width: 760px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--space-5);
+  }
+
+  .stats-cell {
+    padding: 0;
+  }
+
+  .stats-cell + .stats-cell {
+    border-left: 0;
+  }
+}

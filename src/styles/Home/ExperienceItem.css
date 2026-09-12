@@ -1,54 +1,65 @@
 @import '../vars.css';
 
-.experience-item {
-  display: flex;
-  gap: 24px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-  border-bottom: 0.5px var(--very-light-secondary) solid;
-}
-
-.experience-item:last-child {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.experience-subtitle {
+.experience-item-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: var(--light-secondary);
+  gap: var(--space-4);
 }
 
-.experience-subtitle p {
-  font-weight: 700;
-  font-size: var(--xl);
+.experience-logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-2);
 }
 
-.experience-wrapper {
+.experience-heading {
   flex: 1;
   min-width: 0;
 }
 
-.experience-small {
-  font-size: var(--sm);
-  font-weight: 400;
-  color: var(--light-secondary);
+.experience-position {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.experience-company {
+  font-size: var(--text-ui);
+  color: var(--text-secondary);
+}
+
+.experience-date {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .experience-content {
-  font-size: var(--md);
-  margin: 8px 0 0;
-  padding-left: 20px;
-  list-style-type: disc;
-  list-style-position: inside;
-  overflow-wrap: break-word;
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  margin-top: var(--space-4);
 }
 
 .experience-content li {
-  margin-bottom: 6px;
-  color: var(--light-secondary);
+  position: relative;
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-2);
+  overflow-wrap: break-word;
+}
+
+.experience-content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .experience-content li:last-child {
@@ -58,16 +69,18 @@
 .experience-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
 }
 
-.experience img {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-color: white;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+@media (max-width: 760px) {
+  .experience-item-header {
+    flex-wrap: wrap;
+  }
+
+  .experience-date {
+    flex-basis: 100%;
+    margin-left: calc(56px + var(--space-4));
+    width: fit-content;
+  }
 }

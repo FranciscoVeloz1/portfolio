@@ -1,27 +1,27 @@
 import '@styles/Home/CertificateItem.css'
 import type { Certificate } from '@portfolio-types/resume'
 
-type CertificateItemProps = Pick<Certificate, 'image' | 'link' | 'title' | 'date' | 'description'>
+type CertificateItemProps = Pick<Certificate, 'image' | 'link' | 'title' | 'date' | 'issuer'> & {
+  description?: string
+}
 
-const CertificateItem = ({ image, link, title, date, description }: CertificateItemProps) => {
+const CertificateItem = ({ image, link, title, date, issuer, description }: CertificateItemProps) => {
   return (
-    <div className='certificate-item'>
-      <img src={image} alt='logo' />
+    <a href={link} className='card certificate-row' target='_blank' rel='noreferrer'>
+      <img className='certificate-logo' src={image} alt={`${issuer} logo`} />
 
-      <div className='certificate-wrapper'>
-        <div className='certificate-subtitle'>
-          <p>{title}</p>
-          <span className='certificate-small'>{date}</span>
-        </div>
-
-        <p className='certificate-content'>{description}</p>
-
-        <a href={link} className='certificate-button' target='_blank' rel='noreferrer'>
-          See certificate
-          <i className='fa-solid fa-angles-right' />
-        </a>
+      <div className='certificate-row-body'>
+        <h3 className='certificate-row-title'>{title}</h3>
+        <p className='certificate-row-meta'>
+          {issuer} · {date}
+        </p>
+        {description
+          ? <p className='certificate-row-description'>{description}</p>
+          : null}
       </div>
-    </div>
+
+      <i className='fa-solid fa-arrow-up-right-from-square certificate-row-icon' aria-hidden='true' />
+    </a>
   )
 }
 

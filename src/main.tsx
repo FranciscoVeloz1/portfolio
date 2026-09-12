@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './styles/MediaQueries.css'
+import './styles/a11y.css'
 
 const rootElement = document.getElementById('root')
 

@@ -73,7 +73,7 @@ export const adaptProfile = (profile: RawProfile, summary: Summary): Profile => 
     location: profile.location,
     website: profile.website,
     profilePhoto: profile.profilePhoto,
-    summary: summary.long || summary.short || ''
+    summary: summary.short || summary.long || ''
   }
 
   return adaptedProfile
@@ -134,7 +134,8 @@ export const adaptWorkExperience = (
         image: experience.logo,
         title: experience.position,
         date: experience.duration,
-        company: `${experience.company} - ${experience.location}`,
+        startDate: experience.startDate,
+        company: `${experience.company} · ${experience.location}`,
         responsibilities: experience.responsibilities || [],
         badges
       }
@@ -206,6 +207,7 @@ export const adaptResumeData = (raw: RawResumeData): ResumeData => {
 
   const adaptedData = {
     profile: adaptProfile(raw.profile, raw.summary),
+    summary: raw.summary ?? { short: '', long: '' },
     socialNetworks: adaptSocialNetworks(raw.socialNetworks ?? []),
     skills,
     experiences: adaptWorkExperience(raw.workExperience ?? [], skills),

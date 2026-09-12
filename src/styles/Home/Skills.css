@@ -1,0 +1,30 @@
+@import '../vars.css';
+
+.skills {
+  padding: var(--space-9) 0;
+}
+
+.skills-group-label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--space-5) 0 var(--space-3);
+}
+
+.skills-group:first-of-type .skills-group-label {
+  margin-top: 0;
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 760px) {
+  .skills {
+    padding: var(--space-8) 0;
+  }
+}

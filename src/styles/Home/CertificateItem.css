@@ -1,61 +1,81 @@
 @import '../vars.css';
 
-.certificate-item {
+.certificate-row {
   display: flex;
   align-items: center;
-  gap: 24px;
-  background-color: var(--very-dark-primary);
-  border-radius: 8px;
-  padding: 24px;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  color: var(--text);
 }
 
-.certificate-item img {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
+.certificate-row:hover {
+  color: var(--text);
 }
 
-.certificate-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.certificate-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-1);
+}
+
+.certificate-row-body {
   flex: 1;
   min-width: 0;
-  overflow-wrap: break-word;
 }
 
-.certificate-subtitle {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--light-secondary);
+.certificate-row-title {
+  font-size: calc(var(--text-ui) + 1px);
+  font-weight: 600;
+  color: var(--text);
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
-.certificate-subtitle p {
-  font-weight: 700;
-  font-size: var(--xl);
+.certificate-row:hover .certificate-row-title {
+  color: var(--accent-strong);
 }
 
-.certificate-small {
-  font-size: var(--sm);
-  font-weight: 400;
-  color: var(--light-secondary);
+.certificate-row-meta {
+  font-size: var(--text-small);
+  color: var(--text-muted);
 }
 
-.certificate-content {
-  font-size: var(--md);
+.certificate-row-description {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.certificate-button {
-  font-size: var(--md);
-  background-color: var(--dark-primary);
-  padding: 6px 24px;
-  border-radius: 10px;
-  width: fit-content;
-  color: var(--white);
+.certificate-row-icon {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
-.certificate-button:hover {
-  color: var(--white);
-  opacity: 0.8;
+.certificate-row:hover .certificate-row-icon {
+  color: var(--accent-strong);
+}
+
+@media (max-width: 760px) {
+  .certificate-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .certificate-row-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

@@ -1,35 +1,63 @@
 @import '../vars.css';
 
-.form-container {
-  margin-bottom: 88px;
+.contact {
+  padding: var(--space-9) 0;
 }
 
-.form-title {
-  font-size: var(--xl4);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 24px;
-  color: var(--light-secondary);
-}
-
-.form {
-  width: 50%;
-  margin: 0 auto;
+.contact .form {
+  max-width: 640px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: var(--space-4);
 }
 
-.form .form-control {
-  border: 1px solid var(--very-dark-primary);
-  border-radius: 8px;
-  padding: 10px 18px;
-  background-color: var(--very-dark-primary) !important;
-  width: 100%;
-  color: var(--very-light-secondary) !important;
-  font-size: var(--md);
-  font-family: 'Open Sans', sans-serif;
+.contact .section-subtitle {
+  text-align: center;
+}
+
+.contact-error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-small);
+}
+
+.contact-error a {
+  color: var(--danger);
+  text-decoration: underline;
+}
+
+.form-submit {
+  min-width: 200px;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.contact-success {
+  max-width: 640px;
+  margin-inline: auto;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.contact-success-icon {
+  font-size: 24px;
+  color: var(--success);
+}
+
+.contact-success-title {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--text);
+  margin-top: var(--space-3);
+}
+
+.contact-success-body {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
 }
 
 input:-webkit-autofill,
@@ -37,31 +65,17 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--very-light-secondary);
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
   transition: background-color 5000s ease-in-out 0s;
 }
 
-::placeholder {
-  color: var(--very-light-secondary);
-  opacity: 0.8;
-}
+@media (max-width: 760px) {
+  .contact {
+    padding: var(--space-8) 0;
+  }
 
-.form-button {
-  border: 1px solid var(--very-dark-primary);
-  font-size: var(--md);
-  background-color: var(--dark-primary);
-  padding: 8px 24px;
-  border-radius: 10px;
-  width: 100%;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.form-button:hover {
-  color: var(--white);
-  opacity: 0.8;
+  .form-submit {
+    width: 100%;
+  }
 }

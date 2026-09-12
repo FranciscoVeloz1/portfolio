@@ -13,19 +13,19 @@ import Certificates from './pages/Certificates'
 // Importing styles
 import './styles/styles.css'
 
-type Theme = 'dark' | 'white'
+type Theme = 'light' | 'dark'
 
 const App = () => {
   const [theme, setTheme] = useState<Theme>(() => {
     try {
-      return window.localStorage.getItem('theme') === 'white' ? 'white' : 'dark'
+      return window.localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
     } catch {
-      return 'dark'
+      return 'light'
     }
   })
 
   useEffect(() => {
-    document.body.classList.toggle('white-theme-variables', theme === 'white')
+    document.body.classList.toggle('theme-dark', theme === 'dark')
     try {
       window.localStorage.setItem('theme', theme)
     } catch {
@@ -34,7 +34,7 @@ const App = () => {
   }, [theme])
 
   const handleToggleTheme = () => {
-    setTheme((currentTheme) => (currentTheme === 'dark' ? 'white' : 'dark'))
+    setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
   }
 
   return (

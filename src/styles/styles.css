@@ -1,14 +1,5 @@
 @import './vars.css';
-
-.white-theme-variables {
-  --background: rgb(240, 240, 240);
-  --very-dark-primary: #ffffff;
-  --light-secondary: #000000;
-  --very-light-secondary: #555555;
-  --dark-primary: #24bdff;
-  --secondary: #616161;
-  --dark: #d4d4d4;
-}
+@import './primitives.css';
 
 * {
   margin: 0;
@@ -16,53 +7,94 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px; /* sticky nav height + breathing room for anchor jumps */
+}
+
 body {
-  font-size: var(--xl);
-  color: var(--very-light-secondary);
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background);
-  line-height: 28px;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color var(--dur-med) var(--ease-out),
+    color var(--dur-med) var(--ease-out);
 }
 
 :focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 4px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 
-.skip-link {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  z-index: 1;
-  padding: 8px 12px;
-  color: var(--very-dark-primary);
-  background: var(--primary);
-  transform: translateY(-150%);
+::selection {
+  background: var(--accent-soft);
+  color: var(--navy);
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+body.theme-dark ::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+input, textarea {
+  caret-color: var(--accent-strong);
 }
 
 a {
-  color: var(--very-light-secondary);
+  color: var(--accent-strong);
   text-decoration: none;
+  text-underline-offset: 4px;
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 a:hover {
-  color: var(--very-light-secondary);
+  color: var(--accent);
 }
 
 ul {
   list-style: none;
 }
 
-.container {
-  width: 56%;
-  margin: auto;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* text colors */
-.txt-primary {
-  color: var(--primary);
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: var(--z-skip-link);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-ui);
+  font-weight: 600;
+  color: var(--text-on-accent);
+  background: var(--accent-strong);
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Utility kept for inline accent spans inside headings */
+.txt-accent {
+  color: var(--accent-strong);
+}
+
+/* Full-bleed subtle band for alternating sections (Skills, Certificates) */
+.section-alt {
+  background: var(--bg-subtle);
+  box-shadow: 0 0 0 100vmax var(--bg-subtle);
+  clip-path: inset(0 -100vmax);
 }

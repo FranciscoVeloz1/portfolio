@@ -12,7 +12,13 @@
   },
   "summary": {
     "short": "Full-stack engineer with 8+ years in technology, specializing in React, Node.js, Python, and AI-powered systems. Dev Lead at PwC México.",
-    "long": "Full-stack software engineer with 8+ years of experience in technology, building scalable web, mobile, and AI-powered applications with React, Node.js, Python, and cloud infrastructure. Currently a Dev Lead at PwC México, leading development teams, architecting production systems, and delivering blockchain and data engineering solutions for enterprise clients. Track record of measurable impact, including cutting daily inventory processing time by 88% through workflow automation."
+    "long": "Full-stack software engineer with 8+ years of experience in technology, building scalable web, mobile, and AI-powered applications with React, Node.js, Python, and cloud infrastructure. Currently a Dev Lead at PwC México, leading development teams, architecting production systems, and delivering blockchain and data engineering solutions for enterprise clients. Track record of measurable impact, including cutting daily inventory processing time by 88% through workflow automation.",
+    "highlights": [
+      "8+ years of experience",
+      "React, Node.js, Python",
+      "Dev Lead at PwC México",
+      "cutting daily inventory processing time by 88%"
+    ]
   },
   "workExperience": [
     {

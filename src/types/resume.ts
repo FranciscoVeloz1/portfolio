@@ -21,6 +21,7 @@ export interface RawProfile {
 export interface Summary {
   short: string
   long: string
+  highlights?: string[]
 }
 
 export interface RawWorkExperience {
@@ -80,6 +81,7 @@ export interface Experience {
   image: string
   title: string
   date: string
+  startDate: string
   company: string
   responsibilities: string[]
   badges: Skill[]
@@ -114,6 +116,7 @@ export interface SocialNetwork {
 
 export interface ResumeData {
   profile: Profile
+  summary: Summary
   socialNetworks: SocialNetwork[]
   skills: Skill[]
   experiences: Experience[]

@@ -1,0 +1,289 @@
+@import './vars.css';
+
+/* ============ Button (.btn) ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-ui);
+  font-weight: 600;
+  border: 0;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+}
+
+.btn-md {
+  padding: var(--space-3) var(--space-5);
+}
+
+.btn-primary {
+  background: var(--accent-strong);
+  color: var(--text-on-accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-strong-hover);
+  color: var(--text-on-accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-strong);
+  border: 1.5px solid var(--accent-strong);
+}
+
+.btn-outline:hover {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.btn-outline:active {
+  background: var(--accent-soft-strong);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============ Badge / Pill (.badge) ============ */
+.badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 12px;
+  font-size: var(--text-badge);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border-radius: var(--radius-pill);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+a:hover .badge {
+  background: var(--accent-soft-strong);
+}
+
+.badge-neutral {
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+}
+
+/* ============ SectionHeader (.section-header) ============ */
+.section-header {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--text);
+  text-wrap: balance;
+  margin-bottom: var(--space-7);
+}
+
+.section-header:has(+ .section-subtitle) {
+  margin-bottom: var(--space-3);
+}
+
+.section-subtitle {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  max-width: 60ch;
+  margin-bottom: var(--space-7);
+}
+
+.section-header-center {
+  text-align: center;
+}
+
+.section-header-center + .section-subtitle {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Section header row: heading left, "view all" link right (Projects, Certificates) */
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.section-header-row .section-header {
+  margin-bottom: 0;
+}
+
+.section-header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+  font-size: var(--text-ui);
+  font-weight: 600;
+  color: var(--accent-strong);
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+
+.section-header-link:hover {
+  gap: var(--space-2);
+  color: var(--accent-strong);
+}
+
+/* ============ Page header (inner pages) ============ */
+.page {
+  padding: var(--space-8) 0 var(--space-9);
+}
+
+.page-back {
+  margin-bottom: var(--space-6);
+}
+
+.page-title {
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--text);
+  text-wrap: balance;
+  margin-bottom: var(--space-7);
+}
+
+.page-title:has(+ .page-subtitle) {
+  margin-bottom: var(--space-3);
+}
+
+.page-subtitle {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-7);
+}
+
+/* ============ IconButton (.icon-btn) ============ */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--text-body);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.icon-btn:hover {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.icon-btn-on-dark {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #c3cbe8;
+}
+
+.icon-btn-on-dark:hover {
+  border-color: var(--accent-bright);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ============ Card (.card) ============ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  transition:
+    transform var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out);
+}
+
+a.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+
+/* ============ Field (.field) ============ */
+.field {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--text);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.field:hover {
+  border-color: var(--accent);
+}
+
+.field:focus {
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  outline: none;
+}
+
+.field--error {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.field:disabled {
+  border-color: var(--border);
+  background: var(--bg-subtle);
+  cursor: not-allowed;
+}
+
+.field::placeholder {
+  color: var(--text-muted);
+}
+
+.field-label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.field-error-message {
+  font-size: var(--text-badge);
+  color: var(--danger);
+  margin-top: var(--space-1);
+}

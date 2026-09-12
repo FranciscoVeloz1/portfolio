@@ -22,28 +22,32 @@ const Experience = () => {
   let loadLabel = 'View all experiences'
 
   if (load > 3) {
-    loadLabel = 'Hide experiences'
+    loadLabel = 'Show less'
   }
 
   return (
-    <section className='experience'>
-      <h2 className='experience-title'>Experience</h2>
+    <section id='experience' className='experience' aria-labelledby='experience-title'>
+      <h2 id='experience-title' className='section-header'>
+        Work <span className='txt-accent'>experience</span>
+      </h2>
 
-      {visibleExperiences.map((experience) => {
-        return (
-          <ExperienceItem
-            key={experience.id}
-            image={experience.image}
-            title={experience.title}
-            date={experience.date}
-            company={experience.company}
-            responsibilities={experience.responsibilities}
-            badges={experience.badges}
-          />
-        )
-      })}
+      <div className='experience-list'>
+        {visibleExperiences.map((experience) => {
+          return (
+            <ExperienceItem
+              key={experience.id}
+              image={experience.image}
+              title={experience.title}
+              date={experience.date}
+              company={experience.company}
+              responsibilities={experience.responsibilities}
+              badges={experience.badges}
+            />
+          )
+        })}
+      </div>
 
-      <button type='button' className='experience-load-small' onClick={handleLoad}>
+      <button type='button' className='btn btn-ghost btn-md experience-toggle' onClick={handleLoad}>
         {loadLabel}
       </button>
     </section>

@@ -9,20 +9,20 @@ const Certificate = () => {
   const certificates = data?.certificates || []
 
   return (
-    <section className='certificates'>
-      <div className='certificates-header'>
-        <p className='certificates-title'>
-          Licenses and <span className='txt-primary'>certifications</span>
-        </p>
+    <section id='certificates' className='certificates section-alt' aria-labelledby='certificates-title'>
+      <div className='section-header-row'>
+        <h2 id='certificates-title' className='section-header'>
+          Licenses and <span className='txt-accent'>certifications</span>
+        </h2>
 
-        <Link to={`${URL}/certificates`} className='certificates-small'>
+        <Link to={`${URL}/certificates`} className='section-header-link'>
           View all certifications
-          <i className='fa-solid fa-right-long' />
+          <i className='fa-solid fa-arrow-right' aria-hidden='true' />
         </Link>
       </div>
 
-      <div className='certificates-cards'>
-        {certificates.slice(0, 3).map((certificate) => {
+      <div className='certificates-list'>
+        {certificates.slice(0, 4).map((certificate) => {
           return (
             <CertificateItem
               key={certificate.id}
@@ -30,7 +30,7 @@ const Certificate = () => {
               image={certificate.image}
               title={certificate.title}
               date={certificate.date}
-              description={certificate.description}
+              issuer={certificate.issuer}
             />
           )
         })}

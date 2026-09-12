@@ -9,20 +9,20 @@ const Projects = () => {
   const projects = data?.projects || []
 
   return (
-    <section className='projects'>
-      <div className='projects-header'>
-        <p className='projects-title'>
-          Recent <span className='txt-primary'>projects</span>
-        </p>
+    <section id='projects' className='projects' aria-labelledby='projects-title'>
+      <div className='section-header-row'>
+        <h2 id='projects-title' className='section-header'>
+          Recent <span className='txt-accent'>projects</span>
+        </h2>
 
-        <Link to={`${URL}/projects`} className='projects-small'>
+        <Link to={`${URL}/projects`} className='section-header-link'>
           View all projects
-          <i className='fa-solid fa-right-long' />
+          <i className='fa-solid fa-arrow-right' aria-hidden='true' />
         </Link>
       </div>
 
       <div className='project-cards'>
-        {projects.slice(0, 3).map((project) => {
+        {projects.slice(0, 6).map((project) => {
           return (
             <Card
               key={project.id}
@@ -31,6 +31,7 @@ const Projects = () => {
               title={project.title}
               date={project.date}
               description={project.description}
+              badges={project.badges}
             />
           )
         })}
