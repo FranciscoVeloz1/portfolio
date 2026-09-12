@@ -34,7 +34,8 @@
         "Lead end-to-end full-stack delivery across a React microservices frontend, Node.js and Python backend services, and PySpark data pipelines",
         "Drive vulnerability remediation through software composition analysis scanning, reducing security risk and keeping services compliant",
         "Own release documentation and feature promotion workflows, improving deployment reliability across services",
-        "Integrate AI agent-assisted development workflows into the team's daily practice, accelerating feature delivery, debugging, and maintenance",
+        "Integrate AI-assisted development workflows with tools such as Cursor and Claude Code into the team's daily practice, accelerating feature delivery, debugging, and maintenance",
+
         "Define commit standards and repository management practices to keep codebases clean and auditable",
         "Mentor junior developers through code reviews, technical guidance, and development planning",
         "Work directly with technical and business stakeholders to align engineering priorities with product goals"
@@ -61,7 +62,7 @@
       "responsibilities": [
         "Built scalable web platforms integrated with blockchain-based data pipelines for enterprise clients",
         "Designed secure data engineering workflows with Python and Databricks, processing on-chain and off-chain datasets through custom ETL and analytics pipelines",
-        "Developed AI-powered applications using LLM integrations and agent-based workflows with tools such as Cursor and Claude Code",
+        "Used AI-assisted development tools such as Cursor and Claude Code to accelerate feature delivery, debugging, and maintenance",
         "Created React interfaces for blockchain data visualization and enterprise reporting"
       ],
       "skills": [
@@ -69,7 +70,7 @@
         22,
         21,
         25,
-        24,
+        23,
         7,
         2
       ]
@@ -360,9 +361,230 @@
       ],
       "description": "Fully responsive landing page for the Smart House platform, built with React and Bootstrap. Presents the product's main features, pricing, and advantages with a clear, mobile-first design.",
       "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/mintel.webp"
+    },
+    {
+      "id": 12,
+      "name": "Kanban CLI",
+      "date": "2026-08-23",
+      "link": "https://github.com/FranciscoVeloz1/kanban-cli",
+      "repo": "https://github.com/FranciscoVeloz1/kanban-cli",
+      "video": "",
+      "demo": "",
+      "skills": [
+        2,
+        16,
+        18
+      ],
+      "description": "Command-line client for the personal-api kanban module. Login, tags, and task CRUD over HTTP with a stored session.",
+      "image": ""
+    },
+    {
+      "id": 13,
+      "name": "Kanban Dashboard",
+      "date": "2026-08-23",
+      "link": "https://franciscoveloz1.github.io/kanban-dashboard/",
+      "repo": "https://github.com/FranciscoVeloz1/kanban-dashboard",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/kanban-dashboard/",
+      "skills": [
+        7,
+        2,
+        18,
+        19
+      ],
+      "description": "Personal three-column kanban board backed by personal-api. Create tags and tasks, drag cards between columns, and persist state after reload.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/kanban-dashboard.webp"
+    },
+    {
+      "id": 14,
+      "name": "personal-api",
+      "date": "2026-08-23",
+      "link": "https://github.com/FranciscoVeloz1/personal-api",
+      "repo": "https://github.com/FranciscoVeloz1/personal-api",
+      "video": "",
+      "demo": "https://personal-api-production-3ca6.up.railway.app/api/v1/health/ping",
+      "skills": [
+        2,
+        16,
+        17,
+        18,
+        19,
+        32
+      ],
+      "description": "Shared platform REST API (Express, TypeScript, PostgreSQL, JWT). Hosts users, fitness, groceries, finance, and kanban modules on Railway.",
+      "image": ""
+    },
+    {
+      "id": 15,
+      "name": "Mandado App",
+      "date": "2026-08-20",
+      "link": "https://franciscoveloz1.github.io/groceries-app/",
+      "repo": "https://github.com/FranciscoVeloz1/groceries-app",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/groceries-app/",
+      "skills": [
+        7,
+        2,
+        11,
+        12
+      ],
+      "description": "Mobile-first grocery list. Browse a static catalog by category, build a cart with quantities, and export it to Excel in the browser.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/groceries.webp"
+    },
+    {
+      "id": 16,
+      "name": "Slides Generator",
+      "date": "2026-08-08",
+      "link": "https://github.com/FranciscoVeloz1/slide-generator",
+      "repo": "https://github.com/FranciscoVeloz1/slide-generator",
+      "video": "",
+      "demo": "",
+      "skills": [
+        7,
+        2,
+        16
+      ],
+      "description": "Local generator for vertical educational decks (TikTok 9:16) using React and Reveal.js. Agents emit validated JSON; the app renders typed slide templates.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/slides-generator.webp"
+    },
+    {
+      "id": 17,
+      "name": "heic-to-png",
+      "date": "2026-08-03",
+      "link": "https://github.com/FranciscoVeloz1/heic-to-png",
+      "repo": "https://github.com/FranciscoVeloz1/heic-to-png",
+      "video": "",
+      "demo": "",
+      "skills": [
+        2,
+        16
+      ],
+      "description": "CLI that converts HEIC/HEIF photos to lossless PNG or high-quality JPG, for a single file or a whole folder.",
+      "image": ""
+    },
+    {
+      "id": 18,
+      "name": "FitTrack",
+      "date": "2026-07-17",
+      "link": "https://franciscoveloz1.github.io/fitness-nutrition-tracker/",
+      "repo": "https://github.com/FranciscoVeloz1/fitness-nutrition-tracker",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/fitness-nutrition-tracker/",
+      "skills": [
+        7,
+        2,
+        18,
+        19
+      ],
+      "description": "Fitness and nutrition tracker. Log meals, workouts, and weight, then sync history to personal-api after sign-in.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/fitness.webp"
+    },
+    {
+      "id": 19,
+      "name": "User Management",
+      "date": "2026-07-17",
+      "link": "https://personal-api-production-3ca6.up.railway.app/",
+      "repo": "https://github.com/FranciscoVeloz1/user-management-app",
+      "video": "",
+      "demo": "https://personal-api-production-3ca6.up.railway.app/",
+      "skills": [
+        7,
+        2,
+        18,
+        19
+      ],
+      "description": "Admin SPA for personal-api users. Provision accounts, assign global roles, and manage the user directory from the same origin as the API.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/user-management.webp"
+    },
+    {
+      "id": 20,
+      "name": "pdf-to-png",
+      "date": "2026-07-14",
+      "link": "https://github.com/FranciscoVeloz1/pdf-to-png",
+      "repo": "https://github.com/FranciscoVeloz1/pdf-to-png",
+      "video": "",
+      "demo": "",
+      "skills": [
+        2,
+        16
+      ],
+      "description": "CLI that renders every page of a PDF to page-N.png using pdf.js.",
+      "image": ""
+    },
+    {
+      "id": 21,
+      "name": "Screen Recorder",
+      "date": "2026-07-10",
+      "link": "https://franciscoveloz1.github.io/screen-recorder/",
+      "repo": "https://github.com/FranciscoVeloz1/screen-recorder",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/screen-recorder/",
+      "skills": [
+        7,
+        2,
+        11,
+        12
+      ],
+      "description": "Browser screen recorder. Capture display (and optional system/mic audio), preview live, and download session recordings.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/screen-recorder.webp"
+    },
+    {
+      "id": 22,
+      "name": "Resume Data Source",
+      "date": "2026-06-12",
+      "link": "https://github.com/FranciscoVeloz1/resume-data-source",
+      "repo": "https://github.com/FranciscoVeloz1/resume-data-source",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/resume-data-source/",
+      "skills": [
+        1,
+        29
+      ],
+      "description": "Single source of truth for resume JSON (profile, work, projects, skills) consumed by the portfolio and CV generator.",
+      "image": ""
+    },
+    {
+      "id": 23,
+      "name": "Car History App",
+      "date": "2026-06-13",
+      "link": "https://franciscoveloz1.github.io/car-history-app/",
+      "repo": "https://github.com/FranciscoVeloz1/car-history-app",
+      "video": "",
+      "demo": "https://franciscoveloz1.github.io/car-history-app/",
+      "skills": [
+        7,
+        2,
+        16,
+        31
+      ],
+      "description": "Maintenance history tracker for a Chevrolet Cavalier 2021. Stores service visits and inspections in MySQL and exposes a JSON export plus a web timeline.",
+      "image": "https://franciscoveloz1.github.io/resume-data-source/images/projects/car-history.webp"
+    },
+    {
+      "id": 24,
+      "name": "Greed Island Card API",
+      "date": "2026-02-15",
+      "link": "https://github.com/FranciscoVeloz1/greed-island-card-api",
+      "repo": "https://github.com/FranciscoVeloz1/greed-island-card-api",
+      "video": "",
+      "demo": "",
+      "skills": [
+        1,
+        16
+      ],
+      "description": "Scraper and JSON dataset of Greed Island card lists.",
+      "image": ""
     }
   ],
   "certifications": [
+    {
+      "name": "Cursor AI Code Editor Course",
+      "issuer": "Platzi",
+      "date": "Jun 2026",
+      "link": "https://platzi.com/p/FranciscoVeloz1/curso/12166-cursor/diploma/detalle/",
+      "logo": "https://franciscoveloz1.github.io/resume-data-source/images/logos/platzi.webp",
+      "description": "Professional AI-assisted development with Cursor: dynamic contexts, custom automation rules, clean architecture, and unit/E2E testing with Jest, Pytest, and Playwright using MCP (Model Context Protocol)."
+    },
     {
       "name": "Databricks Course: Delta Lake Architecture",
       "issuer": "Platzi",
