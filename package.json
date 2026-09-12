@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync:data": "node scripts/sync-resume-data.mjs",
+    "sync:data": "tsx scripts/sync-resume-data.ts",
     "predev": "npm run sync:data",
     "prebuild": "npm run sync:data",
     "dev": "vite",
@@ -12,8 +12,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
+    "lint:fix": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx --fix",
     "prettify": "prettier --write .",
     "precommit": "npm run prettify && npm run lint && npm run lint:fix"
   },
@@ -25,8 +26,11 @@
   "devDependencies": {
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
+    "@types/node": "^20.19.43",
     "@types/react": "18.0.22",
     "@types/react-dom": "18.0.7",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "@typescript-eslint/parser": "^8.70.0",
     "@vitejs/plugin-react": "6.1.1",
     "eslint": "8.57.1",
     "eslint-plugin-react-hooks": "5.2.0",
@@ -34,6 +38,8 @@
     "jsdom": "29.1.1",
     "prettier": "3.8.4",
     "standard": "17.0.0",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
     "vite": "8.3.0",
     "vitest": "4.1.11"
   }
