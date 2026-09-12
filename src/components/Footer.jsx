@@ -45,11 +45,13 @@ const Footer = () => {
       <div className='container'>
         <div className='footer-contact'>
           <div className='footer-item'>
-            {profile?.email ? (
-              <a href={`mailto:${profile.email}`} target='_blank' rel='noreferrer'>
-                <i className='fa-solid fa-envelope' /> {profile.email}
-              </a>
-            ) : null}
+            {profile?.email
+              ? (
+                <a href={`mailto:${profile.email}`} target='_blank' rel='noreferrer'>
+                  <i className='fa-solid fa-envelope' /> {profile.email}
+                </a>
+                )
+              : null}
 
             {orderedSocialNetworks
               .filter((network) => {
@@ -75,11 +77,13 @@ const Footer = () => {
           </div>
 
           <div className='footer-item'>
-            {profile?.phone ? (
-              <a href={`tel:${profile.phone.replace(/\s/g, '')}`} target='_blank' rel='noreferrer'>
-                <i className='fa-solid fa-phone' /> {profile.phone}
-              </a>
-            ) : null}
+            {profile?.phone
+              ? (
+                <a href={`tel:${profile.phone.replace(/\s/g, '')}`} target='_blank' rel='noreferrer'>
+                  <i className='fa-solid fa-phone' /> {profile.phone}
+                </a>
+                )
+              : null}
           </div>
         </div>
 

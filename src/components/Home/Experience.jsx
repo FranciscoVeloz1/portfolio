@@ -11,6 +11,7 @@ const Experience = () => {
   const handleLoad = () => {
     if (load > 3) {
       setLoad(3)
+
       return
     }
 

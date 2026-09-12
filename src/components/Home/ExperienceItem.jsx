@@ -20,13 +20,15 @@ const ExperienceItem = ({ image, title, date, company, responsibilities, badges 
           })}
         </ul>
 
-        {badges.length > 0 ? (
-          <div className='experience-badges'>
-            {badges.map((skill) => {
-              return <Badge skill={skill} key={skill.id} />
-            })}
-          </div>
-        ) : null}
+        {badges.length > 0
+          ? (
+            <div className='experience-badges'>
+              {badges.map((skill) => {
+                return <Badge skill={skill} key={skill.id} />
+              })}
+            </div>
+            )
+          : null}
       </div>
     </div>
   )
